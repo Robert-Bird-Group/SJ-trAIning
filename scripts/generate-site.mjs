@@ -469,14 +469,28 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
   <body>
     <div class="topbar">
       <span class="topbar-title">SJ Training Course</span>
-      <span class="topbar-badge">Lesson</span>
+      <span class="topbar-badge">Business Standard</span>
       <span class="topbar-sub">Generated static lesson page</span>
       <span class="topbar-tag">v0.1</span>
     </div>
 
     <div class="page lesson-shell">
-      <div class="hero card lesson-hero">
-        <div class="hero-copy">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson ${String(lesson.lessonNumber).padStart(2, "0")} Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>${escapeHtml(lesson.folderName)}</code> using <code>${escapeHtml(lesson.primaryFile)}</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
           <a class="back-link" href="../../index.html">← Back to course</a>
           <p class="eyebrow">Lesson ${String(lesson.lessonNumber).padStart(2, "0")}</p>
           <h1>${escapeHtml(lesson.title)}</h1>
@@ -485,9 +499,10 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
             ${durationMarkup}
             <span class="meta-pill">${escapeHtml(lesson.sourceType)}</span>
             <span class="meta-pill">${escapeHtml(lesson.primaryFile)}</span>
+            <span class="meta-pill">${lesson.files.length} assets</span>
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="wiki-article-layout">
         <main class="wiki-article-main">
@@ -598,7 +613,7 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
 </html>`;
 }
 
-function renderIndexPage(lessons) {
+function renderIndexPage(lessons, skipped) {
   const lessonCards = lessons
     .map((lesson) => {
       const summary = lesson.summary || "Imported lesson content ready for GitHub Pages.";
@@ -620,6 +635,9 @@ function renderIndexPage(lessons) {
     })
     .join("");
 
+  const readyCount = lessons.length;
+  const pendingCount = skipped.length;
+
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -632,22 +650,46 @@ function renderIndexPage(lessons) {
   <body>
     <div class="topbar">
       <span class="topbar-title">SJ Training Course</span>
-      <span class="topbar-badge">GitHub Pages</span>
+      <span class="topbar-badge">Business Standard</span>
       <span class="topbar-sub">Generated from synced lesson folders</span>
       <span class="topbar-tag">v0.1</span>
     </div>
 
     <div class="page">
-      <section class="landing-hero card">
-        <div class="landing-grid">
+      <section class="toc">
+        <span class="toc-part">I · Summary</span>
+        <div class="toc-links">
+          <a href="#summary-section">Course Summary</a>
+          <a href="#lessons-section">Lessons</a>
+        </div>
+      </section>
+
+      <section class="part" id="summary-section">
+        <span class="part-num">Part I</span>
+        <span class="part-title">Course Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Priority rule.</strong> Lesson folders on the network drive are the authoring source, but this repo is the publishable GitHub Pages source of truth. Current generated coverage: <strong>${readyCount}</strong> ready lessons, <strong>${pendingCount}</strong> pending lesson folders without content files.
+      </div>
+
+      <section class="card site-header landing-hero">
+        <div class="card-head">
+          <span class="card-title">Training Course Overview</span>
+          <span class="card-hint">Search, lesson status, and generated publish surface</span>
+        </div>
+        <div class="card-body landing-grid">
           <div>
             <p class="eyebrow">Python Training</p>
             <h1>Lesson library built from your course folders</h1>
             <p class="hero-summary">A static course site that mirrors your lesson structure, keeps asset links intact, and can be regenerated whenever new lessons or Markdown files are added.</p>
-            <div class="meta-row">
-              <span class="meta-pill">${lessons.length} lessons</span>
-              <span class="meta-pill">Public static site</span>
-              <span class="meta-pill">GitHub Pages ready</span>
+
+            <div class="stats">
+              <div class="stat"><span>Lessons Ready</span><strong>${readyCount}</strong></div>
+              <div class="stat"><span>Pending Folders</span><strong>${pendingCount}</strong></div>
+              <div class="stat"><span>Formats</span><strong>MD + HTML</strong></div>
+              <div class="stat"><span>Target</span><strong>GitHub Pages</strong></div>
             </div>
           </div>
           <div class="landing-panel">
@@ -663,8 +705,8 @@ function renderIndexPage(lessons) {
         </div>
       </section>
 
-      <section class="part">
-        <span class="part-num">Course</span>
+      <section class="part" id="lessons-section">
+        <span class="part-num">Part II</span>
         <span class="part-title">Lessons</span>
         <span class="part-rule"></span>
       </section>
@@ -717,7 +759,7 @@ function main() {
     }
   }
 
-  writeText(indexPath, renderIndexPage(lessons));
+  writeText(indexPath, renderIndexPage(lessons, skipped));
 
   writeJson(diagnosticsPath, {
     generatedAt: new Date().toISOString(),
