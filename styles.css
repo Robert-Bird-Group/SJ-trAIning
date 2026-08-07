@@ -448,6 +448,7 @@ h6 {
   font-size: 12px;
   color: var(--on-surface-var);
   line-height: 1.7;
+  min-height: 5.1em;
 }
 
 .lesson-card-link {
@@ -469,6 +470,34 @@ h6 {
 
 .lesson-shell {
   padding-bottom: 32px;
+}
+
+.pending-section {
+  margin-top: 16px;
+}
+
+.pending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.pending-card {
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  background: var(--surface-container);
+  padding: 12px;
+}
+
+.pending-card .eyebrow {
+  margin-bottom: 6px;
+}
+
+.pending-reason {
+  margin: 0;
+  font-size: 11px;
+  color: var(--on-surface-var);
+  line-height: 1.6;
 }
 
 .hero-copy {

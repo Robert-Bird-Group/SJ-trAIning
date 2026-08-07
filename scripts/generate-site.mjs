@@ -150,8 +150,29 @@ function extractObjectives(markdownText) {
 }
 
 function extractDuration(rawText) {
-  const match = String(rawText).match(/(^|\n)(\d{1,2}:\d{2})(\n|$)/);
+  const match = String(rawText).match(/(^|\n|\s)(\d{1,2}:\d{2})(?=\s|\n|$)/);
   return match ? match[2] : "";
+}
+
+function extractObjectivesFromHtml(htmlText) {
+  const plain = stripHtml(htmlText).replace(/\s+/g, " ");
+  const blockMatch = plain.match(/Learning Objectives\s*:?\s*([\s\S]*?)(?:Summary\s*:|Create Project|pyCharm Overview|"Hello World"|$)/i);
+  if (!blockMatch) {
+    return [];
+  }
+
+  return blockMatch[1]
+    .split(/[-•]/)
+    .map((item) => cleanupMarkdownText(item))
+    .filter(Boolean)
+    .filter((item) => item.length > 3)
+    .slice(0, 8);
+}
+
+function toTitleCaseFromFolder(name) {
+  return String(name)
+    .replace(/^lesson\s+/i, "Lesson ")
+    .trim();
 }
 
 function extractHtmlTitle(htmlText) {
@@ -350,7 +371,7 @@ function renderHtmlLesson(sourceText) {
     articleHtml: withIds.html,
     headings: withIds.headings,
     summary: paragraphs ? stripHtml(paragraphs[1]) : "",
-    objectives: [],
+    objectives: extractObjectivesFromHtml(sourceText),
     duration: extractDuration(stripHtml(sourceText)),
   };
 }
@@ -438,6 +459,24 @@ function renderObjectives(objectives) {
   }
 
   return `<ul class=\"objective-list\">${objectives.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+}
+
+function renderPendingLessons(skipped) {
+  if (!skipped.length) {
+    return "";
+  }
+
+  return `<section class="card pending-section" id="pending-section">
+    <div class="card-head">
+      <span class="card-title">Pending Lessons</span>
+      <span class="card-hint">Folders detected without a lesson markdown or html file yet</span>
+    </div>
+    <div class="card-body">
+      <div class="pending-grid">
+        ${skipped.map((item) => `<article class="pending-card"><p class="eyebrow">${escapeHtml(toTitleCaseFromFolder(item.folderName))}</p><p class="pending-reason">${escapeHtml(item.reason)}</p></article>`).join("")}
+      </div>
+    </div>
+  </section>`;
 }
 
 function renderToc(headings) {
@@ -619,6 +658,7 @@ function renderIndexPage(lessons, skipped) {
       const summary = lesson.summary || "Imported lesson content ready for GitHub Pages.";
       const objectiveCount = lesson.objectives.length;
       const durationMarkup = lesson.duration ? `<span>${escapeHtml(lesson.duration)}</span>` : "";
+      const fileMarkup = `<span>${lesson.files.length} files</span>`;
       return `<article class="lesson-card" data-lesson-card>
         <div class="lesson-card-head">
           <p class="eyebrow">Lesson ${String(lesson.lessonNumber).padStart(2, "0")}</p>
@@ -627,6 +667,7 @@ function renderIndexPage(lessons, skipped) {
         <p class="lesson-card-summary">${escapeHtml(summary)}</p>
         <div class="lesson-card-meta">
           ${durationMarkup}
+          ${fileMarkup}
           <span>${escapeHtml(lesson.sourceType)}</span>
           <span>${objectiveCount} objectives</span>
         </div>
@@ -661,6 +702,7 @@ function renderIndexPage(lessons, skipped) {
         <div class="toc-links">
           <a href="#summary-section">Course Summary</a>
           <a href="#lessons-section">Lessons</a>
+          ${pendingCount ? '<a href="#pending-section">Pending</a>' : ''}
         </div>
       </section>
 
@@ -714,6 +756,8 @@ function renderIndexPage(lessons, skipped) {
       <section class="lesson-grid" id="lesson-grid">
         ${lessonCards}
       </section>
+
+      ${renderPendingLessons(skipped)}
     </div>
 
     <script>
