@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-08-07T08:24:09.421Z",
+  "lessonCount": 7,
+  "skippedLessonCount": 8,
+  "sourceRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons",
+  "lessonOutputRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\lessons",
+  "indexOnly": false,
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Hello World",
+      "slug": "lesson-01-hello-world",
+      "sourceType": "html",
+      "primaryFile": "Hello World.html",
+      "headingCount": 0,
+      "objectiveCount": 3,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 2,
+      "title": "What is Syntax?",
+      "slug": "lesson-02-what-is-syntax",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_DataTypes.md",
+      "headingCount": 8,
+      "objectiveCount": 0,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 3,
+      "title": "Simple Exercise: Calculator",
+      "slug": "lesson-03-simple-exercise-calculator",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_SimpleCalculator.md",
+      "headingCount": 7,
+      "objectiveCount": 0,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 4,
+      "title": "Collection Data-Types:",
+      "slug": "lesson-04-collection-data-types",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_CollectionDataTypes.md",
+      "headingCount": 38,
+      "objectiveCount": 0,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 5,
+      "title": "Time to Practice",
+      "slug": "lesson-05-time-to-practice",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_ListAndDict.md",
+      "headingCount": 18,
+      "objectiveCount": 0,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 6,
+      "title": "Operators and Expressions in Python",
+      "slug": "lesson-06-operators-and-expressions-in-python",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_BasicOperators.md",
+      "headingCount": 14,
+      "objectiveCount": 0,
+      "duration": ""
+    },
+    {
+      "lessonNumber": 7,
+      "title": "Time To Add Logic!",
+      "slug": "lesson-07-time-to-add-logic",
+      "sourceType": "markdown",
+      "primaryFile": "!Lesson_ConditionalStatements.md",
+      "headingCount": 11,
+      "objectiveCount": 0,
+      "duration": ""
+    }
+  ],
+  "skipped": [
+    {
+      "folderName": "Lesson 08",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 09",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 10",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 11",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 12",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 13",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 14",
+      "reason": "No lesson markdown or html file found."
+    },
+    {
+      "folderName": "Lesson 15",
+      "reason": "No lesson markdown or html file found."
+    }
+  ]
+}

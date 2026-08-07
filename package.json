@@ -1,0 +1,13 @@
+{
+  "name": "sj-training-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "lessons:import": "node scripts/import-lessons.mjs",
+    "generate": "node scripts/generate-site.mjs",
+    "generate:quick": "node scripts/generate-site.mjs --index-only",
+    "site:update": "npm run lessons:import && npm run generate",
+    "preview": "npx --yes serve . -l 4173"
+  }
+}

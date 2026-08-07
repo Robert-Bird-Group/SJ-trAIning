@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-08-07T08:23:29.965Z",
+  "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python",
+  "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons",
+  "lessonCount": 15,
+  "lessons": [
+    {
+      "lesson": "Lesson 01",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 01",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 01",
+      "topLevelEntries": 2
+    },
+    {
+      "lesson": "Lesson 02",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 02",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 02",
+      "topLevelEntries": 5
+    },
+    {
+      "lesson": "Lesson 03",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 03",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 03",
+      "topLevelEntries": 4
+    },
+    {
+      "lesson": "Lesson 04",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 04",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 04",
+      "topLevelEntries": 11
+    },
+    {
+      "lesson": "Lesson 05",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 05",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 05",
+      "topLevelEntries": 4
+    },
+    {
+      "lesson": "Lesson 06",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 06",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 06",
+      "topLevelEntries": 2
+    },
+    {
+      "lesson": "Lesson 07",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 07",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 07",
+      "topLevelEntries": 7
+    },
+    {
+      "lesson": "Lesson 08",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 08",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 08",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 09",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 09",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 09",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 10",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 10",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 10",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 11",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 11",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 11",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 12",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 12",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 12",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 13",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 13",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 13",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 14",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 14",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 14",
+      "topLevelEntries": 0
+    },
+    {
+      "lesson": "Lesson 15",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 15",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 15",
+      "topLevelEntries": 0
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 07 | Time To Add Logic!</title>
+    <meta name="description" content="It’s time we add logic to our python scripts which is essential for any code. You will often need to execute different code depending on your condition." />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-badge">Lesson</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <div class="hero card lesson-hero">
+        <div class="hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <p class="eyebrow">Lesson 07</p>
+          <h1>Time To Add Logic!</h1>
+          <p class="hero-summary">It’s time we add logic to our python scripts which is essential for any code. You will often need to execute different code depending on your condition.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">!Lesson_ConditionalStatements.md</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 07</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 07</p>
+                <p><strong>Primary source:</strong> !Lesson_ConditionalStatements.md</p>
+                <p><strong>Assets:</strong> 7</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="time-to-add-logic">Time To Add Logic!</h1>
+<p><img src="image-1.png" alt="alt text" /></p>
+<p>It’s time we add logic to our python scripts which is essential for any code. You will often need to execute different code depending on your condition.</p>
+<p>For example: If you want to learn more, continue watching. Else, skip to the next one. <strong>Did you notice what I just did here?</strong> I just created a logical statement.</p>
+<p>Here&#39;s how it would look in code:</p>
+<pre><code class="language-py">want_learn_more = True
+
+if want_learn_more:
+    continue_watching()
+
+else:
+    skip_to_next()  
+
+#PS This code won&#39;t execute because of missing functions. 
+# It&#39;s just an abstract example of logic using pseudo code.</code></pre>
+<p>I’ve created an <strong>if/else</strong> statement to decide on a right action depending on the condition. That’s how we create simple logical statements in python. And don&#39;t worry, I will break it down in simple terms.</p>
+<p>So, Let&#39;s dive into that.</p>
+<h1 id="basic-syntax-of-conditional-statements">Basic Syntax of Conditional Statements</h1>
+<p>To create a logical statement in python we need to use the <strong>if</strong> keyword and then provide a <strong>condition</strong>. We will look into various conditions in a moment, for now let&#39;s use simple 5 &gt; 0 condition, which always results in <strong>True</strong>.</p>
+<p>Once you create an <strong>if-statement</strong> with a condition, then you have to end it with a colon :. After that you create a code block that will be executed if condition is True.</p>
+<p>Here is a simple example</p>
+<pre><code class="language-py">if 5&gt;0:
+    print(&#39;Condition was True.&quot;)</code></pre>
+<p>Hold on, what is a <strong>code block</strong> and why are there 4 spaces/ 1 tab for the next line?</p>
+<p>&gt;### Code Block - is a piece of code that is grouped under certain statements (including if statements). Many programing languages use curly braces {} to define the Start and the End of the code block, however python uses indentation. &gt;### Identation - refers to the spaces or tabs at the beginning of a line of code. So in python all lines should be aligned to create a code block. Usually it&#39;s done with a single Tab or 4 spaces.</p>
+<p>So, you create an if statement with a condition, and then your code block under it will only be executed if your condition come to True.</p>
+<pre><code class="language-py">if True:
+    print(&#39;Condition was True.&quot;)</code></pre>
+<p>💡If condition results False, then you code block will never be executed. Python will skip it.</p>
+<p>Also, keep in mind that when you create logical condition in python like 5&gt;0, it results in either True/False. So if you would try to print it, you would just see a boolean.</p>
+<p>That&#39;s important to know because you can also store that in a variable.</p>
+<pre><code class="language-py">condition = 5&gt;0
+
+if condition:
+    print(condition) #True</code></pre>
+<p>You can read the code above as following:</p>
+<p>condition is five is more than zero. If condition is True, then print condition itself.</p>
+<h1 id="more-logical-statements">More Logical Statements</h1>
+<p>Logical statements in python always start with if keyword. However, you can also have additional statements to create more logical checks.</p>
+<p>&gt;<strong>if</strong> - Create first logical test &gt;<strong>elif</strong> - Create More additional logical tests (optionally) &gt;<strong>else</strong> - Define code to execute if no previous logical test were True.</p>
+<p>In general, you always start with if statement and a condtion. Then, you can create more conditions with elif for each. (elif is short for else if). And lastly, you have an option to define code if there wasn&#39;t a single True condition.</p>
+<p>💡Keep in mind that if you&#39;ve created if/elif/else statements, only one will be executed, depending on the conditions. Once something came true then the rest will be ignored.</p>
+<h1 id="examples">Examples:</h1>
+<p>Only one code block can be executed if you use if/elif/else combination. Even if multiple can come to True, once the first one evaluates to True, its code block will be executed and all the rest will be ignored.</p>
+<p>If you try the code, you will only see &#39;A&#39; printed in the console.</p>
+<pre><code class="language-py"># Example A
+condition  = True
+condition2 = True
+
+if condition:
+    # Do action 🅰️
+    print(&#39;A&#39;)
+elif condition2:
+    # Do action 🅱️
+    print(&#39;B&#39;)
+else:
+    # Do something else
+    print(&#39;C&#39;)</code></pre>
+<pre><code class="language-py"># Example B
+condition  = True
+condition2 = True
+
+if condition:
+    # Do action 🅰️
+    print(&#39;A&#39;)
+
+if condition2:
+    # Do action 🅱️
+    print(&#39;B&#39;)</code></pre>
+<p>In the second example, both code blocks can be executed. Because each if statement is unrelated to another one. So no matter the results, both of these statements will be checked and code block executed if True.</p>
+<p>If you try the code, you will see both &#39;A&#39; and &#39;B&#39;.</p>
+<p>&gt;### 💡 Don&#39;t overthink it. It&#39;s a simple concept once you use it a few times.</p>
+<h1 id="example-1-if-elif-else-statements">Example 1 : if/elif/else Statements</h1>
+<p>Enough of the theory, let&#39;s experiment with logical statements. I recommend you to check the video about this example as I will write it out step by step.</p>
+<p>In the written summary, I will provide you the whole snippet and then explain what&#39;s going on and why. Here is the snippet:</p>
+<pre><code class="language-py">temp = 30
+
+if temp &gt; 25:
+    print(&quot;It&#39;s really hot outside 🔥😎&quot;)
+
+elif temp &gt; 15:
+    print(&quot;It&#39;s warm outside🌞&quot;)
+
+elif temp &gt; 0:
+    print(&quot;It&#39;s chill outside🥶&quot;)
+
+else:
+    print(&quot;It&#39;s freezing cold☃️.&quot;)</code></pre>
+<p><img src="image-1.png" alt="alt text" /></p>
+<p>So, in this code you can see that we&#39;ve defined our temperature as 30. And then we created multiple if/elif statements with different code blocks. However, only 1 code block will be executed, depending on the temp value.</p>
+<p>The reason to use many elif statements instead of multiple if statements, is because you only want 1 result. If the temperature is 30, then you would only want the first code block to be executed. It can be evaluated to True in all 3 conditions. Once something is True, the rest will be ignored.</p>
+<p><img src="image-2.png" alt="alt text" /></p>
+<p>You could use multiple if statements, but your results would be very confusing. You would get Hot, Warm and Chill results on a single temperature. That&#39;s not what you expected, isn&#39;t it?</p>
+<p>I recommend you to copy this snippet and change temperature and try experiments with if/elif to see the difference.</p>
+<h1 id="comparison-operators-in-python">Comparison Operators in python</h1>
+<p>Alright, let&#39;s go through various logical operators in python, starting with simple comparisons.</p>
+<pre><code class="language-py"># COMPARISON OPERATORS
+equal           = 5 == 5 # True
+not_equal       = 3 != 3 # False
+greater_than    = 7 &gt; 5  # True
+less_than       = 7 &lt; 5  # False
+greater_than_eq = 5 &gt;= 5 # True
+less_than_eq    = 5 &gt;= 6 # False</code></pre>
+<p>&gt;### 💡 Notice that single equal sign = is used to assign data to a variable, while double equal sign == means equal comparison.</p>
+<h1 id="logical-operators-and-or-not">Logical Operators (And/Or/Not)</h1>
+<p>Also, keep in mind that you can combine multiple conditions together wit And/Or logic. And it&#39;s pretty simple.</p>
+<p>Here is the basic syntax:</p>
+<pre><code class="language-py"># LOGICAL OPERATORS
+logical_and = True and True # True
+logical_or  = True or False # True
+logical_not = not True      # False</code></pre>
+<p>When you use: &gt;<strong>and</strong> - All conditions must be True &gt;<strong>or</strong> - At least one condition must be True &gt;<strong>not</strong> - Make opposite result (not True = False…)</p>
+<h1 id="example2-combine-conditions">Example2: Combine Conditions</h1>
+<p>Let&#39;s create a simple example where we have 2 coordinates (XY), and we want ot make sure that both of them are between 0 and 100.</p>
+<p>Here is how we could combine everything into a single line:</p>
+<pre><code class="language-py">X = 20
+Y = 40
+
+if X &gt; 0 and X &lt; 100 and Y &gt;0 and Y &lt; 100:
+    print(&#39;XY Coordinate is good.&#39;)</code></pre>
+<p>We could also create many nested statements that would look something like this:</p>
+<pre><code class="language-py">if X &gt; 0:
+    if X &lt; 100:
+        if Y &gt; 0:
+            if Y &lt; 100:
+                print(&#39;XY Coordinate is good.&#39;)</code></pre>
+<p>I think we can both agree that the first option is way better, takes less space and easier to read. The second statement is an overkill.</p>
+<p>However, if you would need to create more steps in between, the second step could be the only option to achieve it.</p>
+<h1 id="logical-or-example">Logical or Example:</h1>
+<p>If you want to see another example using or, imagine that we&#39;ve selected a list of categories and now we need to make sure that at least one of the required categories is selected.</p>
+<p>Here is how it could be done:</p>
+<pre><code class="language-py">selection = [&#39;wall&#39;, &#39;floor&#39;, &#39;roof&#39;]
+
+if (&#39;wall&#39; in selection
+    or &#39;window&#39; in selection
+    or &#39;generic&#39; in selection):
+    print(&#39;We selected at least one valid element.&#39;)</code></pre>
+<p>Notice that not only I used multiple or conditions, I&#39;ve also split them into multiple lines by using parenthesis.</p>
+<p>That&#39;s a trick in python if you want to make your code more readable and split each condition on new line. It doesn&#39;t have any difference, except for readability.</p>
+<h1 id="membership-operators">Membership Operators</h1>
+<p>Lastly, you also need to know about membership operators. This allows you to check if something is a collection of items (including strings).</p>
+<p>That&#39;s a very used operators as you will often need to test if something is already inside your list or not to proceed with your code.</p>
+<p>Here is an example:</p>
+<pre><code class="language-py"># MEMBERSHIP OPERATORS
+member_in     = &#39;wood&#39;     in [&#39;metal&#39;, &#39;concrete&#39;, &#39;wood&#39;]     # True
+member_in     = &#39;w&#39;        in &#39;wood&#39;                            # True
+member_not_in = &#39;wood&#39; not in [&#39;metal&#39;, &#39;concrete&#39;, &#39;bricks&#39;]   # True</code></pre>
+<h1 id="example-3-nested-statements">Example 3: Nested Statements</h1>
+<p>Alright, let&#39;s create another example with logical statements.</p>
+<p>Imagine that you are a Facade panel manufacturer. And you need to make sure that all panels you create do not exceed the limits:</p>
+<p>&gt;max<em>width = 1500 mm &gt;max</em>height = 3000 mm</p>
+<p>Then, someone sends an order for a <strong>2000x2500mm panel</strong>. Now you need to use python to check if you can produce it or not.</p>
+<p>Here is how you could do that:</p>
+<pre><code class="language-py"># Max Sizes
+max_width = 1500
+max_height = 3000
+
+# Ordered Sizes
+panel_W = 2000
+panel_H = 2500
+
+# Status
+is_panel_allowed = True # Default Value
+
+# Check Width
+if panel_W &lt;= 1500:
+    print(&#39;Width: GOOD.&#39;)
+else:
+    print(&#39;Width: NOT GOOD.&#39;)
+    is_panel_allowed = False
+
+# Check Height
+if panel_H &lt;= 3000:
+    print(&#39;Height: GOOD.&#39;)
+
+else:
+    print(&#39;Height: NOT GOOD.&#39;)
+    is_panel_allowed = False
+
+print(&#39;Is Panel Allowed: {}&#39;.format(is_panel_allowed))</code></pre>
+<p>This is the result you would get from the last example:</p>
+<p><img src="image-4.png" alt="alt text" /></p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./!Lesson_ConditionalStatements.md">!Lesson_ConditionalStatements.md</a></li><li><a href="./ConditionalStatements.py">ConditionalStatements.py</a></li><li><a href="./image-1.png">image-1.png</a></li><li><a href="./image-2.png">image-2.png</a></li><li><a href="./image-3.png">image-3.png</a></li><li><a href="./image-4.png">image-4.png</a></li><li><a href="./image.png">image.png</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-06-operators-and-expressions-in-python/"><span>Previous</span><strong>Lesson 06 · Operators and Expressions in Python</strong></a>
+              <span class="lesson-nav-card is-empty"><span>Next</span><strong>End of current course</strong></span>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#time-to-add-logic">Time To Add Logic!</a><a class="toc-link toc-level-1" href="#basic-syntax-of-conditional-statements">Basic Syntax of Conditional Statements</a><a class="toc-link toc-level-1" href="#more-logical-statements">More Logical Statements</a><a class="toc-link toc-level-1" href="#examples">Examples:</a><a class="toc-link toc-level-1" href="#example-1-if-elif-else-statements">Example 1 : if/elif/else Statements</a><a class="toc-link toc-level-1" href="#comparison-operators-in-python">Comparison Operators in python</a><a class="toc-link toc-level-1" href="#logical-operators-and-or-not">Logical Operators (And/Or/Not)</a><a class="toc-link toc-level-1" href="#example2-combine-conditions">Example2: Combine Conditions</a><a class="toc-link toc-level-1" href="#logical-or-example">Logical or Example:</a><a class="toc-link toc-level-1" href="#membership-operators">Membership Operators</a><a class="toc-link toc-level-1" href="#example-3-nested-statements">Example 3: Nested Statements</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

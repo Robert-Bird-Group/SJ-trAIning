@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 04 | Collection Data-Types:</title>
+    <meta name="description" content="In case you wonder: Mutable - You can make changes. Immutable - You can NOT make changes (it&#39;s fixed data)." />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-badge">Lesson</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <div class="hero card lesson-hero">
+        <div class="hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <p class="eyebrow">Lesson 04</p>
+          <h1>Collection Data-Types:</h1>
+          <p class="hero-summary">In case you wonder: Mutable - You can make changes. Immutable - You can NOT make changes (it&#39;s fixed data).</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">!Lesson_CollectionDataTypes.md</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 04</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 04</p>
+                <p><strong>Primary source:</strong> !Lesson_CollectionDataTypes.md</p>
+                <p><strong>Assets:</strong> 11</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="collection-data-types">Collection Data-Types:</h1>
+<p>So far you know how to create variables and store simple data ( <strong>var = &#39;Text&#39;</strong> ). But  you&#39;ll also want to store more than a single value, that&#39;s where Collection data types come in such as:</p>
+<pre><code class="language-py">#📦 Collection Data-Types in Python (List | Tuple | Set | Dictionary)
+#--------------------------------------------------------
+# 🔹List  |         | Mutable   | Ordered   | Collection | ⭐ 90%+
+# 🔹Tuple |         | Immutable | Ordered   | Collection |
+# 🔹Set   | Unique  | Mutable   | Unordered | Collection |
+# 🔹Dict  | Mapped  | Mutable   | Ordered*  | Collection |
+#--------------------------------------------------------</code></pre>
+<p>In case you wonder: &gt;<strong>Mutable</strong>     - You can make changes. &gt;<strong>Immutable</strong> - You can NOT make changes (it&#39;s fixed data).</p>
+<p>We&#39;re going to cover all of them, but keep in mind that you&#39;ll use Lists in 90-99% of the time, so we&#39;ll focus the most on them so you know how to get the most out of them.</p>
+<h1 id="1-list-mutable-ordered-collection-most-used">1️⃣ List (Mutable Ordered Collection)  - ⭐MOST USED</h1>
+<p>Let&#39;s start with the basic syntax of Lists.</p>
+<p>To create a list we need to use square brackets <strong>[]</strong>, and separate all items inside with commas <strong>[1,2,3]</strong>. Also, we can put any data-types inside (text, int, float, bool, none-type, other lists, tuples... Anything!)</p>
+<p>Here&#39;s example:</p>
+<pre><code class="language-py">#📜 Basic Syntax
+#-------------------------
+empty_list = [] # or list()
+my_list    = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+
+print(my_list)</code></pre>
+<h1 id="list-get-single-item">🔹List - Get Single Item</h1>
+<p>Firstly, let&#39;s look how to get items out of the list.</p>
+<p>Lists are ordered collections, so each item has a fixed index position that can be used to get the data out of the list. Use a variable name of a list and put square brackets with the index number  (e.g. <strong>my_list[1]</strong>)</p>
+<p>Here&#39;s Example:</p>
+<pre><code class="language-py">#👉 Get Single List Item
+#-------------------------
+print(my_list)
+print(my_list[0])  # First Item (count starts from 0)
+print(my_list[2])  # Third Item (count starts from 0)
+print(my_list[-1]) # Last Item
+print(my_list[-2]) # Second Last Item
+print(my_list[100]) #IndexError: list index out of range</code></pre>
+<h3 id="also-a-few-important-notes">💡Also a few important notes:</h3>
+<p>&gt;🔹In programming we start count from 0, not 1! &gt;🔹We can get items from the end with negative index starting -1 &gt;🔹You&#39;ll get IndexError if index is out of range</p>
+<p><img src="image.png" alt="alt text" /></p>
+<p>⌨️ Use CTRL + / to comment out large section of the code, and let&#39;s move on.</p>
+<h1 id="list-slicing-get-multiple-items">🔹List - Slicing (Get Multiple Items)</h1>
+<p>You can also use <strong>Slicing</strong> if you want to get multiple items from a list. It allows you to get a chunk of data by specifying <strong>Start, End or Step</strong> positions. (e.g. <strong>my_list[start:stop:step]</strong>). And you don&#39;t have to specify all of them at once.</p>
+<p>Here are examples:</p>
+<pre><code class="language-py">#✂️ Get Multiple Items (Slice)
+#-------------------------
+my_list    = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;, &#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+print(my_list[:2])      # Get Until 2nd Item (excl)
+print(my_list[2:])      # Get From 2nd Item (incl)
+print(my_list[1:3])     # Get From First(incl) until Third (excl)
+print(my_list[::2])     # Get Every 2nd item
+print(my_list[2:6:2])   # Get Every 2nd Item from 2nd (incl) until 6th (excl)
+print(my_list[::-1])    # Trick to Reverse List
+print(my_list[:])       # Same List Copy</code></pre>
+<h3 id="keep-in-mind-start-is-including-and-end-is-excluding">💡Keep in mind <strong>START is including and END is excluding</strong>.</h3>
+<p><img src="image-1.png" alt="alt text" /></p>
+<h1 id="list-slicing-example">🔹List - Slicing Example</h1>
+<p>In case you wonder: <em>&quot;why would I want to slice my lists?</em>&quot;</p>
+<p>Imagine you have a list of data representing a column in Excel. The first item is the header so it might be necessary to separate it from the data to apply different styling.</p>
+<p><img src="image-2.png" alt="alt text" /></p>
+<p>In this case we could use Slicing like this to separate header and data:</p>
+<pre><code class="language-py"># Slicing Use-Case Example
+#-------------------------
+my_list = [&#39;Categories&#39;, &#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+header  = my_list[0]
+data    = my_list[1:]
+print(header)
+print(data)</code></pre>
+<h1 id="list-replace-list-items">🔹List - Replace List Items</h1>
+<p>Lists a mutable objects, meaning we can make changes.</p>
+<p>And to override any value, we can specify it&#39;s index (position) and assign any new data with an equal sign =.</p>
+<p>Example:</p>
+<pre><code class="language-py">#👉 Replace Items
+#-------------------------
+my_list    = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+my_list[2] = &#39;NewItem&#39;
+my_list[-1] = &#39;LastItem&#39;
+my_list[1:3] = [&#39;a&#39;,&#39;b&#39;]
+print(my_list)</code></pre>
+<h1 id="list-membership-operators">🔹List - Membership Operators</h1>
+<p>We can also check if something is inside our lists. This is a very common and important step when you start creating logic in your python code (<em>more on that in another lesson</em>).</p>
+<p>To check if something is inside, we can use in or not in operators and this will produce a boolean result like True/False.</p>
+<pre><code class="language-py">#🔎 Membership Operators (Necessary for Logic)
+#-------------------------
+my_list = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+
+print(&#39;Wall&#39; in my_list)
+print(&#39;wall&#39; in my_list)
+print(&#39;Door&#39; not in my_list)</code></pre>
+<h3 id="important-lower-and-upper-case-letters-are-not-the-same-in-python-so-wall-is-not-the-same-as-wall">💡 IMPORTANT: lower and UPPER case letters are not the same in Python, so wall is not the same as Wall.</h3>
+<p>On top of that, we can also check if content is equal == or not equal != :</p>
+<pre><code class="language-py">#🔎 Equal Operators (Necessary for Logic)
+#-------------------------
+my_list  = [10, 20, 30]
+my_list2 = [10, 20, 30, 40]
+
+print(my_list == my_list2) # False </code></pre>
+<h1 id="list-popular-functions">🔹List - Popular Functions</h1>
+<p>&gt;<strong>Function in Python is a reusable piece of code that performs a certain action.</strong></p>
+<p>We&#39;ll cover all Python functions and how to create custom ones in other lessons, for now let&#39;s keep it simple and look at the most popular built-in functions for working with lists:</p>
+<pre><code class="language-py">#⚙️ Popular Functions with Lists
+#-------------------------
+my_list = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+numbers = [10, 30, 20, 50, 40 ]
+print(len(my_list))     # Get Length             &gt;(5)
+print(sorted(my_list))  # Create new sorted list &gt;[10,20,30,40,50]
+print(sum(numbers))     # Sum Numbers            &gt;(150)
+print(min(numbers))     # Get Min Value          &gt;(10)
+print(max(numbers))     # Get Max Value          &gt;(50)</code></pre>
+<h1 id="list-methods-built-in-functionality">🔹List - Methods (Built-In Functionality)</h1>
+<p>Now, let&#39;s look deeper into Lists and check additional functionality that we get with methods.</p>
+<p>&gt;<strong>A Method In Python - is a function associated with an object that create action or modifies the object itself.</strong></p>
+<p>While functions are standalone, methods are tied to data-types, and we can use them by adding a dot after variable name and choosing the right method.</p>
+<p><img src="image-3.png" alt="alt text" /></p>
+<p>💡There are <strong>11 Methods</strong> in Lists to choose from. Some require argumernts while others don&#39;t need any additional input.</p>
+<p>❌ Also, <strong>Ignore Dunder (double-underscore) methods</strong>, because they&#39;re made for python&#39;s internal functionality.</p>
+<p>Here is a quick code example of all List Methods:</p>
+<pre><code class="language-py"># Lists
+#-------------------------
+my_list = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;, &#39;Floor&#39;]
+my_list2 = [&#39;Door&#39;, &#39;Window&#39;]
+
+#🚨️ List Methods (Built-In Functionality)
+#-------------------------
+my_list.append(&#39;Door&#39;)        # Add Single Item
+my_list.extend(my_list2)      # Join 2 Lists
+my_list += my_list2           # Join 2 Lists
+my_list.sort()                # Sort List Alphanumerically
+print(my_list.count(&#39;Door&#39;))  # Count value inside list
+print(my_list.index(&#39;Roof&#39;))  # Find index of value
+my_list.insert(2,&#39;Sofa&#39;)      # Insert Item at certain Index
+my_list.remove(&#39;Floor&#39;)       # Remove Value from List (if possible)
+item = my_list.pop(2)         # Remove and Return Value at given Index (last by default)
+my_list.reverse()             # Reverse List Order
+my_list.clear()               # Clear all items from list
+y = my_list.copy()            # Create independant copy of a list!</code></pre>
+<p>💡That might look like a lot to take in, but don&#39;t worry. You just need to know that methods exist and remember what kind of actions they make. Then you can always look it up when you need it.</p>
+<h1 id="list-nested-structure">🔹List - Nested Structure</h1>
+<p>I also want to show you an example of a Nested List Structure.</p>
+<p>Nested List - is a list that contains other lists as its elements. It is often used to represent 2D data, such as tables,  grids and so on...</p>
+<p>It functions the same, but you just have multiple layers to go into. Think of it as Russian Matroshka Doll 🪆.</p>
+<p>Here&#39;s an example of a list that contains nested lists representing XYZ Points.</p>
+<pre><code class="language-py">#📂 Nested Lists
+#-------------------------
+points = [
+    [0,0,0],
+    [2,2,0],
+    [4,4,0],
+    [6,6,0],
+]
+
+#🔎 Read Data
+#-------------------------
+pt2 = points[1]
+print(points[1][2])
+print(pt2[0], pt2[1], pt2[2])</code></pre>
+<p>Don&#39;t overthink it. Nested lists are just a way to better organize your data. You&#39;ll know exactly when you need to use them.</p>
+<h1 id="list-for-loops">🔹List - For Loops</h1>
+<p>Lastly, I have to mention loops.</p>
+<h3 id="loops-are-one-of-the-most-important-python-concepts-that-allow-you-to-execute-the-same-piece-of-code-on-each-item-in-a-collection">💡Loops are one of the most important Python concepts that allow you to execute the same piece of code on each item in a collection.</h3>
+<p>Don&#39;t worry, we&#39;ll have a full lesson about loops a bit later so you better understand how to work with them, but I want to briefly mention a quick example now that you could try with lists.</p>
+<pre><code class="language-py">#➿ Loops (More in Another Lesson!)
+my_list = [&#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;, &#39;Ceiling&#39;]
+
+for i in my_list:
+    print(i)
+    print(i)
+    print(i)</code></pre>
+<p>In a nutshell: We use for i in collection:  syntax to create a loop and then everything we put under it (code-block) will be executed for each item.</p>
+<p>In this case, we&#39;ll <strong>#print each item</strong> x3 times.</p>
+<h2 id="list-remarks">🔹List - Remarks</h2>
+<p>And that&#39;s the main functionality of Lists in Python.</p>
+<p>There were quite many topics, but don&#39;t worry, each one of them is very simple on its own. And you&#39;ll get more comfortable along the course as you start practicing more.</p>
+<p>&gt;For now your goal is to remember what&#39;s possible and you can always come back and reference the code of how to do it.</p>
+<h1 id="2-tuples-immutable-ordered-collection">2️⃣ Tuples (Immutable Ordered Collection)</h1>
+<p>Now let&#39;s talk about Tuples which are created with parenthesis ().</p>
+<p>&gt;<strong>Tuples are basically same as lists, but immutable</strong>. So it means that you <strong>can&#39;t make any changes</strong> to tuples after you made them. So, why do we need them?</p>
+<p>Since tuples are <strong>immutable</strong>, they have <strong>less functionality</strong> and therefore they are <strong>more memory efficient</strong> and can <strong>execute faster</strong>. However, this only makes sense on crazy big data sets like millions or billions of rows of data. (Think of some financial transactions data or large data sets of coordinates). Then tuples can provide a noticeable performance boost. Otherwise lists are just fine.</p>
+<p>Also, just because you can&#39;t change tuples, doesn&#39;t mean you can&#39;t create a new tuple with updated data... Just something to keep in mind.</p>
+<p>Let&#39;s look at an example:</p>
+<pre><code class="language-py"># ╔╦╗╦ ╦╔═╗╦  ╔═╗╔═╗
+#  ║ ║ ║╠═╝║  ║╣ ╚═╗
+#  ╩ ╚═╝╩  ╩═╝╚═╝╚═╝ TUPLES (Immutable Ordered Collection)
+#--------------------------------------------------
+empty_tuple = () # or tuple()
+list_data = [0,1,2,3,4,5,0,1,2,3,4,5]       # List Can Be Modified     (Mutable)
+data      = (0,1,2,3,4,5,0,1,2,3,4,5)       # Tuples Can&#39;t be Modified (Immutable)
+data_pts  = ((0,0,0), (1,2,3), (2,4,6))     # Nested Tuples Example</code></pre>
+<p>You&#39;ll see the same data wrapped as a list and tuple and the only difference is that you can modify list with methods to add/remove/modify data inside.</p>
+<p>Other than that functionality is very similar.</p>
+<h1 id="tuple-get-single-item">🔹Tuple - Get Single Item</h1>
+<p>Getting items from a tuple is exactly the same as from a list.</p>
+<pre><code class="language-py">#👉 Get Single List Item
+#-------------------------
+print(data[0])
+print(data[2])
+print(data[4])
+print(data_pts[1])</code></pre>
+<h1 id="tuple-slicing-get-multiple-items">🔹Tuple - Slicing (Get Multiple Items)</h1>
+<p><strong>Slicing</strong> works also exactly the same as lists, you create square brackets <strong>[ ]</strong> and specify <strong>[Start:End:Step]</strong> values.</p>
+<pre><code class="language-py">#✂️ Get Multiple Items (Slice)
+#-------------------------
+print(data[:2]) # Get Until 2nd Item (excl)
+print(data[2:]) # Get From 2nd Item (incl)
+print(data[1:3]) # Get From First(incl) until Third (excl)</code></pre>
+<h1 id="tuple-replace-items-not-possible">🔹Tuple - Replace Items (Not Possible)</h1>
+<p>Remember, tuples are immutable so you can&#39;t make any changes and therefore you can&#39;t replace data.</p>
+<p>However, you can create a new tuple and assign to the same variable...</p>
+<pre><code class="language-py">#❌ You Can&#39;t Change Tuple Item!
+data[0] = &#39;New Value&#39;
+print(data)</code></pre>
+<h1 id="tuple-popular-functions">🔹Tuple - Popular Functions</h1>
+<p>When it comes to functions they also work exactly the same as with lists because they work with all iterable objects.</p>
+<p>&gt;### Iterable object is an object that can be iterated over. Like a sequence/collection of data.</p>
+<p>Here&#39;s an Example:</p>
+<pre><code class="language-py">#⚙️ Popular Functions with Tuples
+#-------------------------
+data      = (0,1,2,3,4,5,0,1,2,3,4,5)       # Tuples Can&#39;t be Modified (Immutable)
+print(len(data))            # Get Length
+print(min(data))            # Min Value
+print(max(data))            # Max value
+print(sum(data))            # Sum Numbers
+print(sorted(data))         # Create new sorted list
+print(tuple(sorted(data)))  # Convert List Into Tuple</code></pre>
+<h1 id="tuple-methods-built-in-functionality">🔹Tuple - Methods (Built-In Functionality)</h1>
+<p>If you&#39;d look into Tuple&#39;s methods, you&#39;ll realize that there are only 2 very simple methods available: count, index.  Tuples have limited functionality so they can store data more efficiently.</p>
+<pre><code class="language-py">#🚨️ Tuple Methods (Built-In Functionality)
+#-------------------------
+data      = (0,1,2,3,4,5,0,1,2,3,4,5)
+print(data.count(3))
+print(data.index(3))</code></pre>
+<h1 id="tuple-loops-amp-nested-structure">🔹Tuple - Loops &amp; Nested Structure</h1>
+<p>Also other concepts like Nested Tuples or Loops work exactly the same as with lists. But let&#39;s keep it simple and focus on the basics instead.</p>
+<p>And that&#39;s the wrap on tuples.</p>
+<h1 id="3-set-unordered-unique-collection">3️⃣ Set - (Unordered Unique Collection)</h1>
+<p>Now let&#39;s look at the next data-type - <strong>Set</strong>.</p>
+<p>&gt;### 💡Set is an Unordered Unique Collection and it&#39;s great for getting rid of duplicates or when you need to compare 2 sets of data and quickly find the difference.</p>
+<p>To create a set you can use curcly braces <strong>{1,2,1}</strong> and write your data separated by commas. All duplicates will be removed. If you want to create an empty set you have to use <strong>set()</strong> function because empty braces will create a <strong>dict</strong> instead of <strong>set</strong> (more on that later)..</p>
+<p>Try this snippet:</p>
+<pre><code class="language-py"># SETS (Unordered Unique Collection)
+#--------------------------------------------------
+empty_set = set()
+set_items = {10, 20, 30, 10, 20, &#39;AB&#39;,&#39;BA&#39;, &#39;AB&#39;, True, True, False}
+
+print(set_items)</code></pre>
+<p>If you try to execute this code you&#39;ll notice that all duplicates were removed automatically. This is the main power of using <strong>sets</strong>, but not the only one.</p>
+<p><img src="image-4.png" alt="alt text" /></p>
+<h1 id="set-remove-duplicates-example">🔹Set - Remove Duplicates Example</h1>
+<p>Let&#39;s look at a useful example for working with sets and lists.</p>
+<p>Imagine you have a list of data, and you know that you might get some repeating data. To clean duplicates you can turn your list into a set and then back into a list.</p>
+<p>list -&gt; set -&gt; list</p>
+<p>This way you&#39;re going to get rid of all duplicates and turn it back into a list.</p>
+<p>Try This:</p>
+<pre><code class="language-py">#🔎 Convert  List/Tuple
+#-------------------------
+list_data        = [1,2,3,4, 1,2,3,4]     # original list
+set_data         = set(list_data)         # list -&gt; set (remove duplicates)
+unique_list_data = list(set_data)         # set -&gt; list (make it list again)
+
+# Print Results:
+print(list_data)          #&gt; [1,2,3,4,1,2,3,4] 
+print(set_data)           #&gt; {1,2,3,4}
+print(unique_list_data)   #&gt; [1,2,3,4]</code></pre>
+<p>As you can see it&#39;s very simple to get rid of duplicates. However remember that sets are not ordered collections so you might ruin the order of your list doing this.</p>
+<h1 id="set-common-methods-built-in-functionality">🔹Set - Common Methods (Built-In Functionality)</h1>
+<p>Now, lets look deeper into sets and explore their methods (built-in functionality).</p>
+<p><img src="image-5.png" alt="alt text" /></p>
+<p>You&#39;ll notice there quite many methods and they can be split into 2 categories:</p>
+<p>&gt;🔹Regular Methods &gt;🔹Comparison Methods</p>
+<p>Let&#39;s start with regular methods that modify the existing set. It&#39;s very self-explanatory,.</p>
+<p>Example:</p>
+<pre><code class="language-py">#🚨️ Set Methods (Built-In Functionality)
+#-------------------------
+items = {10, 20, 30, &#39;AB&#39;, &#39;BA&#39;, &#39;AB&#39;, True, True, True}
+
+copy_set = items.copy()     # Copy the set
+removed  = items.pop()      # Remove &amp; return a random element
+items.clear()                # Remove all elements
+items.remove(3)              # Remove element (error if missing)
+items.discard(3)             # Remove element (no error if missing)
+items.add(10)                # Add a single element</code></pre>
+<h1 id="set-comparison-methods-built-in-functionality">🔹Set - Comparison Methods (Built-In Functionality)</h1>
+<p>Now let&#39;s look at <strong>comparison methods</strong> and it&#39;s the second big super power of sets.</p>
+<p>You can take 2 Sets of data and compare to find <strong>Intersection / Difference</strong>...</p>
+<p><img src="image-6.png" alt="alt text" /></p>
+<p>And here is a code snippet so you could try it out yourself.</p>
+<pre><code class="language-py">#🆎 Set Methods: Compare Sets
+#-------------------------
+a = {1,2,3,4}
+b = {3,4,5,6}
+
+print(a.union(b))                # Join 2 Sets
+print(a.intersection(b))         # Find Items in BOTH sets
+print(a.difference(b))           # Set A items that are missing in set B
+print(a.symmetric_difference(b)) # Symmetric difference between 2 sets
+print(a.issubset(b))             # Is set a completely inside set b?
+print(a.issuperset(b))           # Does set_a contain all from set_B?</code></pre>
+<p>Also notice the last 2 methods issubset, issuperset. These are a bit confusing but you just check if data in one set is completely inside another. And then you determine if it&#39;s a sub or super set.</p>
+<p><img src="image-7.png" alt="alt text" /></p>
+<h1 id="set-popular-functions">🔹Set - Popular Functions</h1>
+<p>Similar to <strong>Lists</strong> and <strong>Tuples</strong> you can use the same popular functions.</p>
+<pre><code class="language-py">#⚙️ Popular Functions with Lists
+#-------------------------
+set_nums = {10, 30, 20, 50, 40 , 10, 20}
+
+print(len(set_nums ))     # Get Length             &gt; 5
+print(sorted(set_nums ))  # Create new sorted list &gt; [10,20,30,40,50]
+print(sum(set_nums ))     # Sum Numbers            &gt; 150
+print(min(set_nums ))     # Get Min Value          &gt; 10
+print(max(set_nums ))     # Get Max Value          &gt; 50</code></pre>
+<p>&gt;💡 Just keep in mind that set will clean up all duplicates before you run any functions.</p>
+<h1 id="set-loops">🔹Set - Loops</h1>
+<p>You can also create loops with sets and it works similar to lists and tuples. But let&#39;s ignore it for now, there will be a separate lesson for loops.</p>
+<p>And that&#39;s a wrap on sets!</p>
+<h1 id="4-dictionary-mapped-ordered-mutable-collection">4️⃣ Dictionary  (Mapped Ordered* Mutable Collection)</h1>
+<p>And the final collection data type is <strong>Dictionary</strong>.</p>
+<p>&gt;### Dictionary is a mapped ordered mutable collection. It means that it stores data as key-value pairs like a real dictionary where each word (key) has a meaning (value) and they are separated with a colon :</p>
+<p>For example: Imagine that you&#39;ve just heard a new word &#39;Defenestration&#39; . Out of curiosity you decide to open up a dictionary (if you old enough to remember those) and look up the word definition. And there you&#39;ll find:</p>
+<pre><code class="language-py">{&#39;Defenestration&#39; : &#39;It is an act of throwing someone out of a window.&#39;}</code></pre>
+<p>Python dictionaries are the same. You create a collection where you store <strong>values</strong> associated with specific <strong>keys</strong>. And it can be really useful to structure your data (think of JSON format).</p>
+<p>Here&#39;s dictionary syntax basics:</p>
+<pre><code class="language-py"># Syntax
+empty_dict   = {}                    # or dict()
+dict_example = {&#39;key1&#39; : &#39;value1&#39;,
+                &#39;key2&#39; : &#39;value2&#39;}</code></pre>
+<p>💡 Notice that <strong>dictionary</strong> also uses curly braces {} like <strong>sets</strong>. This is because dictionary also can not contain duplicate keys. However, you need to store data in <strong>dict</strong> as pairs of <strong>key-value</strong> separated with a colon :</p>
+<p>🤔 I know beginners often feel confused about dictionaries, so let&#39;s have a quick comparison with lists that usually helps a lot.</p>
+<h1 id="dict-vs-list-comparison">🔹Dict vs List Comparison</h1>
+<p>Let&#39;s quickly compare structure of a <strong>List</strong> and a <strong>Dictionary</strong>.</p>
+<p>In lists you store single data values separated with a comma. However, remember that each item has a <strong>positional index</strong> starting count from 0 .</p>
+<p>Dictionaries do not have <strong>positional index</strong>, because they use <strong>custom keys</strong> instead.</p>
+<p><img src="image-8.png" alt="alt text" /></p>
+<p>Theoretically, you could use integers as <strong>keys</strong> in a <strong>dictionary</strong> and it would mimic the structure of a <strong>list</strong>, but it would have different functionality associated with them.</p>
+<pre><code class="language-py">d1 = {&#39;key1&#39;:&#39;value1&#39;, &#39;key2&#39;:&#39;value2&#39;, &#39;key3&#39;:&#39;value3&#39;}
+d2 = {0:&#39;value1&#39;, 1:&#39;value2&#39;, 2:&#39;value3&#39;}</code></pre>
+<p>Let&#39;s look into dictionary&#39;s functionality.</p>
+<h1 id="dict-get-items">🔹Dict - Get Items</h1>
+<p>Getting items from a dict is actually similar to tuples and lists, but instead of positional index we need to use the key of your items.</p>
+<p>Let&#39;s define a better dictionary example. And notice that I put each pair on a new line, this helps keep your code more readable. Spacing is irrelevant as long as all pairs are between start/end curcly braces {}.</p>
+<pre><code class="language-py">#✨Better Example
+data_types = {
+    &quot;int&quot;     : &quot;A whole number, like 1, 2, or 3.&quot;,
+    &quot;float&quot;   : &quot;A number that can have a decimal point, like 2.5 or 0.1.&quot;,
+    &quot;str&quot;     : &quot;Words or letters, like &#39;hello&#39; or &#39;apple&#39;.&quot;,
+    &quot;bool&quot;    : &quot;True/False. Similar to Yes/No parameter in Revit.&quot;,
+    &quot;list&quot;    : &quot;A group of things you can change, like [1, 2, &#39;apple&#39;].&quot;,
+    &quot;tuple&quot;   : &quot;A collection of things you can’t change, like (1, 2, &#39;apple&#39;).&quot;,
+    &quot;dict&quot;    : &quot;Pairs of things, like {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 10}.&quot;,
+    &quot;set&quot;     : &quot;A group of unique things, like {1, 2, 3}. Duplicates ignored.&quot;,
+    &quot;NoneType&quot;: &quot;Means nothing or empty, like an empty box.&quot;
+}</code></pre>
+<p>And here&#39;s how to read values (multiple options):</p>
+<pre><code class="language-py">#🔎 Access Values
+#-------------------------
+print(data_types[&#39;dict&#39;])                          # Classic getter
+print(data_types[&#39;set&#39;])                           # Classic getter
+print(data_types.get(&#39;NoneType&#39;))                  # Use Method to Get
+print(data_types[&#39;Missing&#39;])                       # KeyError: &#39;Missing&#39;
+print(data_types.setdefault(&#39;int&#39;, &#39;MyValue&#39;))     # Use Default if Missing</code></pre>
+<h1 id="dict-add-modify-data">🔹Dict - Add/Modify Data</h1>
+<p><strong>Dictionaries</strong> are <strong>mutable</strong> collection, so we can make changes.</p>
+<p>To add or modify data we need to specify the <strong>key</strong> in square brackets and assign a new <strong>value</strong> like this: <strong>my_dict[&#39;key&#39;] = &#39;NewValue&#39;</strong> . This will either create a <strong>new pair</strong> in a dict or override existing <strong>key-value</strong>.</p>
+<p>Code:</p>
+<pre><code class="language-py">#⚙️ Add/Modify Data
+#-------------------------
+data_types[&#39;int&#39;] = &#39;Just a number&#39;                # Modify Existing
+data_types[&#39;complex&#39;] = &#39;It is too complex...&#39;     # New Pair
+
+print(data_types)</code></pre>
+<h1 id="dict-membership-operators">🔹Dict - Membership Operators</h1>
+<p>We can also look inside our dictionaries and check if certain keys are already inside or not. It&#39;s important for creating conditional statements to create logic in our scripts (more on that in another lesson).</p>
+<p>Here&#39;s simple example:</p>
+<pre><code class="language-py">#🔎 Membership Operators (Necessary for Logic)
+#-------------------------
+print(&#39;list&#39; in data_types)         # True
+print(&#39;test&#39; not in data_types)     # False </code></pre>
+<h1 id="dict-popular-functions">🔹Dict - Popular Functions</h1>
+<p>Dictionary can also use the same popular functions because they work with all inerrable objects. However, make sure your keys support it (e.g. sum() only works on  numbers...)</p>
+<p>&gt;### Iterable object is a term for collection data types where you can iterate over items in a container. Think of List, Tuple, Set, Dict, String (sequence of characters...) and so on...</p>
+<p>Therefore I&#39;ll only leave len() because it&#39;s most used with dicitonaries.</p>
+<pre><code class="language-py">#⚙️ Popular Functions with Dict
+#-------------------------
+data_types = {...}
+
+print(len(data_types))
+#... Others also work if data is right</code></pre>
+<h1 id="dict-methods-built-in-functionality">🔹Dict Methods (Built-In Functionality)</h1>
+<p>Lastly, let&#39;s jump a bit ahead of ourselves so I can mention the <strong>most used built-in methods</strong> for dictionaries. They will help you extract the right data from a <strong>dict</strong> as a <strong>list</strong>:</p>
+<p>&gt;<strong>.keys()</strong> - Get List of all Keys in a dictionary &gt;<strong>.values()</strong> - Get a list of all Values in a dictionary &gt;<strong>.items()</strong> - Get a list of both Keys and Values as tuples.</p>
+<p>Try this code snippet:</p>
+<pre><code class="language-py">#🚨️ Dict Methods (Built-In Functionality)
+#-------------------------
+print(list(data_types.keys()))      # Get list of Keys
+print(list(data_types.values()))   # Get list of Values
+print(list(data_types.items()))      # Get list of Key+Value Tuples
+data_types.update(dict_example)
+print(data_types.pop(&#39;bool&#39;))</code></pre>
+<p>💡Don&#39;t worry if it feels like too much. I&#39;m jumping ahead of myself so I can show you what&#39;s available and we&#39;re going to cover <strong>Built-In methods</strong> in another lesson in more detail.</p>
+<h1 id="dict-loops">🔹Dict - Loops</h1>
+<p>Lastly, I probably shouldn&#39;t show you loops yet, but I&#39;ll just leave this important code snippet so you know how to go over <strong>Keys and Values</strong> in a dictionary at the same time.</p>
+<p>Again, we&#39;ll cover loops in <strong>Lesson 09 - Loops in Python</strong>, so please be patient for in-depth explanation of loops.</p>
+<pre><code class="language-py">##➿ Dict Loops
+#-------------------------
+for k,v in data_types.items():
+    print(k, &#39;---&#39;, v)</code></pre>
+<p>And, that&#39;s a wrap on Dictionaries!</p>
+<h1 id="summary">Summary</h1>
+<p>And now you know about Collection Data-Types and how to use them. And remember, <strong>you will use Lists 90%+</strong>, so focus the most attention on them.</p>
+<pre><code class="language-py">#📦 Collection Data-Types in Python (List | Tuple | Set | Dictionary)
+#--------------------------------------------------------
+# 🔹List  |         | Mutable   | Ordered   | Collection | ⭐ 90%+
+# 🔹Tuple |         | Immutable | Ordered   | Collection |
+# 🔹Set   | Unique  | Mutable   | Unordered | Collection |
+# 🔹Dict  | Mapped  | Mutable   | Ordered*  | Collection |
+#--------------------------------------------------------
+
+my_list = [10,20,30,40,50]
+my_tuple = (10,20,30,40,50)
+my_set   = {10,20,30,10,20}
+my_dict = {&#39;key&#39;  : &#39;value&#39;,
+           &#39;key2&#39; : &#39;value2&#39;
+                }</code></pre>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./!Lesson_CollectionDataTypes.md">!Lesson_CollectionDataTypes.md</a></li><li><a href="./collection%20data-types.py">collection data-types.py</a></li><li><a href="./image-1.png">image-1.png</a></li><li><a href="./image-2.png">image-2.png</a></li><li><a href="./image-3.png">image-3.png</a></li><li><a href="./image-4.png">image-4.png</a></li><li><a href="./image-5.png">image-5.png</a></li><li><a href="./image-6.png">image-6.png</a></li><li><a href="./image-7.png">image-7.png</a></li><li><a href="./image-8.png">image-8.png</a></li><li><a href="./image.png">image.png</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-03-simple-exercise-calculator/"><span>Previous</span><strong>Lesson 03 · Simple Exercise: Calculator</strong></a>
+              <a class="lesson-nav-card" href="../lesson-05-time-to-practice/"><span>Next</span><strong>Lesson 05 · Time to Practice</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#collection-data-types">Collection Data-Types:</a><a class="toc-link toc-level-1" href="#1-list-mutable-ordered-collection-most-used">1️⃣ List (Mutable Ordered Collection) - ⭐MOST USED</a><a class="toc-link toc-level-1" href="#list-get-single-item">🔹List - Get Single Item</a><a class="toc-link toc-level-3" href="#also-a-few-important-notes">💡Also a few important notes:</a><a class="toc-link toc-level-1" href="#list-slicing-get-multiple-items">🔹List - Slicing (Get Multiple Items)</a><a class="toc-link toc-level-3" href="#keep-in-mind-start-is-including-and-end-is-excluding">💡Keep in mind START is including and END is excluding .</a><a class="toc-link toc-level-1" href="#list-slicing-example">🔹List - Slicing Example</a><a class="toc-link toc-level-1" href="#list-replace-list-items">🔹List - Replace List Items</a><a class="toc-link toc-level-1" href="#list-membership-operators">🔹List - Membership Operators</a><a class="toc-link toc-level-3" href="#important-lower-and-upper-case-letters-are-not-the-same-in-python-so-wall-is-not-the-same-as-wall">💡 IMPORTANT: lower and UPPER case letters are not the same in Python, so wall is not the same as Wall.</a><a class="toc-link toc-level-1" href="#list-popular-functions">🔹List - Popular Functions</a><a class="toc-link toc-level-1" href="#list-methods-built-in-functionality">🔹List - Methods (Built-In Functionality)</a><a class="toc-link toc-level-1" href="#list-nested-structure">🔹List - Nested Structure</a><a class="toc-link toc-level-1" href="#list-for-loops">🔹List - For Loops</a><a class="toc-link toc-level-3" href="#loops-are-one-of-the-most-important-python-concepts-that-allow-you-to-execute-the-same-piece-of-code-on-each-item-in-a-collection">💡Loops are one of the most important Python concepts that allow you to execute the same piece of code on each item in a collection.</a><a class="toc-link toc-level-2" href="#list-remarks">🔹List - Remarks</a><a class="toc-link toc-level-1" href="#2-tuples-immutable-ordered-collection">2️⃣ Tuples (Immutable Ordered Collection)</a><a class="toc-link toc-level-1" href="#tuple-get-single-item">🔹Tuple - Get Single Item</a><a class="toc-link toc-level-1" href="#tuple-slicing-get-multiple-items">🔹Tuple - Slicing (Get Multiple Items)</a><a class="toc-link toc-level-1" href="#tuple-replace-items-not-possible">🔹Tuple - Replace Items (Not Possible)</a><a class="toc-link toc-level-1" href="#tuple-popular-functions">🔹Tuple - Popular Functions</a><a class="toc-link toc-level-1" href="#tuple-methods-built-in-functionality">🔹Tuple - Methods (Built-In Functionality)</a><a class="toc-link toc-level-1" href="#tuple-loops-amp-nested-structure">🔹Tuple - Loops &amp;amp; Nested Structure</a><a class="toc-link toc-level-1" href="#3-set-unordered-unique-collection">3️⃣ Set - (Unordered Unique Collection)</a><a class="toc-link toc-level-1" href="#set-remove-duplicates-example">🔹Set - Remove Duplicates Example</a><a class="toc-link toc-level-1" href="#set-common-methods-built-in-functionality">🔹Set - Common Methods (Built-In Functionality)</a><a class="toc-link toc-level-1" href="#set-comparison-methods-built-in-functionality">🔹Set - Comparison Methods (Built-In Functionality)</a><a class="toc-link toc-level-1" href="#set-popular-functions">🔹Set - Popular Functions</a><a class="toc-link toc-level-1" href="#set-loops">🔹Set - Loops</a><a class="toc-link toc-level-1" href="#4-dictionary-mapped-ordered-mutable-collection">4️⃣ Dictionary (Mapped Ordered* Mutable Collection)</a><a class="toc-link toc-level-1" href="#dict-vs-list-comparison">🔹Dict vs List Comparison</a><a class="toc-link toc-level-1" href="#dict-get-items">🔹Dict - Get Items</a><a class="toc-link toc-level-1" href="#dict-add-modify-data">🔹Dict - Add/Modify Data</a><a class="toc-link toc-level-1" href="#dict-membership-operators">🔹Dict - Membership Operators</a><a class="toc-link toc-level-1" href="#dict-popular-functions">🔹Dict - Popular Functions</a><a class="toc-link toc-level-1" href="#dict-methods-built-in-functionality">🔹Dict Methods (Built-In Functionality)</a><a class="toc-link toc-level-1" href="#dict-loops">🔹Dict - Loops</a><a class="toc-link toc-level-1" href="#summary">Summary</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>
