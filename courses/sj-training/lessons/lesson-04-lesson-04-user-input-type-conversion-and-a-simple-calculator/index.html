@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SJ-trAIning | Lesson 04 | Lesson 04 - User Input, Type Conversion, and a Simple Calculator</title>
+    <meta name="description" content="Python has a built-in function called input()." />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ-trAIning</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 04 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 04 User Input Type Conversion and a Simple Calculator</code> using <code>Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 04</p>
+          <h1>Lesson 04 - User Input, Type Conversion, and a Simple Calculator</h1>
+          <p class="hero-summary">Python has a built-in function called input().</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 04 User Input Type Conversion and a Simple Calculator</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 04 User Input Type Conversion and a Simple Calculator</p>
+                <p><strong>Primary source:</strong> Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md</p>
+                <p><strong>Assets:</strong> 1</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="lesson-04-user-input-type-conversion-and-a-simple-calculator">Lesson 04 - User Input, Type Conversion, and a Simple Calculator</h1>
+<h2 id="how-to-get-user-input">How To Get User Input?</h2>
+<p>Python has a built-in function called <code>input()</code>.</p>
+<pre><code class="language-python">name = input(&#39;Enter your name: &#39;)
+print(f&#39;Hello {name}&#39;)</code></pre>
+<p>The important rule is this:</p>
+<p>&gt; <code>input()</code> always returns a string.</p>
+<p>That means if you ask for numbers, Python still receives text.</p>
+<h2 id="the-string-problem">🧮 The String Problem</h2>
+<pre><code class="language-python">num_a = input(&#39;Enter First Number: &#39;)
+num_b = input(&#39;Enter Second Number: &#39;)
+
+total = num_a + num_b
+print(total)</code></pre>
+<p>If the user enters <code>2</code> and <code>3</code>, Python prints:</p>
+<pre><code class="language-text">23</code></pre>
+<p>Why? Because Python joined two strings together.</p>
+<pre><code class="language-python">&#39;2&#39; + &#39;3&#39; == &#39;23&#39;</code></pre>
+<h2 id="convert-strings-to-numbers">🔁 Convert Strings to Numbers</h2>
+<p>Use <code>int()</code> for whole numbers.</p>
+<pre><code class="language-python">num_a = int(input(&#39;Enter First Number: &#39;))
+num_b = int(input(&#39;Enter Second Number: &#39;))
+
+total = num_a + num_b
+print(total)</code></pre>
+<p>Now <code>2 + 3</code> becomes <code>5</code>.</p>
+<h2 id="floating-point-numbers">Floating Point Numbers</h2>
+<p>If you want decimals, use <code>float()</code>.</p>
+<pre><code class="language-python">num_a = float(input(&#39;Enter First Number: &#39;))
+num_b = float(input(&#39;Enter Second Number: &#39;))
+
+total = num_a + num_b
+print(total)</code></pre>
+<p>Now values like <code>2.5</code> and <code>2.75</code> work properly.</p>
+<h2 id="common-conversion-functions">Common Conversion Functions</h2>
+<pre><code class="language-python">str()    # Convert to string
+int()    # Convert to integer
+float()  # Convert to decimal number
+bool()   # Convert to True or False
+list()   # Convert to list where possible
+set()    # Convert to unique collection
+dict()   # Convert to dictionary where possible</code></pre>
+<h2 id="simple-exercise-revit-time-saver-calculator">💪 Simple Exercise: Revit Time Saver Calculator</h2>
+<p>Ask the user:</p>
+<ul><li>How many minutes the task takes manually</li><li>How many times they do it per week</li><li>How many minutes the automated version takes</li></ul>
+<p>Then calculate weekly time saved.</p>
+<pre><code class="language-python">manual_minutes = float(input(&#39;Manual minutes per task: &#39;))
+weekly_count = float(input(&#39;Times per week: &#39;))
+automated_minutes = float(input(&#39;Automated minutes per task: &#39;))
+
+time_saved = (manual_minutes - automated_minutes) * weekly_count
+
+print(f&#39;Estimated weekly time saved: {time_saved} minutes&#39;)</code></pre>
+<h2 id="lesson-outcome">✅ Lesson Outcome</h2>
+<p>You understand why user input arrives as text and how to convert values before using them in calculations.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md">Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-03-lesson-03-python-syntax-variables-and-data-types/"><span>Previous</span><strong>Lesson 03 · Lesson 03 - Python Syntax, Variables, and Data Types</strong></a>
+              <a class="lesson-nav-card" href="../lesson-05-lesson-05-lists-dictionaries-and-simple-data-structures/"><span>Next</span><strong>Lesson 05 · Lesson 05 - Lists, Dictionaries, and Simple Data Structures</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#lesson-04-user-input-type-conversion-and-a-simple-calculator">Lesson 04 - User Input, Type Conversion, and a Simple Calculator</a><a class="toc-link toc-level-2" href="#how-to-get-user-input">How To Get User Input?</a><a class="toc-link toc-level-2" href="#the-string-problem">🧮 The String Problem</a><a class="toc-link toc-level-2" href="#convert-strings-to-numbers">🔁 Convert Strings to Numbers</a><a class="toc-link toc-level-2" href="#floating-point-numbers">Floating Point Numbers</a><a class="toc-link toc-level-2" href="#common-conversion-functions">Common Conversion Functions</a><a class="toc-link toc-level-2" href="#simple-exercise-revit-time-saver-calculator">💪 Simple Exercise: Revit Time Saver Calculator</a><a class="toc-link toc-level-2" href="#lesson-outcome">✅ Lesson Outcome</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

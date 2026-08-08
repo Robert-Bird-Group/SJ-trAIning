@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 
 const repoRoot = process.cwd();
-const sourceRoot = path.join(repoRoot, "content", "lessons");
-const lessonsRoot = path.join(repoRoot, "lessons");
+const sourceCoursesRoot = path.join(repoRoot, "content", "courses");
+const coursePagesRoot = path.join(repoRoot, "courses");
 const diagnosticsRoot = path.join(repoRoot, "generated");
 const diagnosticsPath = path.join(diagnosticsRoot, "site-diagnostics.json");
 const indexPath = path.join(repoRoot, "index.html");
@@ -73,9 +73,20 @@ function slugify(value) {
     .replace(/-{2,}/g, "-");
 }
 
+function toTitleCaseFromSlug(value) {
+  return String(value)
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\w/g, (ch) => ch.toUpperCase())
+    .trim();
+}
+
 function extractLessonNumber(name) {
-  const match = String(name).match(/lesson\s+(\d+)/i);
+  const match = String(name).match(/lesson[\s_-]*(\d+)/i);
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
+function isLessonName(name) {
+  return /lesson[\s_-]*(\d+)/i.test(String(name));
 }
 
 function extractMarkdownHeadings(markdownText) {
@@ -171,7 +182,8 @@ function extractObjectivesFromHtml(htmlText) {
 
 function toTitleCaseFromFolder(name) {
   return String(name)
-    .replace(/^lesson\s+/i, "Lesson ")
+    .replace(/^lesson[\s_-]*/i, "Lesson ")
+    .replace(/[_-]+/g, " ")
     .trim();
 }
 
@@ -376,21 +388,46 @@ function renderHtmlLesson(sourceText) {
   };
 }
 
-function collectLessons() {
-  if (!fs.existsSync(sourceRoot)) {
-    throw new Error("No imported lessons found. Run npm run lessons:import first.");
+function readCourseMeta(courseDir, fallbackName, fallbackSlug) {
+  const metaPath = path.join(courseDir, "course.json");
+  if (!fs.existsSync(metaPath)) {
+    return {
+      name: fallbackName,
+      slug: fallbackSlug,
+    };
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(metaPath, "utf8"));
+    return {
+      name: parsed.name || fallbackName,
+      slug: parsed.slug || fallbackSlug,
+      sourcePath: parsed.sourcePath || "",
+      importedAt: parsed.importedAt || "",
+    };
+  } catch {
+    return {
+      name: fallbackName,
+      slug: fallbackSlug,
+    };
+  }
+}
+
+function collectLessonsFromCourse(lessonSourceRoot) {
+  if (!fs.existsSync(lessonSourceRoot)) {
+    return { lessons: [], skipped: [] };
   }
 
   const lessonDirs = fs
-    .readdirSync(sourceRoot, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && /lesson\s+\d+/i.test(entry.name))
+    .readdirSync(lessonSourceRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && isLessonName(entry.name))
     .sort((a, b) => extractLessonNumber(a.name) - extractLessonNumber(b.name));
 
   const lessons = [];
   const skipped = [];
 
   for (const entry of lessonDirs) {
-    const dirPath = path.join(sourceRoot, entry.name);
+    const dirPath = path.join(lessonSourceRoot, entry.name);
     const files = fs.readdirSync(dirPath, { withFileTypes: true });
     const fileNames = files.filter((file) => file.isFile()).map((file) => file.name);
     const primaryFile = findPrimaryFile(fileNames);
@@ -434,6 +471,38 @@ function collectLessons() {
   }
 
   return { lessons, skipped };
+}
+
+function collectCourses() {
+  if (!fs.existsSync(sourceCoursesRoot)) {
+    throw new Error("No imported courses found. Run npm.cmd run lessons:import first.");
+  }
+
+  const courseDirs = fs
+    .readdirSync(sourceCoursesRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const courses = [];
+
+  for (const entry of courseDirs) {
+    const courseDir = path.join(sourceCoursesRoot, entry.name);
+    const courseMeta = readCourseMeta(courseDir, toTitleCaseFromSlug(entry.name), entry.name);
+    const lessonSourceRoot = path.join(courseDir, "lessons");
+    const { lessons, skipped } = collectLessonsFromCourse(lessonSourceRoot);
+
+    courses.push({
+      name: courseMeta.name,
+      slug: courseMeta.slug || entry.name,
+      sourcePath: courseMeta.sourcePath || "",
+      importedAt: courseMeta.importedAt || "",
+      sourceRoot: lessonSourceRoot,
+      lessons,
+      skipped,
+    });
+  }
+
+  return courses;
 }
 
 function copyDir(sourceDir, destDir) {
@@ -490,7 +559,7 @@ function renderToc(headings) {
     .join("");
 }
 
-function renderLessonPage(lesson, prevLesson, nextLesson) {
+function renderLessonPage(course, lesson, prevLesson, nextLesson) {
   const summary = lesson.summary || "Lesson content imported from the source course folder.";
   const durationMarkup = lesson.duration
     ? `<span class="meta-pill">${escapeHtml(lesson.duration)}</span>`
@@ -501,13 +570,13 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lesson ${String(lesson.lessonNumber).padStart(2, "0")} | ${escapeHtml(lesson.title)}</title>
+    <title>${escapeHtml(course.name)} | Lesson ${String(lesson.lessonNumber).padStart(2, "0")} | ${escapeHtml(lesson.title)}</title>
     <meta name="description" content="${escapeHtml(summary.slice(0, 160))}" />
-    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../../../styles.css" />
   </head>
   <body>
     <div class="topbar">
-      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-title">${escapeHtml(course.name)}</span>
       <span class="topbar-badge">Business Standard</span>
       <span class="topbar-sub">Generated static lesson page</span>
       <span class="topbar-tag">v0.1</span>
@@ -531,6 +600,7 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
         </div>
         <div class="card-body hero-copy">
           <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
           <p class="eyebrow">Lesson ${String(lesson.lessonNumber).padStart(2, "0")}</p>
           <h1>${escapeHtml(lesson.title)}</h1>
           <p class="hero-summary">${escapeHtml(summary)}</p>
@@ -652,7 +722,8 @@ function renderLessonPage(lesson, prevLesson, nextLesson) {
 </html>`;
 }
 
-function renderIndexPage(lessons, skipped) {
+function renderCoursePage(course) {
+  const { lessons, skipped } = course;
   const lessonCards = lessons
     .map((lesson) => {
       const summary = lesson.summary || "Imported lesson content ready for GitHub Pages.";
@@ -684,13 +755,13 @@ function renderIndexPage(lessons, skipped) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SJ Training Course</title>
+    <title>${escapeHtml(course.name)} | Course</title>
     <meta name="description" content="Static training course site generated from lesson folders." />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body>
     <div class="topbar">
-      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-title">${escapeHtml(course.name)}</span>
       <span class="topbar-badge">Business Standard</span>
       <span class="topbar-sub">Generated from synced lesson folders</span>
       <span class="topbar-tag">v0.1</span>
@@ -723,8 +794,9 @@ function renderIndexPage(lessons, skipped) {
         </div>
         <div class="card-body landing-grid">
           <div>
-            <p class="eyebrow">Python Training</p>
-            <h1>Lesson library built from your course folders</h1>
+            <a class="back-link" href="../../index.html">← Back to all courses</a>
+            <p class="eyebrow">Course Workspace</p>
+            <h1>${escapeHtml(course.name)}</h1>
             <p class="hero-summary">A static course site that mirrors your lesson structure, keeps asset links intact, and can be regenerated whenever new lessons or Markdown files are added.</p>
 
             <div class="stats">
@@ -740,7 +812,7 @@ function renderIndexPage(lessons, skipped) {
               <input id="search-input" type="search" placeholder="Title, summary, format..." />
             </label>
             <div class="landing-notes">
-              <p><strong>Source:</strong> Imported from the network-drive lesson folders into this repo.</p>
+              <p><strong>Source:</strong> Imported from the network-drive course folder into this repo.</p>
               <p><strong>Format support:</strong> Markdown first, HTML compatibility included.</p>
             </div>
           </div>
@@ -783,49 +855,199 @@ function renderIndexPage(lessons, skipped) {
 </html>`;
 }
 
+function renderCourseTitlePage(courses) {
+  const totalLessons = courses.reduce((sum, course) => sum + course.lessons.length, 0);
+  const totalPending = courses.reduce((sum, course) => sum + course.skipped.length, 0);
+
+  const courseCards = courses
+    .map((course) => {
+      const readyCount = course.lessons.length;
+      const pendingCount = course.skipped.length;
+      const topLesson = course.lessons[0];
+      const lead = topLesson
+        ? topLesson.summary || "Imported lessons are ready to browse."
+        : "No lesson content was detected yet for this course.";
+
+      return `<article class="lesson-card" data-course-card>
+        <div class="lesson-card-head">
+          <p class="eyebrow">Course</p>
+          <h2><a href="./courses/${course.slug}/">${escapeHtml(course.name)}</a></h2>
+        </div>
+        <p class="lesson-card-summary">${escapeHtml(lead)}</p>
+        <div class="lesson-card-meta">
+          <span>${readyCount} lessons</span>
+          <span>${pendingCount} pending</span>
+          <span>MD + HTML</span>
+        </div>
+        <p class="lesson-card-link"><a href="./courses/${course.slug}/">Open course</a></p>
+      </article>`;
+    })
+    .join("");
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pyRevit Course Library</title>
+    <meta name="description" content="Static training site with multiple courses generated from network-drive course folders." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">pyRevit Course Library</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated multi-course landing page</span>
+      <span class="topbar-tag">v0.2</span>
+    </div>
+
+    <div class="page">
+      <section class="toc">
+        <span class="toc-part">I · Summary</span>
+        <div class="toc-links">
+          <a href="#library-summary">Library Summary</a>
+          <a href="#courses-section">Courses</a>
+        </div>
+      </section>
+
+      <section class="part" id="library-summary">
+        <span class="part-num">Part I</span>
+        <span class="part-title">Library Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Priority rule.</strong> Each subfolder in your pyRevit Course source is treated as a course and generated into its own publishable section. Current generated coverage: <strong>${courses.length}</strong> courses, <strong>${totalLessons}</strong> ready lessons, <strong>${totalPending}</strong> pending lesson folders.
+      </div>
+
+      <section class="card site-header landing-hero">
+        <div class="card-head">
+          <span class="card-title">Course Directory</span>
+          <span class="card-hint">Switch between courses and scale to future additions</span>
+        </div>
+        <div class="card-body landing-grid">
+          <div>
+            <p class="eyebrow">Course Selector</p>
+            <h1>All training courses in one title page</h1>
+            <p class="hero-summary">Add a new course folder under the pyRevit Course source path, run the update command, and it appears automatically in this directory.</p>
+
+            <div class="stats">
+              <div class="stat"><span>Courses</span><strong>${courses.length}</strong></div>
+              <div class="stat"><span>Lessons Ready</span><strong>${totalLessons}</strong></div>
+              <div class="stat"><span>Pending</span><strong>${totalPending}</strong></div>
+              <div class="stat"><span>Target</span><strong>GitHub Pages</strong></div>
+            </div>
+          </div>
+          <div class="landing-panel">
+            <label class="search-wrap">
+              <span>Search courses</span>
+              <input id="course-search" type="search" placeholder="Course name or summary..." />
+            </label>
+            <div class="landing-notes">
+              <p><strong>Source root:</strong> pyRevit Course folder.</p>
+              <p><strong>Import mode:</strong> lesson folders and flat lesson markdown/html files.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="courses-section">
+        <span class="part-num">Part II</span>
+        <span class="part-title">Courses</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <section class="lesson-grid" id="course-grid">
+        ${courseCards}
+      </section>
+    </div>
+
+    <script>
+      (function () {
+        const input = document.getElementById('course-search');
+        const cards = Array.from(document.querySelectorAll('[data-course-card]'));
+
+        if (!input || !cards.length) {
+          return;
+        }
+
+        input.addEventListener('input', function () {
+          const query = input.value.trim().toLowerCase();
+
+          for (const card of cards) {
+            const visible = !query || card.textContent.toLowerCase().includes(query);
+            card.style.display = visible ? '' : 'none';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>`;
+}
+
 function main() {
   const { indexOnly } = parseArgs();
-  const { lessons, skipped } = collectLessons();
+  const courses = collectCourses();
 
   ensureDir(diagnosticsRoot);
-  clearDir(lessonsRoot);
-  ensureDir(lessonsRoot);
+  clearDir(coursePagesRoot);
+  ensureDir(coursePagesRoot);
 
-  if (!indexOnly) {
-    for (let index = 0; index < lessons.length; index += 1) {
-      const lesson = lessons[index];
-      const prevLesson = lessons[index - 1] || null;
-      const nextLesson = lessons[index + 1] || null;
-      const outDir = path.join(lessonsRoot, lesson.slug);
+  for (const course of courses) {
+    const courseOutDir = path.join(coursePagesRoot, course.slug);
+    ensureDir(courseOutDir);
 
-      copyDir(lesson.folderPath, outDir);
-      writeText(path.join(outDir, "index.html"), renderLessonPage(lesson, prevLesson, nextLesson));
+    if (!indexOnly) {
+      const lessonsOutDir = path.join(courseOutDir, "lessons");
+      ensureDir(lessonsOutDir);
+      for (let index = 0; index < course.lessons.length; index += 1) {
+        const lesson = course.lessons[index];
+        const prevLesson = course.lessons[index - 1] || null;
+        const nextLesson = course.lessons[index + 1] || null;
+        const outDir = path.join(lessonsOutDir, lesson.slug);
+
+        copyDir(lesson.folderPath, outDir);
+        writeText(path.join(outDir, "index.html"), renderLessonPage(course, lesson, prevLesson, nextLesson));
+      }
     }
+
+    writeText(path.join(courseOutDir, "index.html"), renderCoursePage(course));
   }
 
-  writeText(indexPath, renderIndexPage(lessons, skipped));
+  writeText(indexPath, renderCourseTitlePage(courses));
+
+  const totalLessons = courses.reduce((sum, course) => sum + course.lessons.length, 0);
+  const totalSkipped = courses.reduce((sum, course) => sum + course.skipped.length, 0);
 
   writeJson(diagnosticsPath, {
     generatedAt: new Date().toISOString(),
-    lessonCount: lessons.length,
-    skippedLessonCount: skipped.length,
-    sourceRoot,
-    lessonOutputRoot: lessonsRoot,
+    courseCount: courses.length,
+    lessonCount: totalLessons,
+    skippedLessonCount: totalSkipped,
+    sourceRoot: sourceCoursesRoot,
+    courseOutputRoot: coursePagesRoot,
     indexOnly,
-    lessons: lessons.map((lesson) => ({
-      lessonNumber: lesson.lessonNumber,
-      title: lesson.title,
-      slug: lesson.slug,
-      sourceType: lesson.sourceType,
-      primaryFile: lesson.primaryFile,
-      headingCount: lesson.headings.length,
-      objectiveCount: lesson.objectives.length,
-      duration: lesson.duration,
+    courses: courses.map((course) => ({
+      name: course.name,
+      slug: course.slug,
+      sourceRoot: course.sourceRoot,
+      lessonCount: course.lessons.length,
+      skippedLessonCount: course.skipped.length,
+      lessons: course.lessons.map((lesson) => ({
+        lessonNumber: lesson.lessonNumber,
+        title: lesson.title,
+        slug: lesson.slug,
+        sourceType: lesson.sourceType,
+        primaryFile: lesson.primaryFile,
+        headingCount: lesson.headings.length,
+        objectiveCount: lesson.objectives.length,
+        duration: lesson.duration,
+      })),
+      skipped: course.skipped,
     })),
-    skipped,
   });
 
-  process.stdout.write(`Generated ${lessons.length} lessons and skipped ${skipped.length} incomplete lesson folders.\n`);
+  process.stdout.write(`Generated ${courses.length} course pages with ${totalLessons} lessons and ${totalSkipped} skipped lesson folders.\n`);
 }
 
 main();

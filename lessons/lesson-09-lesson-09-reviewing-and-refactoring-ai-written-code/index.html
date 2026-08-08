@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 09 | Lesson 09 - Reviewing and Refactoring AI-Written Code</title>
+    <meta name="description" content="Refactoring means improving code structure without changing what the code does." />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 09 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 09 Reviewing and Refactoring AI Written Code</code> using <code>Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <p class="eyebrow">Lesson 09</p>
+          <h1>Lesson 09 - Reviewing and Refactoring AI-Written Code</h1>
+          <p class="hero-summary">Refactoring means improving code structure without changing what the code does.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 09 Reviewing and Refactoring AI Written Code</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 09 Reviewing and Refactoring AI Written Code</p>
+                <p><strong>Primary source:</strong> Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md</p>
+                <p><strong>Assets:</strong> 1</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="lesson-09-reviewing-and-refactoring-ai-written-code">Lesson 09 - Reviewing and Refactoring AI-Written Code</h1>
+<h2 id="what-is-refactoring">What is Refactoring?</h2>
+<p>Refactoring means improving code structure without changing what the code does.</p>
+<p>First drafts are often messy. That is fine. But before sharing a tool, clean it up.</p>
+<h2 id="things-to-check">🔎 Things to Check</h2>
+<ul><li>Are variable names clear?</li><li>Is repeated code turned into functions?</li><li>Are comments useful?</li><li>Are assumptions listed?</li><li>Does the script fail safely?</li><li>Can another person understand it?</li></ul>
+<h2 id="before">Before</h2>
+<pre><code class="language-python">x = uidoc.Selection.GetElementIds()
+for i in x:
+    e = doc.GetElement(i)
+    print(e.Name)</code></pre>
+<h2 id="after">After</h2>
+<pre><code class="language-python">selected_element_ids = uidoc.Selection.GetElementIds()
+
+for element_id in selected_element_ids:
+    element = doc.GetElement(element_id)
+    print(element.Name)</code></pre>
+<h2 id="ai-review-prompt">🧠 AI Review Prompt</h2>
+<pre><code class="language-text">Review this pyRevit script for readability, safety, and beginner clarity.
+Do not rewrite everything at once.
+First list the main issues, then suggest small improvements.</code></pre>
+<h2 id="simple-exercise">💪 Simple Exercise</h2>
+<p>Take one AI-generated script and improve:</p>
+<ul><li>3 variable names</li><li>1 repeated block</li><li>2 comments</li><li>1 error message</li></ul>
+<h2 id="lesson-outcome">✅ Lesson Outcome</h2>
+<p>You can improve AI-written code so it is easier to maintain and explain.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md">Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-08-lesson-08-building-first-useful-tools-with-ai/"><span>Previous</span><strong>Lesson 08 · Lesson 08 - Building First Useful Tools With AI</strong></a>
+              <a class="lesson-nav-card" href="../lesson-10-lesson-10-phase-1-milestone-build-your-first-personal-tool/"><span>Next</span><strong>Lesson 10 · Lesson 10 - Phase 1 Milestone: Build Your First Personal Tool</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#lesson-09-reviewing-and-refactoring-ai-written-code">Lesson 09 - Reviewing and Refactoring AI-Written Code</a><a class="toc-link toc-level-2" href="#what-is-refactoring">What is Refactoring?</a><a class="toc-link toc-level-2" href="#things-to-check">🔎 Things to Check</a><a class="toc-link toc-level-2" href="#before">Before</a><a class="toc-link toc-level-2" href="#after">After</a><a class="toc-link toc-level-2" href="#ai-review-prompt">🧠 AI Review Prompt</a><a class="toc-link toc-level-2" href="#simple-exercise">💪 Simple Exercise</a><a class="toc-link toc-level-2" href="#lesson-outcome">✅ Lesson Outcome</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

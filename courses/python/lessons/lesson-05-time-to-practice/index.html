@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python | Lesson 05 | Time to Practice</title>
+    <meta name="description" content="👉 Quick note: we haven&#39;t covered logical statements and loops, which are super important concepts in Python. So we&#39;ll keep this lesson very simple and focus on" />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">Python</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 05 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 05</code> using <code>!Lesson_ListAndDict.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 05</p>
+          <h1>Time to Practice</h1>
+          <p class="hero-summary">👉 Quick note: we haven&#39;t covered logical statements and loops, which are super important concepts in Python. So we&#39;ll keep this lesson very simple and focus on the very basics of working with lists.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">!Lesson_ListAndDict.md</span>
+            <span class="meta-pill">4 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 05</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 05</p>
+                <p><strong>Primary source:</strong> !Lesson_ListAndDict.md</p>
+                <p><strong>Assets:</strong> 4</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="time-to-practice">Time to Practice</h1>
+<p>You&#39;ve just learnt about collection data types in the previous lesson🥳. So, let&#39;s make a simple exercise to practice lists (and a little bit of sets and dicts).</p>
+<p>&gt;### 👉 Quick note: we haven&#39;t covered logical statements and loops, which are super important concepts in Python. So we&#39;ll keep this lesson very simple and focus on the very basics of working with lists.</p>
+<p>Here&#39;s the plan: We&#39;re going to play a <strong>Backpack Game</strong> where we go through different steps and practice adding, removing, and modifying items in a list. This way you can sit back, relax and see how you can work with a single list and make all kinds of changes depending on the task.</p>
+<p>So let&#39;s begin</p>
+<h1 id="0-how-to-begin-the-game">0️⃣ How To Begin The Game?</h1>
+<p>We begin this journey with an empty backpack (a simple list) and we&#39;ll carry it along the whole game by making different changes depending on the task.</p>
+<p>As I&#39;ve mentioned, it&#39;ll be a very abstract game because we don&#39;t know enough Python yet, but it will be fun and help you practice working with lists early on.</p>
+<p>So, let&#39;s get you a backpack🎒!</p>
+<pre><code class="language-py">#0️⃣ Start Backpack Game
+#--------------------------------------------------
+backpack = []
+print(&#39;0. 🙂Starting Journey with Empty Backpack.&#39;)
+
+print(&#39;🎒&#39;, backpack )
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>0. 🙂Starting Journey with Empty Backpack.
+🎒 []</code></pre>
+<h1 id="1-pick-up-starter-kit-items">1️⃣ Pick up Starter Kit Items.</h1>
+<p>You&#39;re given a StarterKit that contains &#39;Armor&#39;, &#39;Shield&#39;, &#39;Sword&#39;, &#39;Potion&#39;. Pick them up by adding these words to your backpack-list.</p>
+<p>&gt;### Add Items from StarterKit to Your Backpack one by one.</p>
+<pre><code class="language-py">#1️⃣ Pick up StarterKit Items.
+#--------------------------------------------------
+print(&#39;1. 📦 Picking Up StarterKit (Armor, Shield, Sword, Potion).&#39;)
+backpack .append(&#39;Sword&#39;)
+backpack .append(&#39;Armor&#39;)
+backpack .append(&#39;Shield&#39;)
+backpack .append(&#39;Potion&#39;)
+
+print(&#39;🎒&#39;, backpack )
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>1. 📦 Picking Up StarterKit (Armor, Shield, Sword, Potion).
+🎒 [&#39;Sword&#39;, &#39;Armor&#39;, &#39;Shield&#39;, &#39;Potion&#39;]</code></pre>
+<h1 id="2-loot-a-chest">2️⃣ Loot a Chest</h1>
+<p>You&#39;ve just found a treasure chest: [&#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;] . You can pick all these items and add them to your backpack.</p>
+<p>&gt;### Add items from chest to your backpack (without append)</p>
+<pre><code class="language-py">#2️⃣ Loot a Treasure Chest
+#--------------------------------------------------
+chest     = [&#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;]
+backpack += chest
+
+print(&#39;2. 🎁Looting a Treasure  Chest!&#39;)
+print(f&#39;Chest: {chest}&#39;)
+
+print(&#39;🎒&#39;, backpack )
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>2. 🎁Looting a Treasure  Chest!
+Chest: [&#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;]
+🎒 [&#39;Sword&#39;, &#39;Armor&#39;, &#39;Shield&#39;, &#39;Potion&#39;, &#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;</code></pre>
+<h1 id="3-visit-merchant">3️⃣ Visit Merchant</h1>
+<p>We&#39;re visiting a merchant and we see a shiny &#39;Magic-GreatSword&#39;. We want that! Merchant says that we can exchange our Shield and current Sword for this new Magic-GreatSword. Let&#39;s do it.</p>
+<p>&gt;### Remove &#39;Shield&#39; from list &gt;### Replace &#39;Sword&#39; to &#39;Magic-GreatSword&#39;</p>
+<pre><code class="language-py">#3️⃣ Visit Merchant.
+#--------------------------------------------------
+print(&#39;3. 🧙‍♂️ Visiting Merchant&#39;)
+print(&#39;- Selling the Shield.&#39;)
+print(&#39;- Upgrading Sword -&gt; Magic GreatSword&#39;)
+
+backpack.remove(&#39;Shield&#39;)                    # Remove Shield
+inx            = backpack .index(&#39;Sword&#39;)    # Find Sword Position
+backpack [inx] = &#39;Magic-GreatSword&#39;          # Change Sword at any index
+
+print(&#39;🎒&#39;, backpack )
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>3. 🧙‍♂️ Visiting Merchant
+- Selling the Shield.
+- Upgrading Sword -&gt; Magic GreatSword
+🎒 [&#39;Magic-GreatSword&#39;, &#39;Armor&#39;, &#39;Potion&#39;, &#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;</code></pre>
+<h1 id="4-inventory-check">4️⃣ Inventory Check</h1>
+<p>We&#39;ve collected quite a few items and even changed things. Let&#39;s double check what we have:</p>
+<p>&gt;### Count Total Items &gt;### Count Unique Items &gt;### Count amount of &#39;Potion&#39; in the Backpack.</p>
+<pre><code class="language-py">#4️⃣ Check Inventory
+#--------------------------------------------------
+print(&#39;4. 🔎Checking Backpack: &#39;)
+print(&#39;🎒&#39;, backpack)
+
+total_count   = len(backpack)
+unique_items  = set(backpack)
+unique_count  = len(unique_items)
+potion_count  = backpack.count(&#39;Potion&#39;)
+
+print(f&#39;There are {total_count} Items in Total.&#39;)
+print(f&#39;There are {unique_count} Unique Items.&#39;)
+print(f&#39;There are {potion_count} Potions.&#39;)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>4. 🔎Checking Backpack: 
+🎒 [&#39;Magic-GreatSword&#39;, &#39;Armor&#39;, &#39;Potion&#39;, &#39;Map&#39;, &#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;</code></pre>
+<h1 id="5-dropped-the-backpack">5️⃣ Dropped The Backpack 🙃</h1>
+<p>Oh no, we&#39;ve just dropped the backpack upside down. What happened to all our items?</p>
+<p>&gt;### Reverse the order of your backpack</p>
+<pre><code class="language-py">#5️⃣ Dropped the Backpack.
+#--------------------------------------------------
+print(&#39;5. 🙃Dropped the Backpack Upside-Down... &#39;)
+backpack.reverse()
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>5. 🙃Dropped the Backpack Upside-Down... 
+🎒 [&#39;Potion&#39;, &#39;Compass&#39;, &#39;Potion&#39;, &#39;Map&#39;, &#39;Potion&#39;, &#39;Armor&#39;, &#39;Magic-GreatSword&#39;</code></pre>
+<h1 id="6-sort-your-backpack">6️⃣ Sort Your Backpack</h1>
+<p>Let&#39;s fix the order of our backpack and sort it back using alphanumeric sorting rules.</p>
+<p>&gt;### Sort your backpack</p>
+<pre><code class="language-py">#6️⃣ Sorting Items
+#--------------------------------------------------
+print(&#39;6. ➡️Sorting Items: &#39;)
+backpack.sort()
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>6. ➡️Sorting Items: 
+🎒 [&#39;Armor&#39;, &#39;Compass&#39;, &#39;Magic-GreatSword&#39;, &#39;Map&#39;, &#39;Potion&#39;, &#39;Potion&#39;, &#39;Potion&#39;</code></pre>
+<p>P.S. By default the <strong>sort()</strong> function sorts alphanumerically. But we can also provide custom sorting rules by using key= parameters and providing another function.</p>
+<p>For example we can provide len() function name, to sort by the amount of letters in each word. And it can be any function, but it&#39;s a topic for another lesson!</p>
+<p>Here&#39;s a simple example you can try:</p>
+<pre><code class="language-py">backpack.sort(key=len)
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>6. ➡️Sorting Items: 
+🎒 [&#39;Map&#39;, &#39;Armor&#39;,&#39;Potion&#39;, &#39;Potion&#39;, &#39;Potion&#39; &#39;Compass&#39;, &#39;Magic-GreatSword&#39;</code></pre>
+<h1 id="7-stolen-items-during-sleep">7️⃣ Stolen Items during Sleep</h1>
+<p>While we sleep somebody has come and taken 3 random items from our backpack!</p>
+<p>&gt;### Remove 3 items &gt;### Display a list of stolen items</p>
+<pre><code class="language-py">#7️⃣ 3 Items Stolen During Sleep
+#--------------------------------------------------
+print(&#39;7. 💤Sleeping...&#39;)
+
+a      = backpack.pop()
+b      = backpack.pop(2)
+c      = backpack.pop()
+stolen = [a,b,c]
+
+print(f&#39;Stolen Items: &#39;, stolen)
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>7. 💤Sleeping...
+Stolen Items:  [&#39;Potion&#39;, &#39;Magic-GreatSword&#39;, &#39;Potion&#39;]
+🎒 [&#39;Armor&#39;, &#39;Compass&#39;, &#39;Map&#39;, &#39;Potion&#39;</code></pre>
+<h1 id="8-found-magic-ring-and-coin-pouch">8️⃣Found Magic Ring and Coin Pouch</h1>
+<p>We&#39;ve just been robbed, but luck is on our side. we&#39;ve just found a Magic Ring and a Coin Pouch. Let&#39;s pick the up and this time we&#39;re going to put the ring deep into our backpack.</p>
+<p>&gt;### Add Ring as the first item in a list ring = &#39;Magic-Ring&#39; &gt;### Add nested list of coins in the end coin_pouch = [&#39;Gold Coin&#39;, &#39;Silver Coin&#39;]</p>
+<pre><code class="language-py">#8️⃣ Found Magic-Ring
+#--------------------------------------------------
+print(&#39;8. 💍Found Magic Ring And Coin Pouch&#39;)
+ring       = &#39;Magic Ring&#39;
+coin_pouch = [&#39;Gold Coin&#39;, &#39;Silver Coin&#39;]
+
+backpack.insert(0, ring)
+backpack.append(coin_pouch)
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>8. 💍Found Magic Ring And Coin Pouch
+🎒 [&#39;Magic Ring&#39;, &#39;Armor&#39;, &#39;Compass&#39;, &#39;Map&#39;, &#39;Potion&#39;, [&#39;Gold Coin&#39;, &#39;Silver Coin&#39;</code></pre>
+<h1 id="9-half-backpack-disappears">9️⃣Half Backpack Disappears</h1>
+<p>The Magic Ring was activated and it disappeared taking half of the backpack with it. Damn you magic ring...</p>
+<p>&gt;### Remove the first half of items from the backpack</p>
+<pre><code class="language-py">#9️⃣ Half Backpack Contents Have Teleported
+#--------------------------------------------------
+print(&#39;9. 💥Half Items Magically Disappeared. Damn You Magic Ring...&#39;)
+
+count    = len(backpack)
+half     = count // 2
+backpack = backpack[half:]
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<pre><code>9. 💥Half Items Magically Disappeared. Damn You Magic Ring...
+🎒 [&#39;Map&#39;, &#39;Potion&#39;, [&#39;Gold Coin&#39;, &#39;Silver Coin&#39;</code></pre>
+<h1 id="bandits-attack">🔟 Bandits Attack</h1>
+<p>Bandits attack. We&#39;d beat their asses, but we lost our Magic-Greatsword so we&#39;re at their mercy. And they really like our backpack so we have to let it go.</p>
+<p>&gt;### Get rid of Backpack</p>
+<pre><code class="language-py">#🔟 Bandits Stole Empty Backpack
+#--------------------------------------------------
+print(&#39;10. 🧌Bandits Attacked.&#39;)
+print(&#39;Backpack Stolen...&#39;)
+
+backpack = None                       # None is not the same as empty list! 
+
+print(&#39;🎒&#39;, backpack)
+print(&#39;-&#39;*50)</code></pre>
+<h1 id="game-over">☠️ Game Over</h1>
+<p>Not every game has a happy ending, but I hope you&#39;ve gained some good practice and learned more about working with lists. There’s always a bright side to the coin🪙.</p>
+<pre><code class="language-py">print(&#39;Game Over&#39;)
+print(&#39;Learn More Python To Fight Back!&#39;)</code></pre>
+<p>But let&#39;s look over the code and <strong>Refactor</strong> it to make it a bit better.</p>
+<h1 id="what-is-refactoring">What is Refactoring?</h1>
+<p>&gt;### Refactoring means improving the code so it&#39;s cleaner, easier to read, and better to maintain while keeping the same functionality of the code.</p>
+<p>It&#39;s a very important step after the first draft version of any script, which is often quick and dirty solution to begin with. It means rewriting parts of your code or even changin variable names and doc strings to better explain the login.</p>
+<p>Sometimes it feels like this to refactor your code, but it&#39;s always worth it if you have time:</p>
+<h3 id="what-to-do">What to do?</h3>
+<p>Look over your code and find if there&#39;s anything you could make better. And here&#39;s a great rule for programming:</p>
+<h3 id="if-you-ever-catch-yourself-copy-pasting-the-same-code-over-and-over-you-39-re-doing-something-wrong-programming-is-all-about-being-efficient-and-it-includes-writing-clean-code-always-look-for-ways-to-reuse-your-code-without-using-ctrl-c-ctrl-v-combo">If you ever catch yourself copy-pasting the same code over and over - you&#39;re doing something wrong. Programming is all about being efficient and it includes writing clean code. Always look for ways to reuse your code without using CTRL+C, CTRL+V combo.</h3>
+<p>🔷For example we&#39;ve copied print(&#39;-&#39;*50)  too many times...</p>
+<p>And what if you want to change from 50 to 75? It would mean you have to update it everywhere manually. And later you might need to do it again... So not very efficient. Instead, we can create a single variable and reuse it everywhere</p>
+<pre><code class="language-py">dashes = &#39;-&#39; * 75
+
+#...
+print(dashes)
+#...
+print(dashes)
+#... </code></pre>
+<p>Now, we have a single control for all these print statements.</p>
+<p>--- 🔷Another example: we can improve variable names. We&#39;ve create a backpack variable and used it everywhere. And to be fair it can be shorter without losing the meaning. why don&#39;t we rename it to pack instead?</p>
+<p>Here&#39;s how to rename the same variable across the whole script or even project:</p>
+<p>You can right click on a variable name and then select <strong>Change All Occurences</strong>. VS Code will update the name everywhere.</p>
+<p><img src="image-1.png" alt="alt text" /></p>
+<p>Alright enough with the lists.</p>
+<h1 id="simple-dictionary-example">Simple Dictionary Example</h1>
+<p>Now before I let you go let&#39;s go over dictionaries quickly. They are often confusing to beginners because of lack of examples. And don&#39;t worry as you get better at programming you&#39;ll also get more comfortable working with dictionaries.</p>
+<p>They can be used to create different kind of data structures. And as a beginner you can start using them for a simple mapped collection.</p>
+<p>For example, think of a phonebook. Inside you&#39;ll find Names (keys) and Numbers(values) and they are related to each other. This is the perfect data structure to use dictionary for.</p>
+<p>Let&#39;s try it:</p>
+<pre><code class="language-py"># Dicitonaries
+phonebook  = {&#39;Ricky&#39; : &#39;+43 4111 5111&#39;,
+              &#39;Tommy&#39; : &#39;+43 4222 6222&#39;,
+              &#39;Klaus&#39; : &#39;+43 4333 7333&#39;}             # Name : &#39;Number&#39;
+
+
+# Add More Items
+phonebook[&#39;Erik&#39;]     = &#39;+372 5555 5555&#39;
+phonebook[&#39;Kristina&#39;] = &#39;+372 5656 5656&#39;
+phonebook[&#39;Theo&#39;]     = &#39;+372 5757 5757&#39;
+
+print(phonebook)
+
+
+number = phonebook[&#39;Erik&#39;]
+print(f&#39;📞 Calling Erik... ({number})&#39;)
+
+number = phonebook[&#39;Theo&#39;]
+print(f&#39;📞 Calling Theo... ({number})&#39;)
+
+number = phonebook[&#39;Kristina&#39;]
+print(f&#39;📞 Calling Kristina... ({number})&#39;)</code></pre>
+<p>As you can see it makes a lot of sense to use here a dictionary to keep relations between phones and numbers and have an easy way to read this data.</p>
+<p>Now, let&#39;s look at more advanced example:</p>
+<h1 id="dictionary-advanced-example">Dictionary - Advanced Example</h1>
+<p>Think of the backpack game we played earlier. It was fun and easy, but we didn&#39;t store a lot of data...  If we wanted to make a real game we&#39;d need to come up with a better way to store and process our data related to the same object/player.</p>
+<p>There are different ways to do that, and dictionary is one of them. To be honest, Classes would be a better approach because of how much more powerful they are (more on them later), but if you&#39;d want to store data outside of Python script, you&#39;d have to convert it to something like JSON format which uses the dictionary structure.</p>
+<p>So, here&#39;s how we could use dictionary to create a Players Data Structure to store a lot of data related to the same object.</p>
+<pre><code class="language-py">#  DICTIONARY (Advanced)
+player = {&#39;Name&#39;     : &#39;Erik&#39;,
+          &#39;Class&#39;    : &#39;Warrior&#39;,
+          &#39;Health&#39;   : 100,
+          &#39;Level&#39;    : 1,
+          &#39;Backpack&#39; : []
+          }
+
+# Modify Stats
+player[&#39;Level&#39;] += 1
+
+# Add Items
+player[&#39;Backpack&#39;].append(&#39;Item-A&#39;)
+player[&#39;Backpack&#39;].append(&#39;Item-B&#39;)
+player[&#39;Backpack&#39;].append(&#39;Item-C&#39;)
+player[&#39;Backpack&#39;].append([10,20,30])
+
+
+for k,v in player.items():
+    print(k, v)</code></pre>
+<p>Notice that we have a dictionary that represents a player. And now we can store various attributes and even the backpack itself and it will remember all changes we make to any of these attributes.</p>
+<p>The syntax might become a bit more complex, but that&#39;s just the result of creating a more advanced data-structure. And now we can save this player dicitonary as a JSON format to store it somewhere else.</p>
+<p>This is just an idea for you to help you understand how dictionaries can be used, especially if you think a bit more creatively about it. It&#39;s not only about making simple pairs of 2 words. It can include way more information inside and used in different ways.</p>
+<p>Just give it time, you&#39;ll understand dictionary on another level.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./!Lesson_ListAndDict.md">!Lesson_ListAndDict.md</a></li><li><a href="./BackpackAdventure.py">BackpackAdventure.py</a></li><li><a href="./image-1.png">image-1.png</a></li><li><a href="./image.png">image.png</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-04-collection-data-types/"><span>Previous</span><strong>Lesson 04 · Collection Data-Types:</strong></a>
+              <a class="lesson-nav-card" href="../lesson-06-operators-and-expressions-in-python/"><span>Next</span><strong>Lesson 06 · Operators and Expressions in Python</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#time-to-practice">Time to Practice</a><a class="toc-link toc-level-1" href="#0-how-to-begin-the-game">0️⃣ How To Begin The Game?</a><a class="toc-link toc-level-1" href="#1-pick-up-starter-kit-items">1️⃣ Pick up Starter Kit Items.</a><a class="toc-link toc-level-1" href="#2-loot-a-chest">2️⃣ Loot a Chest</a><a class="toc-link toc-level-1" href="#3-visit-merchant">3️⃣ Visit Merchant</a><a class="toc-link toc-level-1" href="#4-inventory-check">4️⃣ Inventory Check</a><a class="toc-link toc-level-1" href="#5-dropped-the-backpack">5️⃣ Dropped The Backpack 🙃</a><a class="toc-link toc-level-1" href="#6-sort-your-backpack">6️⃣ Sort Your Backpack</a><a class="toc-link toc-level-1" href="#7-stolen-items-during-sleep">7️⃣ Stolen Items during Sleep</a><a class="toc-link toc-level-1" href="#8-found-magic-ring-and-coin-pouch">8️⃣Found Magic Ring and Coin Pouch</a><a class="toc-link toc-level-1" href="#9-half-backpack-disappears">9️⃣Half Backpack Disappears</a><a class="toc-link toc-level-1" href="#bandits-attack">🔟 Bandits Attack</a><a class="toc-link toc-level-1" href="#game-over">☠️ Game Over</a><a class="toc-link toc-level-1" href="#what-is-refactoring">What is Refactoring?</a><a class="toc-link toc-level-3" href="#what-to-do">What to do?</a><a class="toc-link toc-level-3" href="#if-you-ever-catch-yourself-copy-pasting-the-same-code-over-and-over-you-39-re-doing-something-wrong-programming-is-all-about-being-efficient-and-it-includes-writing-clean-code-always-look-for-ways-to-reuse-your-code-without-using-ctrl-c-ctrl-v-combo">If you ever catch yourself copy-pasting the same code over and over - you&amp;#39;re doing something wrong. Programming is all about being efficient and it includes writing clean code. Always look for ways to reuse your code without using CTRL+C, CTRL+V combo.</a><a class="toc-link toc-level-1" href="#simple-dictionary-example">Simple Dictionary Example</a><a class="toc-link toc-level-1" href="#dictionary-advanced-example">Dictionary - Advanced Example</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

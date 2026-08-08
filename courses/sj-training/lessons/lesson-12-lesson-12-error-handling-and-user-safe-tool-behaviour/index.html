@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SJ-trAIning | Lesson 12 | Lesson 12 - Error Handling and User-Safe Tool Behaviour</title>
+    <meta name="description" content="Users should not see confusing Python tracebacks for normal mistakes. If they select the wrong thing, tell them clearly." />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ-trAIning</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 12 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 12 Error Handling and User Safe Tool Behaviour</code> using <code>Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 12</p>
+          <h1>Lesson 12 - Error Handling and User-Safe Tool Behaviour</h1>
+          <p class="hero-summary">Users should not see confusing Python tracebacks for normal mistakes. If they select the wrong thing, tell them clearly.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 12 Error Handling and User Safe Tool Behaviour</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 12 Error Handling and User Safe Tool Behaviour</p>
+                <p><strong>Primary source:</strong> Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md</p>
+                <p><strong>Assets:</strong> 1</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="lesson-12-error-handling-and-user-safe-tool-behaviour">Lesson 12 - Error Handling and User-Safe Tool Behaviour</h1>
+<h2 id="make-tools-fail-safely">Make Tools Fail Safely</h2>
+<p>Users should not see confusing Python tracebacks for normal mistakes. If they select the wrong thing, tell them clearly.</p>
+<h2 id="try-except">Try / Except</h2>
+<pre><code class="language-python">try:
+    result = 10 / 0
+except Exception as ex:
+    print(f&#39;Something went wrong: {ex}&#39;)</code></pre>
+<h2 id="validate-first">Validate First</h2>
+<pre><code class="language-python">selection_ids = uidoc.Selection.GetElementIds()
+
+if not selection_ids:
+    forms.alert(&#39;Please select at least one element.&#39;, exitscript=True)</code></pre>
+<h2 id="confirm-destructive-actions">Confirm Destructive Actions</h2>
+<pre><code class="language-python">confirmed = forms.alert(
+    &#39;This will rename selected views. Continue?&#39;,
+    yes=True,
+    no=True
+)
+
+if not confirmed:
+    forms.alert(&#39;Cancelled.&#39;, exitscript=True)</code></pre>
+<h2 id="simple-exercise">💪 Simple Exercise</h2>
+<p>Add checks to one tool for:</p>
+<ul><li>Empty selection</li><li>Missing parameter</li><li>Cancelled operation</li></ul>
+<h2 id="lesson-outcome">✅ Lesson Outcome</h2>
+<p>You can make tools safer and more understandable for non-coder users.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md">Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-11-lesson-11-the-pyrevit-debugging-protocol/"><span>Previous</span><strong>Lesson 11 · Lesson 11 - The pyRevit Debugging Protocol</strong></a>
+              <a class="lesson-nav-card" href="../lesson-13-lesson-13-building-better-user-inputs-and-basic-ui/"><span>Next</span><strong>Lesson 13 · Lesson 13 - Building Better User Inputs and Basic UI</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#lesson-12-error-handling-and-user-safe-tool-behaviour">Lesson 12 - Error Handling and User-Safe Tool Behaviour</a><a class="toc-link toc-level-2" href="#make-tools-fail-safely">Make Tools Fail Safely</a><a class="toc-link toc-level-2" href="#try-except">Try / Except</a><a class="toc-link toc-level-2" href="#validate-first">Validate First</a><a class="toc-link toc-level-2" href="#confirm-destructive-actions">Confirm Destructive Actions</a><a class="toc-link toc-level-2" href="#simple-exercise">💪 Simple Exercise</a><a class="toc-link toc-level-2" href="#lesson-outcome">✅ Lesson Outcome</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

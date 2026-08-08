@@ -7,7 +7,7 @@
     "lessons:import": "node scripts/import-lessons.mjs",
     "generate": "node scripts/generate-site.mjs",
     "generate:quick": "node scripts/generate-site.mjs --index-only",
-    "site:update": "npm run lessons:import && npm run generate",
+    "site:update": "node scripts/import-lessons.mjs && node scripts/generate-site.mjs",
     "preview": "npx --yes serve . -l 4173"
   }
 }

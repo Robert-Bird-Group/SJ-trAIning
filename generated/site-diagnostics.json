@@ -1,114 +1,354 @@
 {
-  "generatedAt": "2026-08-07T08:50:45.462Z",
-  "lessonCount": 7,
+  "generatedAt": "2026-08-08T04:53:54.970Z",
+  "courseCount": 2,
+  "lessonCount": 29,
   "skippedLessonCount": 8,
-  "sourceRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons",
-  "lessonOutputRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\lessons",
+  "sourceRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses",
+  "courseOutputRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\courses",
   "indexOnly": false,
-  "lessons": [
+  "courses": [
     {
-      "lessonNumber": 1,
-      "title": "Hello World",
-      "slug": "lesson-01-hello-world",
-      "sourceType": "html",
-      "primaryFile": "Hello World.html",
-      "headingCount": 0,
-      "objectiveCount": 3,
-      "duration": "5:06"
+      "name": "Python",
+      "slug": "python",
+      "sourceRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons",
+      "lessonCount": 7,
+      "skippedLessonCount": 8,
+      "lessons": [
+        {
+          "lessonNumber": 1,
+          "title": "Hello World",
+          "slug": "lesson-01-hello-world",
+          "sourceType": "html",
+          "primaryFile": "Hello World.html",
+          "headingCount": 0,
+          "objectiveCount": 3,
+          "duration": "5:06"
+        },
+        {
+          "lessonNumber": 2,
+          "title": "What is Syntax?",
+          "slug": "lesson-02-what-is-syntax",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_DataTypes.md",
+          "headingCount": 8,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 3,
+          "title": "Simple Exercise: Calculator",
+          "slug": "lesson-03-simple-exercise-calculator",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_SimpleCalculator.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 4,
+          "title": "Collection Data-Types:",
+          "slug": "lesson-04-collection-data-types",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_CollectionDataTypes.md",
+          "headingCount": 38,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 5,
+          "title": "Time to Practice",
+          "slug": "lesson-05-time-to-practice",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_ListAndDict.md",
+          "headingCount": 18,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 6,
+          "title": "Operators and Expressions in Python",
+          "slug": "lesson-06-operators-and-expressions-in-python",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_BasicOperators.md",
+          "headingCount": 14,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 7,
+          "title": "Time To Add Logic!",
+          "slug": "lesson-07-time-to-add-logic",
+          "sourceType": "markdown",
+          "primaryFile": "!Lesson_ConditionalStatements.md",
+          "headingCount": 11,
+          "objectiveCount": 0,
+          "duration": ""
+        }
+      ],
+      "skipped": [
+        {
+          "folderName": "Lesson 08",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 09",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 10",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 11",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 12",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 13",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 14",
+          "reason": "No lesson markdown or html file found."
+        },
+        {
+          "folderName": "Lesson 15",
+          "reason": "No lesson markdown or html file found."
+        }
+      ]
     },
     {
-      "lessonNumber": 2,
-      "title": "What is Syntax?",
-      "slug": "lesson-02-what-is-syntax",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_DataTypes.md",
-      "headingCount": 8,
-      "objectiveCount": 0,
-      "duration": ""
-    },
-    {
-      "lessonNumber": 3,
-      "title": "Simple Exercise: Calculator",
-      "slug": "lesson-03-simple-exercise-calculator",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_SimpleCalculator.md",
-      "headingCount": 7,
-      "objectiveCount": 0,
-      "duration": ""
-    },
-    {
-      "lessonNumber": 4,
-      "title": "Collection Data-Types:",
-      "slug": "lesson-04-collection-data-types",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_CollectionDataTypes.md",
-      "headingCount": 38,
-      "objectiveCount": 0,
-      "duration": ""
-    },
-    {
-      "lessonNumber": 5,
-      "title": "Time to Practice",
-      "slug": "lesson-05-time-to-practice",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_ListAndDict.md",
-      "headingCount": 18,
-      "objectiveCount": 0,
-      "duration": ""
-    },
-    {
-      "lessonNumber": 6,
-      "title": "Operators and Expressions in Python",
-      "slug": "lesson-06-operators-and-expressions-in-python",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_BasicOperators.md",
-      "headingCount": 14,
-      "objectiveCount": 0,
-      "duration": ""
-    },
-    {
-      "lessonNumber": 7,
-      "title": "Time To Add Logic!",
-      "slug": "lesson-07-time-to-add-logic",
-      "sourceType": "markdown",
-      "primaryFile": "!Lesson_ConditionalStatements.md",
-      "headingCount": 11,
-      "objectiveCount": 0,
-      "duration": ""
-    }
-  ],
-  "skipped": [
-    {
-      "folderName": "Lesson 08",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 09",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 10",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 11",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 12",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 13",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 14",
-      "reason": "No lesson markdown or html file found."
-    },
-    {
-      "folderName": "Lesson 15",
-      "reason": "No lesson markdown or html file found."
+      "name": "SJ-trAIning",
+      "slug": "sj-training",
+      "sourceRoot": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons",
+      "lessonCount": 22,
+      "skippedLessonCount": 0,
+      "lessons": [
+        {
+          "lessonNumber": 1,
+          "title": "Lesson 01 - Course Orientation and the 90-Day Toolbar Goal",
+          "slug": "lesson-01-lesson-01-course-orientation-and-the-90-day-toolbar-goal",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_01_Course_Orientation_and_the_90_Day_Toolbar_Goal.md",
+          "headingCount": 11,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 2,
+          "title": "Lesson 02 - Setting Up Your AI Sidekick for pyRevit Development",
+          "slug": "lesson-02-lesson-02-setting-up-your-ai-sidekick-for-pyrevit-development",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_02_Setting_Up_Your_AI_Sidekick_for_pyRevit_Development.md",
+          "headingCount": 8,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 3,
+          "title": "Lesson 03 - Python Syntax, Variables, and Data Types",
+          "slug": "lesson-03-lesson-03-python-syntax-variables-and-data-types",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_03_Python_Syntax_Variables_and_Data_Types.md",
+          "headingCount": 10,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 4,
+          "title": "Lesson 04 - User Input, Type Conversion, and a Simple Calculator",
+          "slug": "lesson-04-lesson-04-user-input-type-conversion-and-a-simple-calculator",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md",
+          "headingCount": 8,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 5,
+          "title": "Lesson 05 - Lists, Dictionaries, and Simple Data Structures",
+          "slug": "lesson-05-lesson-05-lists-dictionaries-and-simple-data-structures",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 6,
+          "title": "Lesson 06 - pyRevit Extension Structure and First Button",
+          "slug": "lesson-06-lesson-06-pyrevit-extension-structure-and-first-button",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_06_pyRevit_Extension_Structure_and_First_Button.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 7,
+          "title": "Lesson 07 - Revit API Foundations for pyRevit",
+          "slug": "lesson-07-lesson-07-revit-api-foundations-for-pyrevit",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_07_Revit_API_Foundations_for_pyRevit.md",
+          "headingCount": 8,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 8,
+          "title": "Lesson 08 - Building First Useful Tools With AI",
+          "slug": "lesson-08-lesson-08-building-first-useful-tools-with-ai",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_08_Building_First_Useful_Tools_With_AI.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 9,
+          "title": "Lesson 09 - Reviewing and Refactoring AI-Written Code",
+          "slug": "lesson-09-lesson-09-reviewing-and-refactoring-ai-written-code",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md",
+          "headingCount": 8,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 10,
+          "title": "Lesson 10 - Phase 1 Milestone: Build Your First Personal Tool",
+          "slug": "lesson-10-lesson-10-phase-1-milestone-build-your-first-personal-tool",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_10_Phase_1_Milestone_Build_Your_First_Personal_Tool.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 11,
+          "title": "Lesson 11 - The pyRevit Debugging Protocol",
+          "slug": "lesson-11-lesson-11-the-pyrevit-debugging-protocol",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_11_The_pyRevit_Debugging_Protocol.md",
+          "headingCount": 6,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 12,
+          "title": "Lesson 12 - Error Handling and User-Safe Tool Behaviour",
+          "slug": "lesson-12-lesson-12-error-handling-and-user-safe-tool-behaviour",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 13,
+          "title": "Lesson 13 - Building Better User Inputs and Basic UI",
+          "slug": "lesson-13-lesson-13-building-better-user-inputs-and-basic-ui",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_13_Building_Better_User_Inputs_and_Basic_UI.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 14,
+          "title": "Lesson 14 - Packaging a pyRevit Extension for Office Use",
+          "slug": "lesson-14-lesson-14-packaging-a-pyrevit-extension-for-office-use",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_14_Packaging_a_pyRevit_Extension_for_Office_Use.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 15,
+          "title": "Lesson 15 - Office Rollout Plan and Update Strategy",
+          "slug": "lesson-15-lesson-15-office-rollout-plan-and-update-strategy",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_15_Office_Rollout_Plan_and_Update_Strategy.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 16,
+          "title": "Lesson 16 - Adoption Wiki, Tool Documentation, and Feedback Loops",
+          "slug": "lesson-16-lesson-16-adoption-wiki-tool-documentation-and-feedback-loops",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_16_Adoption_Wiki_Tool_Documentation_and_Feedback_Loops.md",
+          "headingCount": 6,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 17,
+          "title": "Lesson 17 - Phase 2 Milestone: Deploy a Reliable Mini Toolbar",
+          "slug": "lesson-17-lesson-17-phase-2-milestone-deploy-a-reliable-mini-toolbar",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_17_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md",
+          "headingCount": 6,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 18,
+          "title": "Lesson 18 - How AI Coding Agents Really Work",
+          "slug": "lesson-18-lesson-18-how-ai-coding-agents-really-work",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_18_How_AI_Coding_Agents_Really_Work.md",
+          "headingCount": 6,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 19,
+          "title": "Lesson 19 - Turning the AI Sidekick Into a pyRevit AI Engine",
+          "slug": "lesson-19-lesson-19-turning-the-ai-sidekick-into-a-pyrevit-ai-engine",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_19_Turning_the_AI_Sidekick_Into_a_pyRevit_AI_Engine.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 20,
+          "title": "Lesson 20 - Self-Iterating AI Workflows and Advanced Automation Experiments",
+          "slug": "lesson-20-lesson-20-self-iterating-ai-workflows-and-advanced-automation-experiments",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_20_Self_Iterating_AI_Workflows_and_Advanced_Automation_Experiments.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 21,
+          "title": "Lesson 21 - Capstone Project: Build, Test, Document, and Deploy Your Office Toolbar",
+          "slug": "lesson-21-lesson-21-capstone-project-build-test-document-and-deploy-your-office-toolbar",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_21_Capstone_Project_Build_Test_Document_and_Deploy_Your_Office_Toolbar.md",
+          "headingCount": 6,
+          "objectiveCount": 0,
+          "duration": ""
+        },
+        {
+          "lessonNumber": 22,
+          "title": "Lesson 22 - Next Steps, Maintenance, and Long-Term AI Workflow Strategy",
+          "slug": "lesson-22-lesson-22-next-steps-maintenance-and-long-term-ai-workflow-strategy",
+          "sourceType": "markdown",
+          "primaryFile": "Lesson_22_Next_Steps_Maintenance_and_Long_Term_AI_Workflow_Strategy.md",
+          "headingCount": 7,
+          "objectiveCount": 0,
+          "duration": ""
+        }
+      ],
+      "skipped": []
     }
   ]
 }

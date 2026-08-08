@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python | Lesson 02 | What is Syntax?</title>
+    <meta name="description" content="But don&#39;t worry - Errors are you best teachers. They&#39;ll let you know exactly where and what went wrong so you can go and fix it. And hopefully learn along the w" />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">Python</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 02 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 02</code> using <code>!Lesson_DataTypes.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 02</p>
+          <h1>What is Syntax?</h1>
+          <p class="hero-summary">But don&#39;t worry - Errors are you best teachers. They&#39;ll let you know exactly where and what went wrong so you can go and fix it. And hopefully learn along the way.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">!Lesson_DataTypes.md</span>
+            <span class="meta-pill">5 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 02</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 02</p>
+                <p><strong>Primary source:</strong> !Lesson_DataTypes.md</p>
+                <p><strong>Assets:</strong> 5</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="what-is-syntax">What is Syntax?</h1>
+<p>Syntax is like a grammar of programming languages. And if you don&#39;t follow it, then Python won&#39;t understand you and you&#39;ll get an error.</p>
+<p>But don&#39;t worry - Errors are you best teachers. They&#39;ll let you know exactly where and what went wrong so you can go and fix it. And hopefully learn along the way.</p>
+<h1 id="basic-data-type-strings">Basic Data-Type: Strings</h1>
+<p>Let&#39;s begin exploring syntax rules with <strong>String Data-Type</strong>, which refers to text.</p>
+<p>To create strings we need to use &#39;single&#39; or &quot;double quotes&quot; on each side of the message. That&#39;s a syntax rule for strings.</p>
+<pre><code class="language-py">&#39;Text in python is called String&#39;
+&quot;It has to be inside single or double quotes&quot;
+&#39;We can use &quot;double-quotes&quot; inside single quotes&#39;
+&quot;And &#39;vice-versa&#39; &quot; # This is a string</code></pre>
+<p>⚠️However, keep in mind we can&#39;t write text without quotes. This will break python syntax rules, and it will certainly lead to many errors.</p>
+<p><img src="image.png" alt="alt text" /></p>
+<p>Also notice that certain words are highlighted (not, in, break). There are certain keywords in Python with a special meaning to create Logical Statements, Loops, Functions and use other concepts (More on that later...).</p>
+<h1 id="comments-in-python"># Comments in Python</h1>
+<p>While coding you might leave some remarks of a piece of code that should be ignored by Python. And we can use <strong>Comments</strong> for that.</p>
+<p>To create a comment put # symbol and then python will ignore everything on the right side of it. You can even put comments after your statements:</p>
+<pre><code class="language-py">&quot;And &#39;vice-versa&#39; &quot; # this is a string
+
+# But we can not write text in python without quotes.
+# It will break syntax rules</code></pre>
+<p>As a beginner use comments to document your code and explain what&#39;s going on. No need to write an essay, but it&#39;s great to leave quick comments everything.</p>
+<p>It&#39;s very common for beginners to write code, and then come back a few days/weeks later and forget what&#39;s going on. Comments can remind you most important parts. So leave comments to help your future-self or at least organize your code to be more readable.</p>
+<h1 id="variables-how-to-store-data">Variables: How to Store Data?</h1>
+<p>In python you can&#39;t write your data anywhere you want. You need to assign your data to containers called <strong>&#39;Variables&#39;</strong>. Think of it as a box that can store your data (text, numbers, lists...)</p>
+<p>It&#39;s needed so you can define your data once and then reuse it many times in your code, always referring to the same data. You can also override the data if you need to.</p>
+<p>To create a variable write a single word (without quotes) and then assign data with = equal sign. Later you can use the same variable name to access this data.</p>
+<p>For example, you can print the data that variables hold like this:</p>
+<pre><code class="language-py">#📦 Text Variables
+#--------------------------------------------------
+text   = &#39;Text in python is called String&#39;
+text_2 = &quot;It has to be inside single or double quotes&quot;
+text_3 = &#39;We can use &quot;double-quotes&quot; inside single quotes&#39;
+text_4 = &quot;And &#39;vice-versa&#39; &quot; # This is a string
+
+#👀 Print Statements
+#--------------------------------------------------
+print(text)
+print(text_2)
+print(text_3)
+print(text_3)</code></pre>
+<p>P.S. Make sure you don&#39;t use variable names with internal meaning in Python. This will override this meaning and you can break your Python. You might not know all the names yet, but you&#39;ll learn them as you progress during this course.</p>
+<h1 id="all-basic-datatypes">All Basic DataTypes</h1>
+<p><img src="image-1.png" alt="alt text" /></p>
+<pre><code class="language-py"># Basic Data-Types in Python
+#--------------------------------------------------
+string    = &#39;text&#39;
+num_int   = 10
+num_float = 3.14
+boolean   = True #False
+none_type = None</code></pre>
+<p>As you can see they are very simple. These are the building blocks for any script logic you&#39;ll want to create.</p>
+<h1 id="check-variable-types">Check Variable Types</h1>
+<p>As you code sometimes you might need to verify the type of your variables. And for that we can use type() built-in function. You can provide any object and it will return its type.</p>
+<p>So to display in the console we also need to print() it, and here&#39;s how to combine both of them:</p>
+<pre><code class="language-py">print(type(string))      # &lt;class &#39;str&#39;&gt;
+print(type(num_int))     # &lt;class &#39;int&#39;&gt;
+print(type(num_float))   # &lt;class &#39;float&#39;&gt;
+print(type(boolean))     # &lt;class &#39;bool&#39;&gt;
+print(type(none_type))   # &lt;class &#39;NoneType&#39;&gt;</code></pre>
+<p>Usually you&#39;d do that during development, and then you&#39;d comment it out once your code is complete.</p>
+<h1 id="simple-exercise">Simple Exercise</h1>
+<p>Lastly, let&#39;s have an example of how we could use variables to make our life easier.</p>
+<p>Imagine you have a simple story:</p>
+<pre><code class="language-py">print(&#39;Once upon a time, there was a Revit User named Erik&#39;)
+print(&#39;Erik has spent months on soul-draining tasks in Revit&#39;)
+print(&#39;Until one day Erik said: Enough!&#39;)
+print(&#39;And by accident he discovered that he could automate his Revit work with python&#39;)
+print(&#39;But Erik knew nothing about python.&#39;)
+print(&#39;And so, Erik has begun his programming journey.&#39;)</code></pre>
+<p>Now you decide to change user name and the app.  But doing it manually is prone to errors and not very efficient...</p>
+<p>So instead, define variables once, and then use them inside your print statements. And if you decide to change the name or app, you have to make change only in one place. And to do that you can join multiple pieces of text including your variables.</p>
+<p>Like this:</p>
+<pre><code class="language-py"># 💪 Simple Excercise
+#--------------------------------------------------
+user = &#39;Klaus&#39;
+app  = &#39;Photoshop&#39;
+
+print(&#39;Once upon a time, there was a&#39; + app + &#39;User named &#39; + user)
+print(user + &#39; wasted months on soul-draining tasks in &#39; + app )
+print(&#39;Until one day&#39; + user + &#39; said: Enough!&#39;)
+print(&#39;And by accident he discovered that he could automate his&#39; + app +  &#39; work with python&#39;)
+print(&#39;But &#39; + user + &#39; knew nothing about python.&#39;)
+print(&#39;And so, &#39; + user + &#39; has begun his programming journey.&#39;)</code></pre>
+<p>Now we&#39;re joining multiple strings into one using our variables. But we can agree on one thing:</p>
+<p>🤬 It looks Horrible, isn&#39;t it?</p>
+<p>It&#39;s fine to use + symbol to join strings on smaller examples, but in this case it&#39;s best to use string-formatting. Here&#39;s how.</p>
+<h1 id="string-formatting">String Formatting</h1>
+<p>Instead of joining strings one by one, we can use string-formatting.</p>
+<p>It&#39;s a way to put placeholders {} inside your strings and then replace them with actual values. And there are 2 ways to do that, depending if you&#39;re on an old version of python or newer than 3.6.6+.</p>
+<p>Here&#39;s an example of both options:</p>
+<pre><code class="language-py">name = &#39;Erik&#39;
+age  = &#39;29&#39;
+
+# After python 3.6.6 - f-string or .format()
+print(f&quot;My Name is {name} and I&#39;m {age} years old&quot;)
+
+# Before Python 3.6.6 - .format()
+print(&quot;My Name is {} and I&#39;m {} years old&quot;.format(name, age))</code></pre>
+<p>Both examples will produce the same result, but one is a bit simpler than the other. But notice how much simple and easier it is to insert your data in the middle on a sentence no w.</p>
+<p>Now let&#39;s apply it to our story:</p>
+<pre><code class="language-py"># 💪 Simple Excercise
+#--------------------------------------------------
+user = &#39;Klaus&#39;
+app  = &#39;Photoshop&#39;
+
+print(f&#39;Once upon a time, there was a {app} User named {user}&#39;)
+print(f&#39;{user} wasted months on soul-draining tasks in {app}&#39;)
+print(f&#39;Until one day {user} said: Enough!&#39;)
+print(f&#39;And by accident he discovered that he could automate his {app} work with python&#39;)
+print(f&#39;But {user} knew nothing about python.&#39;)
+print(f&#39;And so, {user} has begun his programming journey.&#39;)</code></pre>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./!Lesson_DataTypes.md">!Lesson_DataTypes.md</a></li><li><a href="./icon.png">icon.png</a></li><li><a href="./image-1.png">image-1.png</a></li><li><a href="./image.png">image.png</a></li><li><a href="./Variables%20and%20Data%20Types.py">Variables and Data Types.py</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-01-hello-world/"><span>Previous</span><strong>Lesson 01 · Hello World</strong></a>
+              <a class="lesson-nav-card" href="../lesson-03-simple-exercise-calculator/"><span>Next</span><strong>Lesson 03 · Simple Exercise: Calculator</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#what-is-syntax">What is Syntax?</a><a class="toc-link toc-level-1" href="#basic-data-type-strings">Basic Data-Type: Strings</a><a class="toc-link toc-level-1" href="#comments-in-python"># Comments in Python</a><a class="toc-link toc-level-1" href="#variables-how-to-store-data">Variables: How to Store Data?</a><a class="toc-link toc-level-1" href="#all-basic-datatypes">All Basic DataTypes</a><a class="toc-link toc-level-1" href="#check-variable-types">Check Variable Types</a><a class="toc-link toc-level-1" href="#simple-exercise">Simple Exercise</a><a class="toc-link toc-level-1" href="#string-formatting">String Formatting</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

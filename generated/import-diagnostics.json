@@ -1,98 +1,314 @@
 {
-  "generatedAt": "2026-08-07T08:23:29.965Z",
-  "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python",
-  "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons",
-  "lessonCount": 15,
-  "lessons": [
+  "generatedAt": "2026-08-08T04:53:54.261Z",
+  "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course",
+  "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses",
+  "courseCount": 2,
+  "lessonCount": 37,
+  "importedDirectories": 15,
+  "importedFlatFiles": 22,
+  "courses": [
     {
-      "lesson": "Lesson 01",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 01",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 01",
-      "topLevelEntries": 2
+      "name": "Python",
+      "slug": "python",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons",
+      "lessonCount": 15,
+      "importedDirectories": 15,
+      "importedFlatFiles": 0,
+      "lessons": [
+        {
+          "lesson": "Lesson 01",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 01",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 01",
+          "topLevelEntries": 2
+        },
+        {
+          "lesson": "Lesson 02",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 02",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 02",
+          "topLevelEntries": 5
+        },
+        {
+          "lesson": "Lesson 03",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 03",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 03",
+          "topLevelEntries": 4
+        },
+        {
+          "lesson": "Lesson 04",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 04",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 04",
+          "topLevelEntries": 11
+        },
+        {
+          "lesson": "Lesson 05",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 05",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 05",
+          "topLevelEntries": 4
+        },
+        {
+          "lesson": "Lesson 06",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 06",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 06",
+          "topLevelEntries": 2
+        },
+        {
+          "lesson": "Lesson 07",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 07",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 07",
+          "topLevelEntries": 7
+        },
+        {
+          "lesson": "Lesson 08",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 08",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 08",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 09",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 09",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 09",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 10",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 10",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 10",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 11",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 11",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 11",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 12",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 12",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 12",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 13",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 13",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 13",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 14",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 14",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 14",
+          "topLevelEntries": 0
+        },
+        {
+          "lesson": "Lesson 15",
+          "importMode": "directory",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 15",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\python\\lessons\\Lesson 15",
+          "topLevelEntries": 0
+        }
+      ]
     },
     {
-      "lesson": "Lesson 02",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 02",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 02",
-      "topLevelEntries": 5
-    },
-    {
-      "lesson": "Lesson 03",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 03",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 03",
-      "topLevelEntries": 4
-    },
-    {
-      "lesson": "Lesson 04",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 04",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 04",
-      "topLevelEntries": 11
-    },
-    {
-      "lesson": "Lesson 05",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 05",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 05",
-      "topLevelEntries": 4
-    },
-    {
-      "lesson": "Lesson 06",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 06",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 06",
-      "topLevelEntries": 2
-    },
-    {
-      "lesson": "Lesson 07",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 07",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 07",
-      "topLevelEntries": 7
-    },
-    {
-      "lesson": "Lesson 08",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 08",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 08",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 09",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 09",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 09",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 10",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 10",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 10",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 11",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 11",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 11",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 12",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 12",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 12",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 13",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 13",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 13",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 14",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 14",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 14",
-      "topLevelEntries": 0
-    },
-    {
-      "lesson": "Lesson 15",
-      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\Python\\Lesson 15",
-      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\lessons\\Lesson 15",
-      "topLevelEntries": 0
+      "name": "SJ-trAIning",
+      "slug": "sj-training",
+      "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning",
+      "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons",
+      "lessonCount": 22,
+      "importedDirectories": 0,
+      "importedFlatFiles": 22,
+      "lessons": [
+        {
+          "lesson": "Lesson 01 Course Orientation and the 90 Day Toolbar Goal",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_01_Course_Orientation_and_the_90_Day_Toolbar_Goal.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 01 Course Orientation and the 90 Day Toolbar Goal",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_01_Course_Orientation_and_the_90_Day_Toolbar_Goal.md"
+        },
+        {
+          "lesson": "Lesson 02 Setting Up Your AI Sidekick for pyRevit Development",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_02_Setting_Up_Your_AI_Sidekick_for_pyRevit_Development.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 02 Setting Up Your AI Sidekick for pyRevit Development",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_02_Setting_Up_Your_AI_Sidekick_for_pyRevit_Development.md"
+        },
+        {
+          "lesson": "Lesson 03 Python Syntax Variables and Data Types",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_03_Python_Syntax_Variables_and_Data_Types.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 03 Python Syntax Variables and Data Types",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_03_Python_Syntax_Variables_and_Data_Types.md"
+        },
+        {
+          "lesson": "Lesson 04 User Input Type Conversion and a Simple Calculator",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 04 User Input Type Conversion and a Simple Calculator",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md"
+        },
+        {
+          "lesson": "Lesson 05 Lists Dictionaries and Simple Data Structures",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 05 Lists Dictionaries and Simple Data Structures",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md"
+        },
+        {
+          "lesson": "Lesson 06 pyRevit Extension Structure and First Button",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_06_pyRevit_Extension_Structure_and_First_Button.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 06 pyRevit Extension Structure and First Button",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_06_pyRevit_Extension_Structure_and_First_Button.md"
+        },
+        {
+          "lesson": "Lesson 07 Revit API Foundations for pyRevit",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_07_Revit_API_Foundations_for_pyRevit.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 07 Revit API Foundations for pyRevit",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_07_Revit_API_Foundations_for_pyRevit.md"
+        },
+        {
+          "lesson": "Lesson 08 Building First Useful Tools With AI",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_08_Building_First_Useful_Tools_With_AI.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 08 Building First Useful Tools With AI",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_08_Building_First_Useful_Tools_With_AI.md"
+        },
+        {
+          "lesson": "Lesson 09 Reviewing and Refactoring AI Written Code",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 09 Reviewing and Refactoring AI Written Code",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md"
+        },
+        {
+          "lesson": "Lesson 10 Phase 1 Milestone Build Your First Personal Tool",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_10_Phase_1_Milestone_Build_Your_First_Personal_Tool.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 10 Phase 1 Milestone Build Your First Personal Tool",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_10_Phase_1_Milestone_Build_Your_First_Personal_Tool.md"
+        },
+        {
+          "lesson": "Lesson 11 The pyRevit Debugging Protocol",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_11_The_pyRevit_Debugging_Protocol.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 11 The pyRevit Debugging Protocol",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_11_The_pyRevit_Debugging_Protocol.md"
+        },
+        {
+          "lesson": "Lesson 12 Error Handling and User Safe Tool Behaviour",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 12 Error Handling and User Safe Tool Behaviour",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md"
+        },
+        {
+          "lesson": "Lesson 13 Building Better User Inputs and Basic UI",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_13_Building_Better_User_Inputs_and_Basic_UI.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 13 Building Better User Inputs and Basic UI",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_13_Building_Better_User_Inputs_and_Basic_UI.md"
+        },
+        {
+          "lesson": "Lesson 14 Packaging a pyRevit Extension for Office Use",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_14_Packaging_a_pyRevit_Extension_for_Office_Use.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 14 Packaging a pyRevit Extension for Office Use",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_14_Packaging_a_pyRevit_Extension_for_Office_Use.md"
+        },
+        {
+          "lesson": "Lesson 15 Office Rollout Plan and Update Strategy",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_15_Office_Rollout_Plan_and_Update_Strategy.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 15 Office Rollout Plan and Update Strategy",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_15_Office_Rollout_Plan_and_Update_Strategy.md"
+        },
+        {
+          "lesson": "Lesson 16 Adoption Wiki Tool Documentation and Feedback Loops",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_16_Adoption_Wiki_Tool_Documentation_and_Feedback_Loops.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 16 Adoption Wiki Tool Documentation and Feedback Loops",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_16_Adoption_Wiki_Tool_Documentation_and_Feedback_Loops.md"
+        },
+        {
+          "lesson": "Lesson 17 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_17_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 17 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_17_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md"
+        },
+        {
+          "lesson": "Lesson 18 How AI Coding Agents Really Work",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_18_How_AI_Coding_Agents_Really_Work.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 18 How AI Coding Agents Really Work",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_18_How_AI_Coding_Agents_Really_Work.md"
+        },
+        {
+          "lesson": "Lesson 19 Turning the AI Sidekick Into a pyRevit AI Engine",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_19_Turning_the_AI_Sidekick_Into_a_pyRevit_AI_Engine.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 19 Turning the AI Sidekick Into a pyRevit AI Engine",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_19_Turning_the_AI_Sidekick_Into_a_pyRevit_AI_Engine.md"
+        },
+        {
+          "lesson": "Lesson 20 Self Iterating AI Workflows and Advanced Automation Experiments",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_20_Self_Iterating_AI_Workflows_and_Advanced_Automation_Experiments.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 20 Self Iterating AI Workflows and Advanced Automation Experiments",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_20_Self_Iterating_AI_Workflows_and_Advanced_Automation_Experiments.md"
+        },
+        {
+          "lesson": "Lesson 21 Capstone Project Build Test Document and Deploy Your Office Toolbar",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_21_Capstone_Project_Build_Test_Document_and_Deploy_Your_Office_Toolbar.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 21 Capstone Project Build Test Document and Deploy Your Office Toolbar",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_21_Capstone_Project_Build_Test_Document_and_Deploy_Your_Office_Toolbar.md"
+        },
+        {
+          "lesson": "Lesson 22 Next Steps Maintenance and Long Term AI Workflow Strategy",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_22_Next_Steps_Maintenance_and_Long_Term_AI_Workflow_Strategy.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 22 Next Steps Maintenance and Long Term AI Workflow Strategy",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_22_Next_Steps_Maintenance_and_Long_Term_AI_Workflow_Strategy.md"
+        }
+      ]
     }
   ]
 }

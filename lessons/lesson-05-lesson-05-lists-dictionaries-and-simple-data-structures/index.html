@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 05 | Lesson 05 - Lists, Dictionaries, and Simple Data Structures</title>
+    <meta name="description" content="Lists and dictionaries help you store multiple pieces of information. This is essential for pyRevit scripts because you often collect elements, parameters, view" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ Training Course</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 05 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 05 Lists Dictionaries and Simple Data Structures</code> using <code>Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <p class="eyebrow">Lesson 05</p>
+          <h1>Lesson 05 - Lists, Dictionaries, and Simple Data Structures</h1>
+          <p class="hero-summary">Lists and dictionaries help you store multiple pieces of information. This is essential for pyRevit scripts because you often collect elements, parameters, view names, sheet numbers, or user choices.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 05 Lists Dictionaries and Simple Data Structures</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 05 Lists Dictionaries and Simple Data Structures</p>
+                <p><strong>Primary source:</strong> Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md</p>
+                <p><strong>Assets:</strong> 1</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="lesson-05-lists-dictionaries-and-simple-data-structures">Lesson 05 - Lists, Dictionaries, and Simple Data Structures</h1>
+<h2 id="time-to-practice">Time to Practice</h2>
+<p>Lists and dictionaries help you store multiple pieces of information. This is essential for pyRevit scripts because you often collect elements, parameters, view names, sheet numbers, or user choices.</p>
+<h2 id="lists">🎒 Lists</h2>
+<p>A list stores multiple values in order.</p>
+<pre><code class="language-python">views = [&#39;Level 01&#39;, &#39;Level 02&#39;, &#39;Roof Plan&#39;]
+print(views)</code></pre>
+<p>Add items:</p>
+<pre><code class="language-python">views.append(&#39;Section A&#39;)</code></pre>
+<p>Remove items:</p>
+<pre><code class="language-python">views.remove(&#39;Roof Plan&#39;)</code></pre>
+<p>Count items:</p>
+<pre><code class="language-python">print(len(views))</code></pre>
+<h2 id="dictionaries">📞 Dictionaries</h2>
+<p>A dictionary stores related keys and values.</p>
+<pre><code class="language-python">sheet = {
+    &#39;Sheet Number&#39;: &#39;S101&#39;,
+    &#39;Sheet Name&#39;: &#39;Ground Floor Framing Plan&#39;,
+    &#39;Status&#39;: &#39;For Review&#39;
+}
+
+print(sheet[&#39;Sheet Number&#39;])</code></pre>
+<h2 id="why-this-matters-in-revit">🔎 Why This Matters in Revit</h2>
+<p>A pyRevit tool might collect data like this:</p>
+<pre><code class="language-python">view_data = {
+    &#39;Name&#39;: &#39;Level 01 Structural Plan&#39;,
+    &#39;Scale&#39;: 100,
+    &#39;Discipline&#39;: &#39;Structural&#39;
+}</code></pre>
+<p>Now you can pass structured data around your script instead of juggling unrelated variables.</p>
+<h2 id="simple-exercise">💪 Simple Exercise</h2>
+<p>Create a list of sheet numbers. Then create a dictionary for one sheet.</p>
+<pre><code class="language-python">sheets = [&#39;S001&#39;, &#39;S101&#39;, &#39;S102&#39;]
+
+sheet_info = {
+    &#39;Number&#39;: &#39;S101&#39;,
+    &#39;Name&#39;: &#39;Level 01 Framing Plan&#39;,
+    &#39;Checked&#39;: False
+}
+
+print(sheets)
+print(sheet_info)</code></pre>
+<h2 id="lesson-outcome">✅ Lesson Outcome</h2>
+<p>You can use lists and dictionaries to structure basic Revit-related data.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md">Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-04-lesson-04-user-input-type-conversion-and-a-simple-calculator/"><span>Previous</span><strong>Lesson 04 · Lesson 04 - User Input, Type Conversion, and a Simple Calculator</strong></a>
+              <a class="lesson-nav-card" href="../lesson-06-lesson-06-pyrevit-extension-structure-and-first-button/"><span>Next</span><strong>Lesson 06 · Lesson 06 - pyRevit Extension Structure and First Button</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#lesson-05-lists-dictionaries-and-simple-data-structures">Lesson 05 - Lists, Dictionaries, and Simple Data Structures</a><a class="toc-link toc-level-2" href="#time-to-practice">Time to Practice</a><a class="toc-link toc-level-2" href="#lists">🎒 Lists</a><a class="toc-link toc-level-2" href="#dictionaries">📞 Dictionaries</a><a class="toc-link toc-level-2" href="#why-this-matters-in-revit">🔎 Why This Matters in Revit</a><a class="toc-link toc-level-2" href="#simple-exercise">💪 Simple Exercise</a><a class="toc-link toc-level-2" href="#lesson-outcome">✅ Lesson Outcome</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SJ-trAIning | Lesson 07 | Lesson 07 - Revit API Foundations for pyRevit</title>
+    <meta name="description" content="The Revit API is the programming interface that lets your script read or modify the Revit model." />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ-trAIning</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-sub">Generated static lesson page</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 07 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 07 Revit API Foundations for pyRevit</code> using <code>Lesson_07_Revit_API_Foundations_for_pyRevit.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson Overview</span>
+          <span class="card-hint">Business Standard lesson shell</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 07</p>
+          <h1>Lesson 07 - Revit API Foundations for pyRevit</h1>
+          <p class="hero-summary">The Revit API is the programming interface that lets your script read or modify the Revit model.</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_07_Revit_API_Foundations_for_pyRevit.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          <section class="card wiki-section" id="overview">
+            <div class="card-head">
+              <span class="card-title">Overview</span>
+              <span class="card-hint">Imported from Lesson 07 Revit API Foundations for pyRevit</span>
+            </div>
+            <div class="card-body wiki-body">
+              <div class="wiki-meta-grid">
+                <p><strong>Lesson folder:</strong> Lesson 07 Revit API Foundations for pyRevit</p>
+                <p><strong>Primary source:</strong> Lesson_07_Revit_API_Foundations_for_pyRevit.md</p>
+                <p><strong>Assets:</strong> 1</p>
+                <p><strong>Format:</strong> markdown</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+              <span class="card-hint">Detected from lesson source</span>
+            </div>
+            <div class="card-body wiki-body">
+              <p class="muted">No explicit learning objectives were detected yet.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+              <span class="card-hint">Rendered for GitHub Pages</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <h1 id="lesson-07-revit-api-foundations-for-pyrevit">Lesson 07 - Revit API Foundations for pyRevit</h1>
+<h2 id="what-is-the-revit-api">What is the Revit API?</h2>
+<p>The Revit API is the programming interface that lets your script read or modify the Revit model.</p>
+<h2 id="important-objects">Important Objects</h2>
+<pre><code class="language-python">uidoc = __revit__.ActiveUIDocument
+doc = uidoc.Document
+active_view = doc.ActiveView</code></pre>
+<ul><li><code>uidoc</code> gives access to user selections and UI-level actions</li><li><code>doc</code> gives access to the Revit model database</li><li><code>active_view</code> is the currently open view</li></ul>
+<h2 id="reading-elements">🔎 Reading Elements</h2>
+<pre><code class="language-python">from Autodesk.Revit.DB import FilteredElementCollector, View
+
+views = FilteredElementCollector(doc).OfClass(View).ToElements()
+print(len(views))</code></pre>
+<h2 id="transactions">✍️ Transactions</h2>
+<p>If you modify the model, you need a transaction.</p>
+<pre><code class="language-python">from Autodesk.Revit.DB import Transaction
+
+t = Transaction(doc, &#39;Rename Active View&#39;)
+t.Start()
+active_view.Name = active_view.Name + &#39; - TEST&#39;
+t.Commit()</code></pre>
+<h2 id="safety-rule">⚠️ Safety Rule</h2>
+<p>Never run model-changing code on a live project until you have tested it in a safe model.</p>
+<h2 id="simple-exercise">💪 Simple Exercise</h2>
+<p>Write a script that prints:</p>
+<ul><li>Active view name</li><li>Active view id</li><li>Document title</li></ul>
+<h2 id="lesson-outcome">✅ Lesson Outcome</h2>
+<p>You understand the basic Revit API entry points used in most pyRevit tools.</p>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+              <span class="card-hint">Copied alongside the generated page</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_07_Revit_API_Foundations_for_pyRevit.md">Lesson_07_Revit_API_Foundations_for_pyRevit.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-06-lesson-06-pyrevit-extension-structure-and-first-button/"><span>Previous</span><strong>Lesson 06 · Lesson 06 - pyRevit Extension Structure and First Button</strong></a>
+              <a class="lesson-nav-card" href="../lesson-08-lesson-08-building-first-useful-tools-with-ai/"><span>Next</span><strong>Lesson 08 · Lesson 08 - Building First Useful Tools With AI</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            <a class="toc-link toc-level-1" href="#overview">Overview</a>
+            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-1" href="#lesson-07-revit-api-foundations-for-pyrevit">Lesson 07 - Revit API Foundations for pyRevit</a><a class="toc-link toc-level-2" href="#what-is-the-revit-api">What is the Revit API?</a><a class="toc-link toc-level-2" href="#important-objects">Important Objects</a><a class="toc-link toc-level-2" href="#reading-elements">🔎 Reading Elements</a><a class="toc-link toc-level-2" href="#transactions">✍️ Transactions</a><a class="toc-link toc-level-2" href="#safety-rule">⚠️ Safety Rule</a><a class="toc-link toc-level-2" href="#simple-exercise">💪 Simple Exercise</a><a class="toc-link toc-level-2" href="#lesson-outcome">✅ Lesson Outcome</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>
