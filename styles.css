@@ -317,6 +317,11 @@ h6 {
   max-width: 11ch;
 }
 
+.lesson-header h1 {
+  font-size: clamp(1.6rem, 3.1vw, 2.45rem);
+  max-width: 18ch;
+}
+
 .hero-summary {
   max-width: 72ch;
   margin: 0;
@@ -700,6 +705,10 @@ h6 {
   .landing-hero h1,
   .lesson-header h1 {
     max-width: none;
+  }
+
+  .lesson-header h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
   .lesson-pagination-body {

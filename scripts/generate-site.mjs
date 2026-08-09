@@ -331,6 +331,53 @@ function addHeadingIds(htmlText) {
   return { html, headings };
 }
 
+function normalizeTitleKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function stripLeadingTitleHeading(withIds, lessonTitle) {
+  const headings = Array.isArray(withIds.headings) ? [...withIds.headings] : [];
+  if (!headings.length) {
+    return withIds;
+  }
+
+  const first = headings[0];
+  if (first.level !== 1) {
+    return withIds;
+  }
+
+  const firstKey = normalizeTitleKey(first.text);
+  const titleKey = normalizeTitleKey(lessonTitle);
+  const looksLikeLessonHeading = firstKey.startsWith("lesson ");
+  const titleMatches = titleKey && (firstKey === titleKey || firstKey.includes(titleKey) || titleKey.includes(firstKey));
+
+  if (!titleMatches && !looksLikeLessonHeading) {
+    return withIds;
+  }
+
+  const openingTag = `<h${first.level}`;
+  const startIndex = withIds.html.indexOf(openingTag);
+  if (startIndex < 0) {
+    return withIds;
+  }
+
+  const closeTag = `</h${first.level}>`;
+  const closeIndex = withIds.html.indexOf(closeTag, startIndex);
+  if (closeIndex < 0) {
+    return withIds;
+  }
+
+  const after = closeIndex + closeTag.length;
+  const updatedHtml = `${withIds.html.slice(0, startIndex)}${withIds.html.slice(after)}`.replace(/^\s+/, "");
+  return {
+    html: updatedHtml,
+    headings: headings.slice(1),
+  };
+}
+
 function findPrimaryFile(files) {
   const markdown = files
     .filter((name) => name.toLowerCase().endsWith(".md"))
@@ -355,11 +402,12 @@ function renderMarkdownLesson(sourceText) {
   const lessonTitle = extractMarkdownHeadings(sourceText).find((heading) => heading.level === 1)?.text || "";
   const html = markdownToHtml(sourceText);
   const withIds = addHeadingIds(html);
+  const normalized = stripLeadingTitleHeading(withIds, lessonTitle);
 
   return {
     title: lessonTitle,
-    articleHtml: withIds.html,
-    headings: withIds.headings,
+    articleHtml: normalized.html,
+    headings: normalized.headings,
     summary: extractFirstParagraph(sourceText),
     objectives: extractObjectives(sourceText),
     duration: extractDuration(sourceText),
@@ -376,12 +424,13 @@ function renderHtmlLesson(sourceText) {
 
   const withIds = addHeadingIds(normalized);
   const title = extractHtmlTitle(sourceText);
-  const paragraphs = withIds.html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+  const normalizedWithIds = stripLeadingTitleHeading(withIds, title);
+  const paragraphs = normalizedWithIds.html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
 
   return {
     title,
-    articleHtml: withIds.html,
-    headings: withIds.headings,
+    articleHtml: normalizedWithIds.html,
+    headings: normalizedWithIds.headings,
     summary: paragraphs ? stripHtml(paragraphs[1]) : "",
     objectives: extractObjectivesFromHtml(sourceText),
     duration: extractDuration(stripHtml(sourceText)),
@@ -524,7 +573,7 @@ function copyDir(sourceDir, destDir) {
 
 function renderObjectives(objectives) {
   if (!objectives.length) {
-    return "<p class=\"muted\">No explicit learning objectives were detected yet.</p>";
+    return "";
   }
 
   return `<ul class=\"objective-list\">${objectives.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
@@ -560,7 +609,19 @@ function renderToc(headings) {
 }
 
 function renderLessonPage(course, lesson, prevLesson, nextLesson) {
-  const summary = lesson.summary || "Lesson content imported from the source course folder.";
+  const summary = lesson.summary || "";
+  const summaryMarkup = summary ? `<p class="hero-summary">${escapeHtml(summary)}</p>` : "";
+  const objectivesMarkup = renderObjectives(lesson.objectives);
+  const objectivesSection = objectivesMarkup
+    ? `<section class="card wiki-section" id="objectives">
+            <div class="card-head">
+              <span class="card-title">Learning Objectives</span>
+            </div>
+            <div class="card-body wiki-body">
+              ${objectivesMarkup}
+            </div>
+          </section>`
+    : "";
   const durationMarkup = lesson.duration
     ? `<span class="meta-pill">${escapeHtml(lesson.duration)}</span>`
     : "";
@@ -578,7 +639,6 @@ function renderLessonPage(course, lesson, prevLesson, nextLesson) {
     <div class="topbar">
       <span class="topbar-title">${escapeHtml(course.name)}</span>
       <span class="topbar-badge">Business Standard</span>
-      <span class="topbar-sub">Generated static lesson page</span>
       <span class="topbar-tag">v0.1</span>
     </div>
 
@@ -595,15 +655,14 @@ function renderLessonPage(course, lesson, prevLesson, nextLesson) {
 
       <section class="card site-header lesson-header">
         <div class="card-head">
-          <span class="card-title">Lesson Overview</span>
-          <span class="card-hint">Business Standard lesson shell</span>
+          <span class="card-title">Lesson</span>
         </div>
         <div class="card-body hero-copy">
           <a class="back-link" href="../../index.html">← Back to course</a>
           <a class="back-link" href="../../../../index.html">← Back to all courses</a>
           <p class="eyebrow">Lesson ${String(lesson.lessonNumber).padStart(2, "0")}</p>
           <h1>${escapeHtml(lesson.title)}</h1>
-          <p class="hero-summary">${escapeHtml(summary)}</p>
+          ${summaryMarkup}
           <div class="meta-row">
             ${durationMarkup}
             <span class="meta-pill">${escapeHtml(lesson.sourceType)}</span>
@@ -615,35 +674,11 @@ function renderLessonPage(course, lesson, prevLesson, nextLesson) {
 
       <div class="wiki-article-layout">
         <main class="wiki-article-main">
-          <section class="card wiki-section" id="overview">
-            <div class="card-head">
-              <span class="card-title">Overview</span>
-              <span class="card-hint">Imported from ${escapeHtml(lesson.folderName)}</span>
-            </div>
-            <div class="card-body wiki-body">
-              <div class="wiki-meta-grid">
-                <p><strong>Lesson folder:</strong> ${escapeHtml(lesson.folderName)}</p>
-                <p><strong>Primary source:</strong> ${escapeHtml(lesson.primaryFile)}</p>
-                <p><strong>Assets:</strong> ${lesson.files.length}</p>
-                <p><strong>Format:</strong> ${escapeHtml(lesson.sourceType)}</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="card wiki-section" id="objectives">
-            <div class="card-head">
-              <span class="card-title">Learning Objectives</span>
-              <span class="card-hint">Detected from lesson source</span>
-            </div>
-            <div class="card-body wiki-body">
-              ${renderObjectives(lesson.objectives)}
-            </div>
-          </section>
+          ${objectivesSection}
 
           <section class="card wiki-section" id="content">
             <div class="card-head">
               <span class="card-title">Lesson Content</span>
-              <span class="card-hint">Rendered for GitHub Pages</span>
             </div>
             <div class="card-body wiki-body lesson-content">
               ${lesson.articleHtml}
@@ -653,7 +688,6 @@ function renderLessonPage(course, lesson, prevLesson, nextLesson) {
           <section class="card wiki-section" id="resources">
             <div class="card-head">
               <span class="card-title">Lesson Files</span>
-              <span class="card-hint">Copied alongside the generated page</span>
             </div>
             <div class="card-body wiki-body">
               <ul class="file-list">${lesson.files.map((file) => `<li><a href="./${encodeURI(file)}">${escapeHtml(file)}</a></li>`).join("")}</ul>
@@ -671,8 +705,7 @@ function renderLessonPage(course, lesson, prevLesson, nextLesson) {
         <aside class="wiki-rail" aria-label="Lesson navigation">
           <h3>On This Page</h3>
           <nav class="wiki-toc" aria-label="Lesson sections">
-            <a class="toc-link toc-level-1" href="#overview">Overview</a>
-            <a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>
+            ${objectivesMarkup ? '<a class="toc-link toc-level-1" href="#objectives">Learning Objectives</a>' : ''}
             <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
             ${renderToc(lesson.headings)}
             <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
