@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SJ-trAIning | Lesson 04 | Lesson 04 - Existing Code Audit: Converting Old Scripts into Tool Candidates</title>
+    <meta name="description" content="--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit AP" />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ-trAIning</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 04 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 04 Existing Code Audit Converting Old Scripts into Tool Candidates</code> using <code>Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 04</p>
+          <h1>Lesson 04 - Existing Code Audit: Converting Old Scripts into Tool Candidates</h1>
+          <p class="hero-summary">--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit API basics, parameters, transactions, selections, collectors, docs, and WPF at least in theory. style: Practical, office-deployment focused, AI-assisted, senior BIM technician workflow ---</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <p>--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit API basics, parameters, transactions, selections, collectors, docs, and WPF at least in theory. style: Practical, office-deployment focused, AI-assisted, senior BIM technician workflow ---</p>
+<p>&gt; <strong>Positioning</strong> &gt; This is not a beginner pyRevit course. Basics and Advanced have already covered Python syntax, pyRevit setup, Revit API documentation, selections, parameters, transactions, UI forms, and view automation. &gt; This course treats those topics as prerequisite knowledge and only revisits them as quick refresh checkpoints where they support the larger goal: building, hardening, deploying, and scaling a reliable office toolbar with AI-assisted workflows.</p>
+<h2 id="module">Module</h2>
+<p><strong>Module 01 - AI Sidekick and Development System</strong></p>
+<h2 id="suggested-time">Suggested Time</h2>
+<p>2 to 3 hours</p>
+<h2 id="what-this-lesson-assumes">What This Lesson Assumes</h2>
+<p>You already understand the introductory version of this topic from the previous course. This lesson focuses on applying that knowledge to a deployable, maintainable, AI-assisted pyRevit workflow.</p>
+<h2 id="objectives">Objectives</h2>
+<ul><li>Audit existing pyRevit scripts for quality, risk, and reuse potential.</li><li>Identify scripts that are prototypes, internal tools, deployable tools, or dead ends.</li><li>Create a technical-debt register for the toolbar.</li></ul>
+<h2 id="why-audit-first">Why Audit First?</h2>
+<p>Most teams already have scripts scattered through local folders, snippets, old experiments, or AI chats. Some are valuable. Some are risky. Some should never be deployed.</p>
+<h2 id="script-classification">Script Classification</h2>
+<p>Use four categories:</p>
+<h3 id="prototype">Prototype</h3>
+<p>Works in one model or one user context. Useful for learning or proving logic.</p>
+<h3 id="internal-utility">Internal Utility</h3>
+<p>Useful to you or BIM leads but not ready for broad users.</p>
+<h3 id="candidate-production-tool">Candidate Production Tool</h3>
+<p>Solves a recurring problem and can be hardened.</p>
+<h3 id="retire-reference-only">Retire / Reference Only</h3>
+<p>Useful as learning material but unsafe or too brittle to maintain.</p>
+<h2 id="audit-checklist">Audit Checklist</h2>
+<pre><code class="language-markdown"># Script Audit
+
+## Script Name
+
+## Current Location
+
+## Purpose
+
+## Reads / Writes Model Data
+
+## Uses Transactions Correctly?
+
+## Handles Empty Selection?
+
+## Handles Missing Parameters?
+
+## Revit Versions Known to Work
+
+## Dependencies
+
+## Documentation Exists?
+
+## Classification
+Prototype / Internal / Candidate / Retire
+
+## Next Action</code></pre>
+<h2 id="exercise-audit-three-scripts">Exercise: Audit Three Scripts</h2>
+<p>Choose three old scripts or AI-generated snippets and classify them. If you do not have old scripts, audit three candidate ideas using the same framework.</p>
+<h2 id="source-notes">Source Notes</h2>
+<ul><li>Prior-course screenshots supplied by user: Screenshots showing Basics and Advanced course coverage: Python, pyRevit setup, Revit API docs, selection, parameters, transactions, UI forms, and view automation</li><li>pyRevit extension docs: https://pyrevit1.readthedocs.io/en/latest/creatingexts.html</li></ul>
+<h2 id="completion-artefact">Completion Artefact</h2>
+<p>By the end of this lesson, produce the listed artefact and save it into your course workspace. This course is intentionally output-driven: every lesson should leave behind a tool, decision record, checklist, standard, test result, or deployment asset.</p>
+<h2 id="senior-reviewer-checklist">Senior Reviewer Checklist</h2>
+<p>Before marking this lesson complete, check:</p>
+<ul><li>The artefact supports a real Revit production workflow.</li><li>Assumptions are documented.</li><li>Risks are classified.</li><li>AI-generated output has been reviewed manually.</li><li>Any model-changing logic is isolated, tested, and reversible.</li><li>Another competent pyRevit user could understand the intent without asking you directly.</li></ul>
+<h2 id="ai-sidekick-prompt">AI Sidekick Prompt</h2>
+<pre><code class="language-text">Act as a senior pyRevit and Revit API reviewer.
+Review this lesson artefact for reliability, maintainability, user safety, deployment readiness, and office adoption.
+Assume I already know Python and pyRevit basics.
+Do not reteach fundamentals unless they directly affect the risk or design decision.</code></pre>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md">Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-03-lesson-03-tool-product-briefs-turning-revit-pain-into-deployable-scope/"><span>Previous</span><strong>Lesson 03 · Lesson 03 - Tool Product Briefs: Turning Revit Pain into Deployable Scope</strong></a>
+              <a class="lesson-nav-card" href="../lesson-05-lesson-05-toolbar-architecture-extension-lib-config-docs-tests-and-deployment/"><span>Next</span><strong>Lesson 05 · Lesson 05 - Toolbar Architecture: Extension, lib, config, docs, tests, and deployment</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-2" href="#module">Module</a><a class="toc-link toc-level-2" href="#suggested-time">Suggested Time</a><a class="toc-link toc-level-2" href="#what-this-lesson-assumes">What This Lesson Assumes</a><a class="toc-link toc-level-2" href="#objectives">Objectives</a><a class="toc-link toc-level-2" href="#why-audit-first">Why Audit First?</a><a class="toc-link toc-level-2" href="#script-classification">Script Classification</a><a class="toc-link toc-level-3" href="#prototype">Prototype</a><a class="toc-link toc-level-3" href="#internal-utility">Internal Utility</a><a class="toc-link toc-level-3" href="#candidate-production-tool">Candidate Production Tool</a><a class="toc-link toc-level-3" href="#retire-reference-only">Retire / Reference Only</a><a class="toc-link toc-level-2" href="#audit-checklist">Audit Checklist</a><a class="toc-link toc-level-2" href="#exercise-audit-three-scripts">Exercise: Audit Three Scripts</a><a class="toc-link toc-level-2" href="#source-notes">Source Notes</a><a class="toc-link toc-level-2" href="#completion-artefact">Completion Artefact</a><a class="toc-link toc-level-2" href="#senior-reviewer-checklist">Senior Reviewer Checklist</a><a class="toc-link toc-level-2" href="#ai-sidekick-prompt">AI Sidekick Prompt</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

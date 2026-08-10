@@ -41,12 +41,12 @@ It's great to use during development if you get confused. It can also be used fo
 For now, here's simple example how to print the type of your variables:
 
 ~~~py
-# 📦Random Values
+# ðŸ“¦Random Values
 num_a = "10"
 num_b = 20
 list_nums = ["10", 20]
 
-# 🔎Check Types
+# ðŸ”ŽCheck Types
 print(type(num_a))
 print(type(num_b))
 print(type(list_nums))
@@ -80,15 +80,15 @@ dict() # Create empty dict or convert a mapping/sequence of pairs into a diction
 In our case, we want to convert strings into integers, so we need to use **int()** function. Here's how it works:
 
 ~~~py
-# 🙋‍♂️Get User Input
+# ðŸ™‹â€â™‚ï¸Get User Input
 str_num_a = input("Enter First Number: ")
 str_num_b = input("Enter Second Number: ")
 
-# 🔁Convert String to Int
+# ðŸ”Convert String to Int
 num_a = int(str_num_a)
 num_b = int(str_num_b)
 
-# 🧮Calculate Total
+# ðŸ§®Calculate Total
 total = num_a + num_b
 print(total)
 ~~~
@@ -101,23 +101,23 @@ But what if we decide to add floating numbers like 2.5 + 2.5 ?
 
 ![alt text](image-1.png)
 
-Alright, so we can't convert "2.5" into an integer…  But what about converting into a float number? (float is a number with decimal point e.g. 3.14 )
+Alright, so we can't convert "2.5" into an integerâ€¦  But what about converting into a float number? (float is a number with decimal point e.g. 3.14 )
 
 ~~~py
-# 🙋‍♂️Get User Input
+# ðŸ™‹â€â™‚ï¸Get User Input
 str_num_a = input("Enter First Number: ")
 str_num_b = input("Enter Second Number: ")
 
-# 🔁Convert String to Int
+# ðŸ”Convert String to Int
 num_a = float(str_num_a)
 num_b = float(str_num_b)
 
-# 🧮Calculate Total
+# ðŸ§®Calculate Total
 total = num_a + num_b
 print(total)
 ~~~
 
-This time 2.5 + 2.75 = 5.25 . It works, we're back to real science💥!
+This time 2.5 + 2.75 = 5.25 . It works, we're back to real scienceðŸ’¥!
 
 # Examples
 Alright, let's go through multiple examples quickly, so you get an idea of what's going on when you convert your basic data types. I highly recommend you to copy these examples and run codes yourself.

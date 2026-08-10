@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T04:53:54.261Z",
+  "generatedAt": "2026-08-10T00:08:17.018Z",
   "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course",
   "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses",
   "courseCount": 2,
-  "lessonCount": 37,
+  "lessonCount": 45,
   "importedDirectories": 15,
-  "importedFlatFiles": 22,
+  "importedFlatFiles": 30,
   "courses": [
     {
       "name": "Python",
@@ -128,185 +128,249 @@
       "slug": "sj-training",
       "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning",
       "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons",
-      "lessonCount": 22,
+      "lessonCount": 30,
       "importedDirectories": 0,
-      "importedFlatFiles": 22,
+      "importedFlatFiles": 30,
       "lessons": [
         {
-          "lesson": "Lesson 01 Course Orientation and the 90 Day Toolbar Goal",
+          "lesson": "Lesson 01 Bridge from Advanced pyRevit to Office Ready AI Tooling",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_01_Course_Orientation_and_the_90_Day_Toolbar_Goal.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 01 Course Orientation and the 90 Day Toolbar Goal",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_01_Bridge_from_Advanced_pyRevit_to_Office_Ready_AI_Tooling.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 01 Bridge from Advanced pyRevit to Office Ready AI Tooling",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_01_Course_Orientation_and_the_90_Day_Toolbar_Goal.md"
+          "primaryFile": "Lesson_01_Bridge_from_Advanced_pyRevit_to_Office_Ready_AI_Tooling.md"
         },
         {
-          "lesson": "Lesson 02 Setting Up Your AI Sidekick for pyRevit Development",
+          "lesson": "Lesson 02 AI Development Operating System for pyRevit",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_02_Setting_Up_Your_AI_Sidekick_for_pyRevit_Development.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 02 Setting Up Your AI Sidekick for pyRevit Development",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_02_AI_Development_Operating_System_for_pyRevit.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 02 AI Development Operating System for pyRevit",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_02_Setting_Up_Your_AI_Sidekick_for_pyRevit_Development.md"
+          "primaryFile": "Lesson_02_AI_Development_Operating_System_for_pyRevit.md"
         },
         {
-          "lesson": "Lesson 03 Python Syntax Variables and Data Types",
+          "lesson": "Lesson 03 Tool Product Briefs Turning Revit Pain into Deployable Scope",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_03_Python_Syntax_Variables_and_Data_Types.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 03 Python Syntax Variables and Data Types",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_03_Tool_Product_Briefs_Turning_Revit_Pain_into_Deployable_Scope.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 03 Tool Product Briefs Turning Revit Pain into Deployable Scope",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_03_Python_Syntax_Variables_and_Data_Types.md"
+          "primaryFile": "Lesson_03_Tool_Product_Briefs_Turning_Revit_Pain_into_Deployable_Scope.md"
         },
         {
-          "lesson": "Lesson 04 User Input Type Conversion and a Simple Calculator",
+          "lesson": "Lesson 04 Existing Code Audit Converting Old Scripts into Tool Candidates",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 04 User Input Type Conversion and a Simple Calculator",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 04 Existing Code Audit Converting Old Scripts into Tool Candidates",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_04_User_Input_Type_Conversion_and_a_Simple_Calculator.md"
+          "primaryFile": "Lesson_04_Existing_Code_Audit_Converting_Old_Scripts_into_Tool_Candidates.md"
         },
         {
-          "lesson": "Lesson 05 Lists Dictionaries and Simple Data Structures",
+          "lesson": "Lesson 05 Toolbar Architecture Extension lib config docs tests and deployment",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 05 Lists Dictionaries and Simple Data Structures",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_05_Toolbar_Architecture_Extension_lib_config_docs_tests_and_deployment.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 05 Toolbar Architecture Extension lib config docs tests and deployment",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_05_Lists_Dictionaries_and_Simple_Data_Structures.md"
+          "primaryFile": "Lesson_05_Toolbar_Architecture_Extension_lib_config_docs_tests_and_deployment.md"
         },
         {
-          "lesson": "Lesson 06 pyRevit Extension Structure and First Button",
+          "lesson": "Lesson 06 Quick Revit API Refresh for Production Decisions",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_06_pyRevit_Extension_Structure_and_First_Button.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 06 pyRevit Extension Structure and First Button",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_06_Quick_Revit_API_Refresh_for_Production_Decisions.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 06 Quick Revit API Refresh for Production Decisions",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_06_pyRevit_Extension_Structure_and_First_Button.md"
+          "primaryFile": "Lesson_06_Quick_Revit_API_Refresh_for_Production_Decisions.md"
         },
         {
-          "lesson": "Lesson 07 Revit API Foundations for pyRevit",
+          "lesson": "Lesson 07 Tool Scaffold Generator Standardising New Buttons",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_07_Revit_API_Foundations_for_pyRevit.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 07 Revit API Foundations for pyRevit",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_07_Tool_Scaffold_Generator_Standardising_New_Buttons.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 07 Tool Scaffold Generator Standardising New Buttons",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_07_Revit_API_Foundations_for_pyRevit.md"
+          "primaryFile": "Lesson_07_Tool_Scaffold_Generator_Standardising_New_Buttons.md"
         },
         {
-          "lesson": "Lesson 08 Building First Useful Tools With AI",
+          "lesson": "Lesson 08 Case Study 01 Read Only Model Intelligence Report",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_08_Building_First_Useful_Tools_With_AI.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 08 Building First Useful Tools With AI",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_08_Case_Study_01_Read_Only_Model_Intelligence_Report.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 08 Case Study 01 Read Only Model Intelligence Report",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_08_Building_First_Useful_Tools_With_AI.md"
+          "primaryFile": "Lesson_08_Case_Study_01_Read_Only_Model_Intelligence_Report.md"
         },
         {
-          "lesson": "Lesson 09 Reviewing and Refactoring AI Written Code",
+          "lesson": "Lesson 09 Case Study 02 Controlled Batch Rename or Parameter Update",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 09 Reviewing and Refactoring AI Written Code",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_09_Case_Study_02_Controlled_Batch_Rename_or_Parameter_Update.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 09 Case Study 02 Controlled Batch Rename or Parameter Update",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_09_Reviewing_and_Refactoring_AI_Written_Code.md"
+          "primaryFile": "Lesson_09_Case_Study_02_Controlled_Batch_Rename_or_Parameter_Update.md"
         },
         {
-          "lesson": "Lesson 10 Phase 1 Milestone Build Your First Personal Tool",
+          "lesson": "Lesson 10 Phase 1 Milestone Productise One Personal Tool",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_10_Phase_1_Milestone_Build_Your_First_Personal_Tool.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 10 Phase 1 Milestone Build Your First Personal Tool",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_10_Phase_1_Milestone_Productise_One_Personal_Tool.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 10 Phase 1 Milestone Productise One Personal Tool",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_10_Phase_1_Milestone_Build_Your_First_Personal_Tool.md"
+          "primaryFile": "Lesson_10_Phase_1_Milestone_Productise_One_Personal_Tool.md"
         },
         {
-          "lesson": "Lesson 11 The pyRevit Debugging Protocol",
+          "lesson": "Lesson 11 Reliability Patterns Guard Clauses Skips Summaries and Fail Safe Defaults",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_11_The_pyRevit_Debugging_Protocol.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 11 The pyRevit Debugging Protocol",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_11_Reliability_Patterns_Guard_Clauses_Skips_Summaries_and_Fail_Safe_Defaults.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 11 Reliability Patterns Guard Clauses Skips Summaries and Fail Safe Defaults",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_11_The_pyRevit_Debugging_Protocol.md"
+          "primaryFile": "Lesson_11_Reliability_Patterns_Guard_Clauses_Skips_Summaries_and_Fail_Safe_Defaults.md"
         },
         {
-          "lesson": "Lesson 12 Error Handling and User Safe Tool Behaviour",
+          "lesson": "Lesson 12 Debugging Protocol 2 0 From Traceback to Reproducible Bug Report",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 12 Error Handling and User Safe Tool Behaviour",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_12_Debugging_Protocol_2_0_From_Traceback_to_Reproducible_Bug_Report.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 12 Debugging Protocol 2 0 From Traceback to Reproducible Bug Report",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_12_Error_Handling_and_User_Safe_Tool_Behaviour.md"
+          "primaryFile": "Lesson_12_Debugging_Protocol_2_0_From_Traceback_to_Reproducible_Bug_Report.md"
         },
         {
-          "lesson": "Lesson 13 Building Better User Inputs and Basic UI",
+          "lesson": "Lesson 13 Testing Matrix Revit Versions Worksharing ACC Samples and Pilot Models",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_13_Building_Better_User_Inputs_and_Basic_UI.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 13 Building Better User Inputs and Basic UI",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_13_Testing_Matrix_Revit_Versions_Worksharing_ACC_Samples_and_Pilot_Models.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 13 Testing Matrix Revit Versions Worksharing ACC Samples and Pilot Models",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_13_Building_Better_User_Inputs_and_Basic_UI.md"
+          "primaryFile": "Lesson_13_Testing_Matrix_Revit_Versions_Worksharing_ACC_Samples_and_Pilot_Models.md"
         },
         {
-          "lesson": "Lesson 14 Packaging a pyRevit Extension for Office Use",
+          "lesson": "Lesson 14 Configuration and Standards Making Tools Office Aware Without Hardcoding",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_14_Packaging_a_pyRevit_Extension_for_Office_Use.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 14 Packaging a pyRevit Extension for Office Use",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_14_Configuration_and_Standards_Making_Tools_Office_Aware_Without_Hardcoding.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 14 Configuration and Standards Making Tools Office Aware Without Hardcoding",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_14_Packaging_a_pyRevit_Extension_for_Office_Use.md"
+          "primaryFile": "Lesson_14_Configuration_and_Standards_Making_Tools_Office_Aware_Without_Hardcoding.md"
         },
         {
-          "lesson": "Lesson 15 Office Rollout Plan and Update Strategy",
+          "lesson": "Lesson 15 Logging Report Exports and Privacy Aware Telemetry",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_15_Office_Rollout_Plan_and_Update_Strategy.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 15 Office Rollout Plan and Update Strategy",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_15_Logging_Report_Exports_and_Privacy_Aware_Telemetry.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 15 Logging Report Exports and Privacy Aware Telemetry",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_15_Office_Rollout_Plan_and_Update_Strategy.md"
+          "primaryFile": "Lesson_15_Logging_Report_Exports_and_Privacy_Aware_Telemetry.md"
         },
         {
-          "lesson": "Lesson 16 Adoption Wiki Tool Documentation and Feedback Loops",
+          "lesson": "Lesson 16 Shared Libraries and Dependency Control",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_16_Adoption_Wiki_Tool_Documentation_and_Feedback_Loops.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 16 Adoption Wiki Tool Documentation and Feedback Loops",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_16_Shared_Libraries_and_Dependency_Control.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 16 Shared Libraries and Dependency Control",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_16_Adoption_Wiki_Tool_Documentation_and_Feedback_Loops.md"
+          "primaryFile": "Lesson_16_Shared_Libraries_and_Dependency_Control.md"
         },
         {
-          "lesson": "Lesson 17 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
+          "lesson": "Lesson 17 Production UX Simple Forms WPF Touchpoints Tooltips and User Trust",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_17_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 17 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_17_Production_UX_Simple_Forms_WPF_Touchpoints_Tooltips_and_User_Trust.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 17 Production UX Simple Forms WPF Touchpoints Tooltips and User Trust",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_17_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md"
+          "primaryFile": "Lesson_17_Production_UX_Simple_Forms_WPF_Touchpoints_Tooltips_and_User_Trust.md"
         },
         {
-          "lesson": "Lesson 18 How AI Coding Agents Really Work",
+          "lesson": "Lesson 18 Documentation System Adoption Wiki README Inline Help and Known Limits",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_18_How_AI_Coding_Agents_Really_Work.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 18 How AI Coding Agents Really Work",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_18_Documentation_System_Adoption_Wiki_README_Inline_Help_and_Known_Limits.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 18 Documentation System Adoption Wiki README Inline Help and Known Limits",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_18_How_AI_Coding_Agents_Really_Work.md"
+          "primaryFile": "Lesson_18_Documentation_System_Adoption_Wiki_README_Inline_Help_and_Known_Limits.md"
         },
         {
-          "lesson": "Lesson 19 Turning the AI Sidekick Into a pyRevit AI Engine",
+          "lesson": "Lesson 19 Versioning Git Workflow Release Notes and Rollback",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_19_Turning_the_AI_Sidekick_Into_a_pyRevit_AI_Engine.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 19 Turning the AI Sidekick Into a pyRevit AI Engine",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 19 Versioning Git Workflow Release Notes and Rollback",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_19_Turning_the_AI_Sidekick_Into_a_pyRevit_AI_Engine.md"
+          "primaryFile": "Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md"
         },
         {
-          "lesson": "Lesson 20 Self Iterating AI Workflows and Advanced Automation Experiments",
+          "lesson": "Lesson 20 Deployment Methods Local Network Git and Managed Office Rollout",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_20_Self_Iterating_AI_Workflows_and_Advanced_Automation_Experiments.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 20 Self Iterating AI Workflows and Advanced Automation Experiments",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_20_Deployment_Methods_Local_Network_Git_and_Managed_Office_Rollout.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 20 Deployment Methods Local Network Git and Managed Office Rollout",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_20_Self_Iterating_AI_Workflows_and_Advanced_Automation_Experiments.md"
+          "primaryFile": "Lesson_20_Deployment_Methods_Local_Network_Git_and_Managed_Office_Rollout.md"
         },
         {
-          "lesson": "Lesson 21 Capstone Project Build Test Document and Deploy Your Office Toolbar",
+          "lesson": "Lesson 21 Pilot Rollout User Feedback Training and Support Workflow",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_21_Capstone_Project_Build_Test_Document_and_Deploy_Your_Office_Toolbar.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 21 Capstone Project Build Test Document and Deploy Your Office Toolbar",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_21_Pilot_Rollout_User_Feedback_Training_and_Support_Workflow.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 21 Pilot Rollout User Feedback Training and Support Workflow",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_21_Capstone_Project_Build_Test_Document_and_Deploy_Your_Office_Toolbar.md"
+          "primaryFile": "Lesson_21_Pilot_Rollout_User_Feedback_Training_and_Support_Workflow.md"
         },
         {
-          "lesson": "Lesson 22 Next Steps Maintenance and Long Term AI Workflow Strategy",
+          "lesson": "Lesson 22 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
           "importMode": "flat-file",
-          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_22_Next_Steps_Maintenance_and_Long_Term_AI_Workflow_Strategy.md",
-          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 22 Next Steps Maintenance and Long Term AI Workflow Strategy",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_22_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 22 Phase 2 Milestone Deploy a Reliable Mini Toolbar",
           "topLevelEntries": 1,
-          "primaryFile": "Lesson_22_Next_Steps_Maintenance_and_Long_Term_AI_Workflow_Strategy.md"
+          "primaryFile": "Lesson_22_Phase_2_Milestone_Deploy_a_Reliable_Mini_Toolbar.md"
+        },
+        {
+          "lesson": "Lesson 23 AI Agent Mechanics for Revit Tool Development",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_23_AI_Agent_Mechanics_for_Revit_Tool_Development.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 23 AI Agent Mechanics for Revit Tool Development",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_23_AI_Agent_Mechanics_for_Revit_Tool_Development.md"
+        },
+        {
+          "lesson": "Lesson 24 Building a pyRevit Knowledge Base for AI Sidekick",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_24_Building_a_pyRevit_Knowledge_Base_for_AI_Sidekick.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 24 Building a pyRevit Knowledge Base for AI Sidekick",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_24_Building_a_pyRevit_Knowledge_Base_for_AI_Sidekick.md"
+        },
+        {
+          "lesson": "Lesson 25 MCP Style Workflows and pyRevit AI Engine Concepts",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_25_MCP_Style_Workflows_and_pyRevit_AI_Engine_Concepts.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 25 MCP Style Workflows and pyRevit AI Engine Concepts",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_25_MCP_Style_Workflows_and_pyRevit_AI_Engine_Concepts.md"
+        },
+        {
+          "lesson": "Lesson 26 Self Iterating Development Loops with Human Guardrails",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_26_Self_Iterating_Development_Loops_with_Human_Guardrails.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 26 Self Iterating Development Loops with Human Guardrails",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_26_Self_Iterating_Development_Loops_with_Human_Guardrails.md"
+        },
+        {
+          "lesson": "Lesson 27 Hooks Events and Workflow Guardrails",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_27_Hooks_Events_and_Workflow_Guardrails.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 27 Hooks Events and Workflow Guardrails",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_27_Hooks_Events_and_Workflow_Guardrails.md"
+        },
+        {
+          "lesson": "Lesson 28 External Workflows Data Prep Reports Bluebeam Markups and Revit Re entry",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_28_External_Workflows_Data_Prep_Reports_Bluebeam_Markups_and_Revit_Re_entry.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 28 External Workflows Data Prep Reports Bluebeam Markups and Revit Re entry",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_28_External_Workflows_Data_Prep_Reports_Bluebeam_Markups_and_Revit_Re_entry.md"
+        },
+        {
+          "lesson": "Lesson 29 Capstone Build Sprint Office Toolbar Release Candidate",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_29_Capstone_Build_Sprint_Office_Toolbar_Release_Candidate.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 29 Capstone Build Sprint Office Toolbar Release Candidate",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_29_Capstone_Build_Sprint_Office_Toolbar_Release_Candidate.md"
+        },
+        {
+          "lesson": "Lesson 30 Capstone Presentation Maintenance Roadmap and Manager Summary",
+          "importMode": "flat-file",
+          "source": "P:\\Production\\Computational\\RBG_pyRevit\\pyRevit Course\\SJ-trAIning\\Lesson_30_Capstone_Presentation_Maintenance_Roadmap_and_Manager_Summary.md",
+          "destination": "C:\\Users\\harley.trappitt\\Documents\\GitHub\\SJ-trAIning\\content\\courses\\sj-training\\lessons\\Lesson 30 Capstone Presentation Maintenance Roadmap and Manager Summary",
+          "topLevelEntries": 1,
+          "primaryFile": "Lesson_30_Capstone_Presentation_Maintenance_Roadmap_and_Manager_Summary.md"
         }
       ]
     }

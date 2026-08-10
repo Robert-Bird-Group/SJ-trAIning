@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SJ-trAIning | Lesson 19 | Lesson 19 - Versioning, Git Workflow, Release Notes, and Rollback</title>
+    <meta name="description" content="--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit AP" />
+    <link rel="stylesheet" href="../../../../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <span class="topbar-title">SJ-trAIning</span>
+      <span class="topbar-badge">Business Standard</span>
+      <span class="topbar-tag">v0.1</span>
+    </div>
+
+    <div class="page lesson-shell">
+      <section class="part">
+        <span class="part-num">Lesson</span>
+        <span class="part-title">Lesson 19 Summary</span>
+        <span class="part-rule"></span>
+      </section>
+
+      <div class="priority-card">
+        <strong>Source lesson.</strong> Imported from <code>Lesson 19 Versioning Git Workflow Release Notes and Rollback</code> using <code>Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md</code> and published as a static GitHub Pages lesson.
+      </div>
+
+      <section class="card site-header lesson-header">
+        <div class="card-head">
+          <span class="card-title">Lesson</span>
+        </div>
+        <div class="card-body hero-copy">
+          <a class="back-link" href="../../index.html">← Back to course</a>
+          <a class="back-link" href="../../../../index.html">← Back to all courses</a>
+          <p class="eyebrow">Lesson 19</p>
+          <h1>Lesson 19 - Versioning, Git Workflow, Release Notes, and Rollback</h1>
+          <p class="hero-summary">--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit API basics, parameters, transactions, selections, collectors, docs, and WPF at least in theory. style: Practical, office-deployment focused, AI-assisted, senior BIM technician workflow ---</p>
+          <div class="meta-row">
+            
+            <span class="meta-pill">markdown</span>
+            <span class="meta-pill">Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md</span>
+            <span class="meta-pill">1 assets</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wiki-article-layout">
+        <main class="wiki-article-main">
+          
+
+          <section class="card wiki-section" id="content">
+            <div class="card-head">
+              <span class="card-title">Lesson Content</span>
+            </div>
+            <div class="card-body wiki-body lesson-content">
+              <p>--- course: LRA-Academy 3.0 Continuation level: Post-Basics / Post-Advanced assumption: Learner already understands Python fundamentals, pyRevit setup, Revit API basics, parameters, transactions, selections, collectors, docs, and WPF at least in theory. style: Practical, office-deployment focused, AI-assisted, senior BIM technician workflow ---</p>
+<p>&gt; <strong>Positioning</strong> &gt; This is not a beginner pyRevit course. Basics and Advanced have already covered Python syntax, pyRevit setup, Revit API documentation, selections, parameters, transactions, UI forms, and view automation. &gt; This course treats those topics as prerequisite knowledge and only revisits them as quick refresh checkpoints where they support the larger goal: building, hardening, deploying, and scaling a reliable office toolbar with AI-assisted workflows.</p>
+<h2 id="module">Module</h2>
+<p><strong>Module 06 - Office Deployment</strong></p>
+<h2 id="suggested-time">Suggested Time</h2>
+<p>3 hours</p>
+<h2 id="what-this-lesson-assumes">What This Lesson Assumes</h2>
+<p>You already understand the introductory version of this topic from the previous course. This lesson focuses on applying that knowledge to a deployable, maintainable, AI-assisted pyRevit workflow.</p>
+<h2 id="objectives">Objectives</h2>
+<ul><li>Create a controlled release process for the toolbar.</li><li>Use semantic versioning and changelogs.</li><li>Define rollback steps before users receive updates.</li></ul>
+<h2 id="the-deployment-mindset">The Deployment Mindset</h2>
+<p>Once others use your toolbar, every change is a release.</p>
+<h2 id="versioning">Versioning</h2>
+<pre><code class="language-text">0.1.0 Prototype
+0.2.0 Internal test
+0.3.0 Pilot release
+1.0.0 First office release
+1.0.1 Bug fix</code></pre>
+<h2 id="branching-model">Branching Model</h2>
+<p>A simple model is enough:</p>
+<pre><code class="language-text">main      = stable release
+pilot     = pilot testing
+feature/* = active development</code></pre>
+<h2 id="changelog-template">CHANGELOG Template</h2>
+<pre><code class="language-markdown"># Changelog
+
+## 0.3.0 - Pilot Release
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Known Limitations
+
+### Rollback Notes</code></pre>
+<h2 id="rollback-plan">Rollback Plan</h2>
+<p>Every release should answer:</p>
+<ul><li>Where is the previous version?</li><li>How does a user return to it?</li><li>Who decides rollback?</li><li>How will users be notified?</li></ul>
+<h2 id="exercise">Exercise</h2>
+<p>Create <code>CHANGELOG.md</code> and <code>deployment/rollback_plan.md</code> for your toolbar.</p>
+<h2 id="source-notes">Source Notes</h2>
+<ul><li>Original LRA 3 outline: Uploaded PDF: LRA-Academy 3.0 - Founders 50 (August 2026)</li><li>pyRevit docs: https://docs.pyrevitlabs.io/</li></ul>
+<h2 id="completion-artefact">Completion Artefact</h2>
+<p>By the end of this lesson, produce the listed artefact and save it into your course workspace. This course is intentionally output-driven: every lesson should leave behind a tool, decision record, checklist, standard, test result, or deployment asset.</p>
+<h2 id="senior-reviewer-checklist">Senior Reviewer Checklist</h2>
+<p>Before marking this lesson complete, check:</p>
+<ul><li>The artefact supports a real Revit production workflow.</li><li>Assumptions are documented.</li><li>Risks are classified.</li><li>AI-generated output has been reviewed manually.</li><li>Any model-changing logic is isolated, tested, and reversible.</li><li>Another competent pyRevit user could understand the intent without asking you directly.</li></ul>
+<h2 id="ai-sidekick-prompt">AI Sidekick Prompt</h2>
+<pre><code class="language-text">Act as a senior pyRevit and Revit API reviewer.
+Review this lesson artefact for reliability, maintainability, user safety, deployment readiness, and office adoption.
+Assume I already know Python and pyRevit basics.
+Do not reteach fundamentals unless they directly affect the risk or design decision.</code></pre>
+            </div>
+          </section>
+
+          <section class="card wiki-section" id="resources">
+            <div class="card-head">
+              <span class="card-title">Lesson Files</span>
+            </div>
+            <div class="card-body wiki-body">
+              <ul class="file-list"><li><a href="./Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md">Lesson_19_Versioning_Git_Workflow_Release_Notes_and_Rollback.md</a></li></ul>
+            </div>
+          </section>
+
+          <nav class="lesson-pagination card">
+            <div class="card-body lesson-pagination-body">
+              <a class="lesson-nav-card" href="../lesson-18-lesson-18-documentation-system-adoption-wiki-readme-inline-help-and-known-limits/"><span>Previous</span><strong>Lesson 18 · Lesson 18 - Documentation System: Adoption Wiki, README, Inline Help, and Known Limits</strong></a>
+              <a class="lesson-nav-card" href="../lesson-20-lesson-20-deployment-methods-local-network-git-and-managed-office-rollout/"><span>Next</span><strong>Lesson 20 · Lesson 20 - Deployment Methods: Local, Network, Git, and Managed Office Rollout</strong></a>
+            </div>
+          </nav>
+        </main>
+
+        <aside class="wiki-rail" aria-label="Lesson navigation">
+          <h3>On This Page</h3>
+          <nav class="wiki-toc" aria-label="Lesson sections">
+            
+            <a class="toc-link toc-level-1" href="#content">Lesson Content</a>
+            <a class="toc-link toc-level-2" href="#module">Module</a><a class="toc-link toc-level-2" href="#suggested-time">Suggested Time</a><a class="toc-link toc-level-2" href="#what-this-lesson-assumes">What This Lesson Assumes</a><a class="toc-link toc-level-2" href="#objectives">Objectives</a><a class="toc-link toc-level-2" href="#the-deployment-mindset">The Deployment Mindset</a><a class="toc-link toc-level-2" href="#versioning">Versioning</a><a class="toc-link toc-level-2" href="#branching-model">Branching Model</a><a class="toc-link toc-level-2" href="#changelog-template">CHANGELOG Template</a><a class="toc-link toc-level-2" href="#rollback-plan">Rollback Plan</a><a class="toc-link toc-level-2" href="#exercise">Exercise</a><a class="toc-link toc-level-2" href="#source-notes">Source Notes</a><a class="toc-link toc-level-2" href="#completion-artefact">Completion Artefact</a><a class="toc-link toc-level-2" href="#senior-reviewer-checklist">Senior Reviewer Checklist</a><a class="toc-link toc-level-2" href="#ai-sidekick-prompt">AI Sidekick Prompt</a>
+            <a class="toc-link toc-level-1" href="#resources">Lesson Files</a>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const links = Array.from(document.querySelectorAll('.toc-link'));
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+          return;
+        }
+
+        function setActive(id) {
+          for (const link of links) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          }
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (!visible.length) {
+              return;
+            }
+
+            visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            setActive(visible[0].target.id);
+          },
+          {
+            rootMargin: '-15% 0px -60% 0px',
+            threshold: [0.1, 0.35, 0.7],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        setActive(sections[0].id);
+      })();
+    </script>
+  </body>
+</html>

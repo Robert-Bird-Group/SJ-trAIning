@@ -4,6 +4,7 @@ import path from "node:path";
 const repoRoot = process.cwd();
 const sourceCoursesRoot = path.join(repoRoot, "content", "courses");
 const coursePagesRoot = path.join(repoRoot, "courses");
+const legacyLessonsRoot = path.join(repoRoot, "lessons");
 const diagnosticsRoot = path.join(repoRoot, "generated");
 const diagnosticsPath = path.join(diagnosticsRoot, "site-diagnostics.json");
 const indexPath = path.join(repoRoot, "index.html");
@@ -1023,6 +1024,8 @@ function main() {
   const courses = collectCourses();
 
   ensureDir(diagnosticsRoot);
+  // Clean legacy single-course publish path to avoid stale duplicate pages.
+  clearDir(legacyLessonsRoot);
   clearDir(coursePagesRoot);
   ensureDir(coursePagesRoot);
 

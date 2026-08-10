@@ -55,5 +55,6 @@ npm.cmd run preview
 - Existing Markdown lessons are rendered directly.
 - Existing lesson HTML files are supported as compatibility inputs.
 - Import supports both `lesson xx` folders and flat files such as `lesson_01_topic.md` per course folder.
+- Legacy single-course folders (`content/lessons/` and `lessons/`) are auto-cleaned during updates.
 - Commit the generated output for GitHub Pages publishing.
 

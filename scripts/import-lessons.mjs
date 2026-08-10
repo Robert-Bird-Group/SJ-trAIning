@@ -4,6 +4,7 @@ import path from "node:path";
 const repoRoot = process.cwd();
 const DEFAULT_SOURCE = String.raw`P:\Production\Computational\RBG_pyRevit\pyRevit Course`;
 const DEST_ROOT = path.join(repoRoot, "content", "courses");
+const LEGACY_DEST_ROOT = path.join(repoRoot, "content", "lessons");
 const GENERATED_ROOT = path.join(repoRoot, "generated");
 const DIAGNOSTICS_PATH = path.join(GENERATED_ROOT, "import-diagnostics.json");
 
@@ -178,6 +179,8 @@ function main() {
   }
 
   ensureDir(GENERATED_ROOT);
+  // Clean legacy single-course import path so there is only one source-of-truth tree.
+  clearDir(LEGACY_DEST_ROOT);
   clearDir(DEST_ROOT);
   ensureDir(DEST_ROOT);
 

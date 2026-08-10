@@ -1,87 +1,86 @@
-
 # Time to Practice
-You've just learnt about collection data types in the previous lesson🥳.
+You've just learnt about collection data types in the previous lessonðŸ¥³.
 So, let's make a simple exercise to practice lists (and a little bit of sets and dicts).
 
->### 👉 Quick note: we haven't covered logical statements and loops, which are super important concepts in Python. So we'll keep this lesson very simple and focus on the very basics of working with lists.
+>### ðŸ‘‰ Quick note: we haven't covered logical statements and loops, which are super important concepts in Python. So we'll keep this lesson very simple and focus on the very basics of working with lists.
 
 Here's the plan:
 We're going to play a **Backpack Game** where we go through different steps and practice adding, removing, and modifying items in a list. This way you can sit back, relax and see how you can work with a single list and make all kinds of changes depending on the task.
 
 So let's begin
 
-# 0️⃣ How To Begin The Game?
+# 0ï¸âƒ£ How To Begin The Game?
 We begin this journey with an empty backpack (a simple list) and we'll carry it along the whole game by making different changes depending on the task.
 
 As I've mentioned, it'll be a very abstract game because we don't know enough Python yet, but it will be fun and help you practice working with lists early on.
 
-So, let's get you a backpack🎒!
+So, let's get you a backpackðŸŽ’!
 
 ~~~py
-#0️⃣ Start Backpack Game
+#0ï¸âƒ£ Start Backpack Game
 #--------------------------------------------------
 backpack = []
-print('0. 🙂Starting Journey with Empty Backpack.')
+print('0. ðŸ™‚Starting Journey with Empty Backpack.')
 
-print('🎒', backpack )
+print('ðŸŽ’', backpack )
 print('-'*50)
 ~~~
 
 ~~~
-0. 🙂Starting Journey with Empty Backpack.
-🎒 []
+0. ðŸ™‚Starting Journey with Empty Backpack.
+ðŸŽ’ []
 ~~~
 
-# 1️⃣ Pick up Starter Kit Items.
+# 1ï¸âƒ£ Pick up Starter Kit Items.
 You're given a StarterKit that contains 'Armor', 'Shield', 'Sword', 'Potion'. 
 Pick them up by adding these words to your backpack-list.
 
 >### Add Items from StarterKit to Your Backpack one by one.
 
 ~~~py
-#1️⃣ Pick up StarterKit Items.
+#1ï¸âƒ£ Pick up StarterKit Items.
 #--------------------------------------------------
-print('1. 📦 Picking Up StarterKit (Armor, Shield, Sword, Potion).')
+print('1. ðŸ“¦ Picking Up StarterKit (Armor, Shield, Sword, Potion).')
 backpack .append('Sword')
 backpack .append('Armor')
 backpack .append('Shield')
 backpack .append('Potion')
 
-print('🎒', backpack )
+print('ðŸŽ’', backpack )
 print('-'*50)
 ~~~
 
 ~~~
-1. 📦 Picking Up StarterKit (Armor, Shield, Sword, Potion).
-🎒 ['Sword', 'Armor', 'Shield', 'Potion']
+1. ðŸ“¦ Picking Up StarterKit (Armor, Shield, Sword, Potion).
+ðŸŽ’ ['Sword', 'Armor', 'Shield', 'Potion']
 ~~~
 
-# 2️⃣ Loot a Chest
+# 2ï¸âƒ£ Loot a Chest
 You've just found a treasure chest: ['Map', 'Potion', 'Compass', 'Potion'] .
 You can pick all these items and add them to your backpack.
 
 >### Add items from chest to your backpack (without append)
 
 ~~~py
-#2️⃣ Loot a Treasure Chest
+#2ï¸âƒ£ Loot a Treasure Chest
 #--------------------------------------------------
 chest     = ['Map', 'Potion', 'Compass', 'Potion']
 backpack += chest
 
-print('2. 🎁Looting a Treasure  Chest!')
+print('2. ðŸŽLooting a Treasure  Chest!')
 print(f'Chest: {chest}')
 
-print('🎒', backpack )
+print('ðŸŽ’', backpack )
 print('-'*50)
 ~~~
 
 ~~~
-2. 🎁Looting a Treasure  Chest!
+2. ðŸŽLooting a Treasure  Chest!
 Chest: ['Map', 'Potion', 'Compass', 'Potion']
-🎒 ['Sword', 'Armor', 'Shield', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
+ðŸŽ’ ['Sword', 'Armor', 'Shield', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
 ~~~
 
-# 3️⃣ Visit Merchant
+# 3ï¸âƒ£ Visit Merchant
 We're visiting a merchant and we see a shiny 'Magic-GreatSword'. We want that!
 Merchant says that we can exchange our Shield and current Sword for this new Magic-GreatSword. Let's do it.
 
@@ -89,9 +88,9 @@ Merchant says that we can exchange our Shield and current Sword for this new Mag
 >### Replace 'Sword' to 'Magic-GreatSword'
 
 ~~~py
-#3️⃣ Visit Merchant.
+#3ï¸âƒ£ Visit Merchant.
 #--------------------------------------------------
-print('3. 🧙‍♂️ Visiting Merchant')
+print('3. ðŸ§™â€â™‚ï¸ Visiting Merchant')
 print('- Selling the Shield.')
 print('- Upgrading Sword -> Magic GreatSword')
 
@@ -99,18 +98,18 @@ backpack.remove('Shield')                    # Remove Shield
 inx            = backpack .index('Sword')    # Find Sword Position
 backpack [inx] = 'Magic-GreatSword'          # Change Sword at any index
 
-print('🎒', backpack )
+print('ðŸŽ’', backpack )
 print('-'*50)
 ~~~
 
 ~~~
-3. 🧙‍♂️ Visiting Merchant
+3. ðŸ§™â€â™‚ï¸ Visiting Merchant
 - Selling the Shield.
 - Upgrading Sword -> Magic GreatSword
-🎒 ['Magic-GreatSword', 'Armor', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
+ðŸŽ’ ['Magic-GreatSword', 'Armor', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
 ~~~
 
-# 4️⃣ Inventory Check
+# 4ï¸âƒ£ Inventory Check
 We've collected quite a few items and even changed things. Let's double check what we have:
 
 >### Count Total Items
@@ -118,10 +117,10 @@ We've collected quite a few items and even changed things. Let's double check wh
 >### Count amount of 'Potion' in the Backpack.
 
 ~~~py
-#4️⃣ Check Inventory
+#4ï¸âƒ£ Check Inventory
 #--------------------------------------------------
-print('4. 🔎Checking Backpack: ')
-print('🎒', backpack)
+print('4. ðŸ”ŽChecking Backpack: ')
+print('ðŸŽ’', backpack)
 
 total_count   = len(backpack)
 unique_items  = set(backpack)
@@ -135,51 +134,49 @@ print('-'*50)
 ~~~
 
 ~~~
-4. 🔎Checking Backpack: 
-🎒 ['Magic-GreatSword', 'Armor', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
+4. ðŸ”ŽChecking Backpack: 
+ðŸŽ’ ['Magic-GreatSword', 'Armor', 'Potion', 'Map', 'Potion', 'Compass', 'Potion'
 ~~~
 
-# 5️⃣ Dropped The Backpack 🙃
+# 5ï¸âƒ£ Dropped The Backpack ðŸ™ƒ
 Oh no, we've just dropped the backpack upside down. What happened to all our items?
 
 >### Reverse the order of your backpack
 
 ~~~py
-#5️⃣ Dropped the Backpack.
+#5ï¸âƒ£ Dropped the Backpack.
 #--------------------------------------------------
-print('5. 🙃Dropped the Backpack Upside-Down... ')
+print('5. ðŸ™ƒDropped the Backpack Upside-Down... ')
 backpack.reverse()
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-5. 🙃Dropped the Backpack Upside-Down... 
-🎒 ['Potion', 'Compass', 'Potion', 'Map', 'Potion', 'Armor', 'Magic-GreatSword'
+5. ðŸ™ƒDropped the Backpack Upside-Down... 
+ðŸŽ’ ['Potion', 'Compass', 'Potion', 'Map', 'Potion', 'Armor', 'Magic-GreatSword'
 ~~~
 
-# 6️⃣ Sort Your Backpack
+# 6ï¸âƒ£ Sort Your Backpack
 Let's fix the order of our backpack and sort it back using alphanumeric sorting rules.
 
 >### Sort your backpack
 
 ~~~py
-#6️⃣ Sorting Items
+#6ï¸âƒ£ Sorting Items
 #--------------------------------------------------
-print('6. ➡️Sorting Items: ')
+print('6. âž¡ï¸Sorting Items: ')
 backpack.sort()
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-6. ➡️Sorting Items: 
-🎒 ['Armor', 'Compass', 'Magic-GreatSword', 'Map', 'Potion', 'Potion', 'Potion'
+6. âž¡ï¸Sorting Items: 
+ðŸŽ’ ['Armor', 'Compass', 'Magic-GreatSword', 'Map', 'Potion', 'Potion', 'Potion'
 ~~~
-
-P.S.
 By default the **sort()** function sorts alphanumerically. But we can also provide custom sorting rules by using key= parameters and providing another function. 
 
 For example we can provide len() function name, to sort by the amount of letters in each word. And it can be any function, but it's a topic for another lesson!
@@ -189,25 +186,25 @@ Here's a simple example you can try:
 ~~~py
 backpack.sort(key=len)
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-6. ➡️Sorting Items: 
-🎒 ['Map', 'Armor','Potion', 'Potion', 'Potion' 'Compass', 'Magic-GreatSword'
+6. âž¡ï¸Sorting Items: 
+ðŸŽ’ ['Map', 'Armor','Potion', 'Potion', 'Potion' 'Compass', 'Magic-GreatSword'
 ~~~
 
-# 7️⃣ Stolen Items during Sleep
+# 7ï¸âƒ£ Stolen Items during Sleep
 While we sleep somebody has come and taken 3 random items from our backpack!
 
 >### Remove 3 items
 >### Display a list of stolen items
 
 ~~~py
-#7️⃣ 3 Items Stolen During Sleep
+#7ï¸âƒ£ 3 Items Stolen During Sleep
 #--------------------------------------------------
-print('7. 💤Sleeping...')
+print('7. ðŸ’¤Sleeping...')
 
 a      = backpack.pop()
 b      = backpack.pop(2)
@@ -215,83 +212,83 @@ c      = backpack.pop()
 stolen = [a,b,c]
 
 print(f'Stolen Items: ', stolen)
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-7. 💤Sleeping...
+7. ðŸ’¤Sleeping...
 Stolen Items:  ['Potion', 'Magic-GreatSword', 'Potion']
-🎒 ['Armor', 'Compass', 'Map', 'Potion'
+ðŸŽ’ ['Armor', 'Compass', 'Map', 'Potion'
 ~~~
 
-# 8️⃣Found Magic Ring and Coin Pouch
+# 8ï¸âƒ£Found Magic Ring and Coin Pouch
 We've just been robbed, but luck is on our side. we've just found a Magic Ring and a Coin Pouch. Let's pick the up and this time we're going to put the ring deep into our backpack.
 
 >### Add Ring as the first item in a list ring = 'Magic-Ring'
 >### Add nested list of coins in the end coin_pouch = ['Gold Coin', 'Silver Coin']
 
 ~~~py
-#8️⃣ Found Magic-Ring
+#8ï¸âƒ£ Found Magic-Ring
 #--------------------------------------------------
-print('8. 💍Found Magic Ring And Coin Pouch')
+print('8. ðŸ’Found Magic Ring And Coin Pouch')
 ring       = 'Magic Ring'
 coin_pouch = ['Gold Coin', 'Silver Coin']
 
 backpack.insert(0, ring)
 backpack.append(coin_pouch)
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-8. 💍Found Magic Ring And Coin Pouch
-🎒 ['Magic Ring', 'Armor', 'Compass', 'Map', 'Potion', ['Gold Coin', 'Silver Coin'
+8. ðŸ’Found Magic Ring And Coin Pouch
+ðŸŽ’ ['Magic Ring', 'Armor', 'Compass', 'Map', 'Potion', ['Gold Coin', 'Silver Coin'
 ~~~
 
-# 9️⃣Half Backpack Disappears
+# 9ï¸âƒ£Half Backpack Disappears
 The Magic Ring was activated and it disappeared taking half of the backpack with it. Damn you magic ring...
 
 >### Remove the first half of items from the backpack  
 
 ~~~py
-#9️⃣ Half Backpack Contents Have Teleported
+#9ï¸âƒ£ Half Backpack Contents Have Teleported
 #--------------------------------------------------
-print('9. 💥Half Items Magically Disappeared. Damn You Magic Ring...')
+print('9. ðŸ’¥Half Items Magically Disappeared. Damn You Magic Ring...')
 
 count    = len(backpack)
 half     = count // 2
 backpack = backpack[half:]
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
 ~~~
-9. 💥Half Items Magically Disappeared. Damn You Magic Ring...
-🎒 ['Map', 'Potion', ['Gold Coin', 'Silver Coin'
+9. ðŸ’¥Half Items Magically Disappeared. Damn You Magic Ring...
+ðŸŽ’ ['Map', 'Potion', ['Gold Coin', 'Silver Coin'
 ~~~
 
-# 🔟 Bandits Attack
+# ðŸ”Ÿ Bandits Attack
 Bandits attack. We'd beat their asses, but we lost our Magic-Greatsword so we're at their mercy. And they really like our backpack so we have to let it go.
 
 >### Get rid of Backpack
 
 ~~~py
-#🔟 Bandits Stole Empty Backpack
+#ðŸ”Ÿ Bandits Stole Empty Backpack
 #--------------------------------------------------
-print('10. 🧌Bandits Attacked.')
+print('10. ðŸ§ŒBandits Attacked.')
 print('Backpack Stolen...')
 
 backpack = None                       # None is not the same as empty list! 
 
-print('🎒', backpack)
+print('ðŸŽ’', backpack)
 print('-'*50)
 ~~~
 
-# ☠️ Game Over
-Not every game has a happy ending, but I hope you've gained some good practice and learned more about working with lists. There’s always a bright side to the coin🪙.
+# â˜ ï¸ Game Over
+Not every game has a happy ending, but I hope you've gained some good practice and learned more about working with lists. Thereâ€™s always a bright side to the coinðŸª™.
 
 ~~~py
 print('Game Over')
@@ -314,7 +311,7 @@ Look over your code and find if there's anything you could make better. And here
 
 ### If you ever catch yourself copy-pasting the same code over and over - you're doing something wrong. Programming is all about being efficient and it includes writing clean code. Always look for ways to reuse your code without using CTRL+C, CTRL+V combo.
 
-🔷For example we've copied print('-'*50)  too many times... 
+ðŸ”·For example we've copied print('-'*50)  too many times... 
 
 And what if you want to change from 50 to 75? It would mean you have to update it everywhere manually. And later you might need to do it again... So not very efficient. Instead, we can create a single variable and reuse it everywhere
 
@@ -331,7 +328,7 @@ print(dashes)
 Now, we have a single control for all these print statements.
 
 ---
-🔷Another example: we can improve variable names. We've create a backpack variable and used it everywhere. And to be fair it can be shorter without losing the meaning. why don't we rename it to pack instead?
+ðŸ”·Another example: we can improve variable names. We've create a backpack variable and used it everywhere. And to be fair it can be shorter without losing the meaning. why don't we rename it to pack instead?
 
 Here's how to rename the same variable across the whole script or even project:
 
@@ -367,13 +364,13 @@ print(phonebook)
 
 
 number = phonebook['Erik']
-print(f'📞 Calling Erik... ({number})')
+print(f'ðŸ“ž Calling Erik... ({number})')
 
 number = phonebook['Theo']
-print(f'📞 Calling Theo... ({number})')
+print(f'ðŸ“ž Calling Theo... ({number})')
 
 number = phonebook['Kristina']
-print(f'📞 Calling Kristina... ({number})')
+print(f'ðŸ“ž Calling Kristina... ({number})')
 ~~~
 As you can see it makes a lot of sense to use here a dictionary to keep relations between phones and numbers and have an easy way to read this data.
 

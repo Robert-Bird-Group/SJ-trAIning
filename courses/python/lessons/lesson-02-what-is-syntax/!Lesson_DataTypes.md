@@ -15,7 +15,7 @@ To create strings we need to use 'single' or "double quotes" on each side of the
 "And 'vice-versa' " # This is a string
 ~~~
 
-⚠️However, keep in mind we can't write text without quotes. This will break python syntax rules, and it will certainly lead to many errors.
+âš ï¸However, keep in mind we can't write text without quotes. This will break python syntax rules, and it will certainly lead to many errors.
 
 ![alt text](image.png)
 
@@ -49,22 +49,20 @@ To create a variable write a single word (without quotes) and then assign data w
 For example, you can print the data that variables hold like this:
 
 ~~~py
-#📦 Text Variables
+#ðŸ“¦ Text Variables
 #--------------------------------------------------
 text   = 'Text in python is called String'
 text_2 = "It has to be inside single or double quotes"
 text_3 = 'We can use "double-quotes" inside single quotes'
 text_4 = "And 'vice-versa' " # This is a string
 
-#👀 Print Statements
+#ðŸ‘€ Print Statements
 #--------------------------------------------------
 print(text)
 print(text_2)
 print(text_3)
 print(text_3)
 ~~~
-
-P.S.
 Make sure you don't use variable names with internal meaning in Python. This will override this meaning and you can break your Python. You might not know all the names yet, but you'll learn them as you progress during this course.
 
 # All Basic DataTypes
@@ -119,7 +117,7 @@ So instead, define variables once, and then use them inside your print statement
 Like this:
 
 ~~~py
-# 💪 Simple Excercise
+# ðŸ’ª Simple Excercise
 #--------------------------------------------------
 user = 'Klaus'
 app  = 'Photoshop'
@@ -134,7 +132,7 @@ print('And so, ' + user + ' has begun his programming journey.')
 
 Now we're joining multiple strings into one using our variables. But we can agree on one thing:
 
-🤬 It looks Horrible, isn't it?
+ðŸ¤¬ It looks Horrible, isn't it?
 
 It's fine to use + symbol to join strings on smaller examples, but in this case it's best to use string-formatting. Here's how.
 
@@ -161,7 +159,7 @@ Both examples will produce the same result, but one is a bit simpler than the ot
 Now let's apply it to our story:
 
 ~~~py
-# 💪 Simple Excercise
+# ðŸ’ª Simple Excercise
 #--------------------------------------------------
 user = 'Klaus'
 app  = 'Photoshop'
